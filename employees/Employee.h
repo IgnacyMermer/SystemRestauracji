@@ -1,0 +1,10 @@
+#ifndef PROJEKTPROI2_EMPLOYEE_H
+#define PROJEKTPROI2_EMPLOYEE_H
+
+
+class Employee {
+
+};
+
+
+#endif //PROJEKTPROI2_EMPLOYEE_H
