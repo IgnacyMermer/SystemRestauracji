@@ -14,9 +14,21 @@ find_package(Qt5 COMPONENTS
         REQUIRED)
 
 add_executable(projektPROI2 main.cpp mainwindow.cpp mainwindow.h mainwindow.ui)
+include_directories(client)
+add_subdirectory(client)
+include_directories(employees)
+add_subdirectory(employees)
+include_directories(meals)
+add_subdirectory(meals)
+include_directories(orders)
+add_subdirectory(orders)
 target_link_libraries(projektPROI2
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        projektPROI2_client
+        projektPROI2_employee
+        projektPROI2_meal
+        projektPROI2_order
         )
 

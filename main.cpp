@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QPushButton>
 #include "mainwindow.h"
+#include "client/Client.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
@@ -10,5 +11,7 @@ int main(int argc, char *argv[]) {
     button.show();*/
     mainwindow w;
     w.show();
+    Client c;
+    c.id = 2;
     return QApplication::exec();
 }
