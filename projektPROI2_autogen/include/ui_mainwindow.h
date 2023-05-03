@@ -11,11 +11,15 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -24,8 +28,16 @@ class Ui_mainwindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QRadioButton *radioButton;
+    QGroupBox *groupBox;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label;
+    QLineEdit *lineEdit_username;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_2;
+    QLineEdit *lineEdit_password;
+    QPushButton *pushButton_Login;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -36,12 +48,50 @@ public:
         mainwindow->resize(800, 600);
         centralwidget = new QWidget(mainwindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(110, 160, 100, 32));
-        radioButton = new QRadioButton(centralwidget);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        radioButton->setGeometry(QRect(310, 70, 99, 20));
+        groupBox = new QGroupBox(centralwidget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(370, 40, 361, 341));
+        widget = new QWidget(groupBox);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(50, 80, 172, 99));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout->addWidget(label);
+
+        lineEdit_username = new QLineEdit(widget);
+        lineEdit_username->setObjectName(QString::fromUtf8("lineEdit_username"));
+
+        horizontalLayout->addWidget(lineEdit_username);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout_2->addWidget(label_2);
+
+        lineEdit_password = new QLineEdit(widget);
+        lineEdit_password->setObjectName(QString::fromUtf8("lineEdit_password"));
+
+        horizontalLayout_2->addWidget(lineEdit_password);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        pushButton_Login = new QPushButton(widget);
+        pushButton_Login->setObjectName(QString::fromUtf8("pushButton_Login"));
+
+        verticalLayout->addWidget(pushButton_Login);
+
         mainwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(mainwindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -59,8 +109,10 @@ public:
     void retranslateUi(QMainWindow *mainwindow)
     {
         mainwindow->setWindowTitle(QCoreApplication::translate("mainwindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("mainwindow", "Buttonik", nullptr));
-        radioButton->setText(QCoreApplication::translate("mainwindow", "RadioButton", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("mainwindow", "Logowanie", nullptr));
+        label->setText(QCoreApplication::translate("mainwindow", "Login", nullptr));
+        label_2->setText(QCoreApplication::translate("mainwindow", "Has\305\202o", nullptr));
+        pushButton_Login->setText(QCoreApplication::translate("mainwindow", "Zaloguj si\304\231", nullptr));
     } // retranslateUi
 
 };

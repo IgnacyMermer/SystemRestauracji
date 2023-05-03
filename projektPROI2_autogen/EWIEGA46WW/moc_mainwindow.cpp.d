@@ -706,7 +706,10 @@
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/QMainWindow \
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/QMessageBox \
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/qdialog.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/qmainwindow.h \
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/qmessagebox.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/qsizepolicy.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/qtabwidget.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Versions/5/Headers/qtwidgets-config.h \
