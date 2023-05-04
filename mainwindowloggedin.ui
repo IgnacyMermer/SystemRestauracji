@@ -1,17 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>mainwindowloggedin</class>
- <widget name="mainwindowloggedin" class="QDialog">
+ <widget class="QDialog" name="mainwindowloggedin">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1039</width>
+    <height>586</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>941</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_YourData">
+        <property name="text">
+         <string>Twoje dane</string>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_YourClients">
+        <property name="text">
+         <string>Twoi klienci</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_closeRestaurant">
+        <property name="text">
+         <string>Zamknij restauracje</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_changeAvailabilityMeals">
+        <property name="text">
+         <string>Zmień dostępność dań</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_changeAvailabilityIngredients">
+        <property name="text">
+         <string>Zmień dostępność produktów</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QListWidget" name="listWidget"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_confirmOrder">
+      <property name="text">
+       <string>Wybierz</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>
