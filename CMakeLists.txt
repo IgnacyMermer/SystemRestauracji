@@ -13,7 +13,8 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(projektPROI2 main.cpp mainwindow.cpp mainwindow.h mainwindow.ui)
+add_executable(projektPROI2 main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
+        mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui)
 include_directories(client)
 add_subdirectory(client)
 include_directories(employees)
