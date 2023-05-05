@@ -21,7 +21,7 @@ FIND_PACKAGE(Boost 1.81 REQUIRED)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
 add_executable(projektPROI2 main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
-        mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui)
+        mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui GetData.cpp GetData.h)
 
 include_directories(client)
 add_subdirectory(client)

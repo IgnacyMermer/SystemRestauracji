@@ -5,6 +5,7 @@
 #include <curlpp/Options.hpp>
 #include <json_spirit.h>
 #include <vector>
+#include "GetData.h"
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -22,36 +23,20 @@ mainwindowloggedin::~mainwindowloggedin()
     delete ui;
 }
 
-size_t write_to_string(void *ptr, size_t size, size_t count, void *stream) {
-    ((string*)stream)->append((char*)ptr, 0, size*count);
-    return size*count;
-}
+
 
 void mainwindowloggedin::on_pushButton_YourData_clicked()
 {
     ui->listWidget->addItem("lalal");
-    cURLpp::Cleanup myCleanup;
-    CURL *curl;
-    CURLcode res;
-    curl = curl_easy_init();
-    curl_easy_setopt(curl, CURLOPT_URL, "https://fakestoreapi.com/products");
+    GetData getData = GetData("https://fakestoreapi.com/products");
+    cout<<getData.getResponse()<<'\n';
 
-    string response;
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_to_string);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
-    res = curl_easy_perform(curl);
-
-    res = curl_easy_perform(curl);
-    cout<<response<<'\n';
-    cout<<res<<'\n';
-    curl_easy_cleanup(curl);
 }
 
 
 void mainwindowloggedin::on_pushButton_YourClients_clicked()
 {
-    cout<<"lala";
-    //ui->listWidget->addItem("lalalal");
+    ui->listWidget->addItem("lalalal");
     string name;
     string jsonStr("{\"name\":\"Tom\", \"lech\":\"tom\", \"array\":{\"lechu\":[1, 2, 3]}");
 
