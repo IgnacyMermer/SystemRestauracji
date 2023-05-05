@@ -5,6 +5,7 @@
 #include <curlpp/Options.hpp>
 #include <json_spirit.h>
 #include <vector>
+#include <string>
 #include "GetData.h"
 
 using namespace curlpp::options;
@@ -38,16 +39,19 @@ void mainwindowloggedin::on_pushButton_YourClients_clicked()
 {
     ui->listWidget->addItem("lalalal");
     string name;
-    string jsonStr("{\"name\":\"Tom\", \"lech\":\"tom\", \"array\":{\"lechu\":[1, 2, 3]}");
+    GetData getData = GetData("http://localhost:3000/src/app.js");
+    cout<<getData.getResponse()<<'\n';
+    //string jsonStr("{\"name\":\"Tom\", \"lech\":\"tom\", \"array\":{\"lechu\":[1, 2, 3]}");
+    string jsonStr(getData.getResponse());
 
     Value value;
 
     read( jsonStr, value );
 
-    QString listItem = QString::fromStdString(to_string(value.get_obj()[2].value_.get_obj()[0].value_.get_array()[2].get_int()));
+    QString listItem = QString::fromStdString(value.get_obj()[0].value_.get_str());
     QString temp = "lalalal";
     ui->listWidget->addItem(listItem);
-    std::cout<<std::to_string(value.get_obj()[2].value_.get_obj()[0].value_.get_array()[2].get_int());
+    std::cout<<value.get_obj()[0].value_.get_str();
 }
 
 
