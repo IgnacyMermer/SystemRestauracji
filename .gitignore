@@ -12,3 +12,5 @@
 ./CPackSourceConfig.cmake
 /json_spirit_v4.08/
 /backend/.env
+/CPackSourceConfig.cmake
+/CPackConfig.cmake

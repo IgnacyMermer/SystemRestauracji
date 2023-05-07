@@ -2,6 +2,8 @@
 #define PROJEKTPROI2_EMPLOYEE_H
 
 #include <iostream>
+#include <vector>
+#include "Task.h"
 
 using namespace std;
 
@@ -11,6 +13,9 @@ public:
 private:
     string name;
     string role;
+    string email;
+    vector<Task> tasks;
+    vector<Task> givenTasks;
 
 };
 

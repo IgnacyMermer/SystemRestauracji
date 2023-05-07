@@ -7,6 +7,9 @@ const signingModel = new mongoose.Schema({
     role: {type: mongoose.Schema.Types.String,
         enum: ['Client', 'Manager', 'Chef', 'ChefHelper', 'Employee'], default: 'Client'},
     login: {type: mongoose.Schema.Types.String, required: true},
+    bonusPoints: {type: mongoose.Schema.Types.Number, required: false},
+    address: {type: mongoose.Schema.Types.String, required: false},
+    email: {type: mongoose.Schema.Types.String, required: false},
 
 }, {timestamps: true});
 

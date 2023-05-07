@@ -11,6 +11,10 @@ public:
     int id;
 private:
     string email;
+    string login;
+    int bonusPoints;
+    string address;
+    string role;
 };
 
 
