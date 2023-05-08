@@ -1,0 +1,112 @@
+{
+	"BUILD_DIR" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/ignacymermer/CLionProjects/projektPROI2",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui",
+	"CMAKE_EXECUTABLE" : "/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/Users/ignacymermer/CLionProjects/projektPROI2/ui/CMakeLists.txt",
+		"/opt/homebrew/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/opt/homebrew/lib/cmake/Qt5/Qt5Config.cmake",
+		"/opt/homebrew/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/opt/homebrew/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/opt/homebrew/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/opt/homebrew/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/opt/homebrew/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/opt/homebrew/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/opt/homebrew/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/Users/ignacymermer/CLionProjects/projektPROI2",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindowloggedin.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/Users/ignacymermer/CLionProjects/projektPROI2/curlpp-0.8.1/include",
+		"/Users/ignacymermer/CLionProjects/projektPROI2/json_spirit_v4.08/json_spirit",
+		"/opt/homebrew/include",
+		"/Users/ignacymermer/CLionProjects/projektPROI2/client",
+		"/Users/ignacymermer/CLionProjects/projektPROI2/employees",
+		"/Users/ignacymermer/CLionProjects/projektPROI2/meals",
+		"/Users/ignacymermer/CLionProjects/projektPROI2/orders",
+		"/Users/ignacymermer/CLionProjects/projektPROI2/ui",
+		"/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtCore.framework",
+		"/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtCore.framework/Headers",
+		"/opt/homebrew/Cellar/qt@5/5.15.8_2/mkspecs/macx-clang",
+		"/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtGui.framework",
+		"/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtGui.framework/Headers",
+		"/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
+		"/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework",
+		"/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers",
+		"/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1",
+		"/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include",
+		"/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include",
+		"/Library/Developer/CommandLineTools/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/Library/Developer/CommandLineTools/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/opt/homebrew/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui/CMakeFiles/projektPROI2_ui_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/opt/homebrew/Cellar/qt@5/5.15.8_2/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/opt/homebrew/Cellar/qt@5/5.15.8_2/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui/CMakeFiles/projektPROI2_ui_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
