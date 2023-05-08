@@ -6,7 +6,8 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_library(projektPROI2_ui mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui
+add_library(projektPROI2_ui yourdata.cpp yourdata.h yourdata.ui
+        mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui
         mainwindow.cpp mainwindow.h mainwindow.ui)
 
 target_link_libraries(projektPROI2_ui

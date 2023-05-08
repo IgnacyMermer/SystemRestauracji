@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o.d"
   "CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/projektPROI2_ui.dir/yourdata.cpp.o"
+  "CMakeFiles/projektPROI2_ui.dir/yourdata.cpp.o.d"
   "libprojektPROI2_ui.a"
   "libprojektPROI2_ui.pdb"
 )

@@ -281,6 +281,30 @@ projektPROI2_ui_autogen/mocs_compilation.cpp.s:
 	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.s
 .PHONY : projektPROI2_ui_autogen/mocs_compilation.cpp.s
 
+yourdata.o: yourdata.cpp.o
+.PHONY : yourdata.o
+
+# target to build an object file
+yourdata.cpp.o:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/yourdata.cpp.o
+.PHONY : yourdata.cpp.o
+
+yourdata.i: yourdata.cpp.i
+.PHONY : yourdata.i
+
+# target to preprocess a source file
+yourdata.cpp.i:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/yourdata.cpp.i
+.PHONY : yourdata.cpp.i
+
+yourdata.s: yourdata.cpp.s
+.PHONY : yourdata.s
+
+# target to generate assembly for a file
+yourdata.cpp.s:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/yourdata.cpp.s
+.PHONY : yourdata.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,6 +330,9 @@ help:
 	@echo "... projektPROI2_ui_autogen/mocs_compilation.o"
 	@echo "... projektPROI2_ui_autogen/mocs_compilation.i"
 	@echo "... projektPROI2_ui_autogen/mocs_compilation.s"
+	@echo "... yourdata.o"
+	@echo "... yourdata.i"
+	@echo "... yourdata.s"
 .PHONY : help
 
 

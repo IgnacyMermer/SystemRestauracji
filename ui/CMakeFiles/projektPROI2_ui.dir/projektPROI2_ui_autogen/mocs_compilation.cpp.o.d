@@ -794,4 +794,6 @@ ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_mainwindowloggedin.cpp \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../mainwindowloggedin.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QDialog \
-  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qdialog.h
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qdialog.h \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_yourdata.cpp \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../yourdata.h

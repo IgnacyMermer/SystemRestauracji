@@ -33,6 +33,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindowloggedin.cpp",
 			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/yourdata.h",
+			"MU",
+			"EWIEGA46WW/moc_yourdata.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -100,6 +106,11 @@
 		],
 		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/yourdata.cpp",
 			"MU",
 			null
 		]
