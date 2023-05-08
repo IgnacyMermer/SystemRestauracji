@@ -5,18 +5,20 @@
 #include <vector>
 #include "Task.h"
 
-using namespace std;
-
 class Employee {
+    int employeeId;
+    std::string employeeName;
+    std::string employeeRole;
+    std::string employeeEmail;
 public:
-    int id;
-private:
-    string name;
-    string role;
-    string email;
-    vector<Task> tasks;
-    vector<Task> givenTasks;
-
+    Employee(int id, std::string name, std::string role, std::string email);
+    int id();
+protected:
+    std::string name();
+    std::string role();
+    std::string email();
+    std::vector<Task> tasks;
+    std::vector<Task> givenTasks;
 };
 
 

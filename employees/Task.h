@@ -2,23 +2,23 @@
 #define PROJEKTPROI2_TASK_H
 #include <iostream>
 
-using namespace std;
-
 class Task {
-public:
-    int id;
-    string taskName;
-    string taskDescription;
+    int taskId;
+    std::string taskName;
+    std::string taskDescription;
     bool done;
-    int priority;
-    Task(int id, string taskName, string taskDescription, int priority):id(id), taskName(taskName),
-    taskDescription(taskDescription), priority(priority){
-        done = false;
-    }
-private:
+    int taskPriority;
+public:
+    Task(int id, std::string name, std::string description, int priority);
+    int id();
+    std::string name();
+    std::string description();
+    bool isDone();
+    int priority();
+protected:
     void setTrueDone();
     void setFalseDone();
-    void updateDescription(string newDescription);
+    void updateDescription(std::string newDescription);
 };
 
 
