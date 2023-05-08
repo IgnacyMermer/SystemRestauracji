@@ -20,8 +20,8 @@ add_subdirectory(json_spirit_v4.08)
 FIND_PACKAGE(Boost 1.81 REQUIRED)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
-add_executable(projektPROI2 main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
-        mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui GetData.cpp GetData.h)
+add_executable(projektPROI2 main.cpp
+        GetData.cpp GetData.h)
 
 include_directories(client)
 add_subdirectory(client)
@@ -31,6 +31,8 @@ include_directories(meals)
 add_subdirectory(meals)
 include_directories(orders)
 add_subdirectory(orders)
+include_directories(ui)
+add_subdirectory(ui)
 
 target_link_libraries(projektPROI2
         Qt5::Core
@@ -40,6 +42,7 @@ target_link_libraries(projektPROI2
         projektPROI2_employee
         projektPROI2_meal
         projektPROI2_order
+        projektPROI2_ui
         curlpp
         json_spirit
         ${Boost_LIBRARIES}
