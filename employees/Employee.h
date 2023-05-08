@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "Task.h"
+//#include "Task.h"
 
 class Employee {
     int employeeId;
@@ -17,8 +17,8 @@ protected:
     std::string name();
     std::string role();
     std::string email();
-    std::vector<Task> tasks;
-    std::vector<Task> givenTasks;
+    //std::vector<Task> tasks;
+    //std::vector<Task> givenTasks;
 };
 
 
