@@ -21,6 +21,7 @@ public:
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, GetData::write_to_string);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
+
         cout<<response;
         res = curl_easy_perform(curl);
         curl_easy_cleanup(curl);

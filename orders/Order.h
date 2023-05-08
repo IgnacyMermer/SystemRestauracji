@@ -11,7 +11,7 @@ using namespace std;
 class Order {
 public:
     int id;
-    Order(int clientId, vector<Meal> meals): clientId(clientId), meals(meals){
+    Order(Client client, vector<Meal> meals): client(client), meals(meals){
         double totalPriceTemp = 0.0;
         for(int i=0; i<meals.size(); i++){
             totalPriceTemp+=meals[i].getPrice();

@@ -4,6 +4,7 @@ const signing = require('../models/signingModel');
 exports.signIn = (req, res, status)=>{
     try{
         //it needs crypting, bcrypt library imo
+        console.log(req.body);
         signing.findOne({login: req.body.login, password: req.body.password}).exec().then(async user=>{
             if(user!=undefined){
                 return res.status(200).json({

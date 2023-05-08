@@ -25,5 +25,6 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
     console.log(err);
 });
 
+app.use('/', signingRoute);
 
 app.listen(3000);

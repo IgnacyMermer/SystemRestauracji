@@ -1,7 +1,3 @@
-//
-// Created by Ignacy Mermer on 07/05/2023.
-//
-
 #ifndef PROJEKTPROI2_TASK_H
 #define PROJEKTPROI2_TASK_H
 #include <iostream>
