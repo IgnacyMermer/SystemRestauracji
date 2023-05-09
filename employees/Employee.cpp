@@ -12,7 +12,7 @@ int Employee::id() {
     return employeeId;
 }
 
-Task Employee::createTask(int id, std::string name, std::string description, int priority) {
+void Employee::createTask(int id, std::string name, std::string description, int priority) {
     Task task = Task(id, name, description, priority);
     // TODO: zapis do DB tasku;
     if (0 == 1) {
@@ -20,7 +20,6 @@ Task Employee::createTask(int id, std::string name, std::string description, int
         exc.setDescription("Info");
         throw exc;
     }
-    return task;
 }
 
 Task Employee::getTask() { // wyswietlanie obecnego tasku 
