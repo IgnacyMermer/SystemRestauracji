@@ -23,6 +23,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewmeal.h",
+			"MU",
+			"EWIEGA46WW/moc_addnewmeal.cpp",
+			null
+		],
+		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -32,6 +38,18 @@
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindowloggedin.cpp",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mealsediting.h",
+			"MU",
+			"EWIEGA46WW/moc_mealsediting.cpp",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/yourclients.h",
+			"MU",
+			"EWIEGA46WW/moc_yourclients.cpp",
 			null
 		],
 		[
@@ -100,12 +118,27 @@
 	"SOURCES" : 
 	[
 		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewmeal.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindow.cpp",
 			"MU",
 			null
 		],
 		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mealsediting.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/yourclients.cpp",
 			"MU",
 			null
 		],

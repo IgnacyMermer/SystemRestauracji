@@ -7,6 +7,9 @@ find_package(Qt5 COMPONENTS
         REQUIRED)
 
 add_library(projektPROI2_ui yourdata.cpp yourdata.h yourdata.ui
+        yourclients.cpp yourclients.h yourclients.ui
+        addnewmeal.cpp addnewmeal.h addnewmeal.ui
+        mealsediting.cpp mealsediting.h mealsediting.ui
         mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui
         mainwindow.cpp mainwindow.h mainwindow.ui)
 
@@ -15,4 +18,3 @@ target_link_libraries(projektPROI2_ui
         Qt5::Gui
         Qt5::Widgets
         )
-

@@ -14,8 +14,8 @@
 /backend/.env
 /CPackSourceConfig.cmake
 /CPackConfig.cmake
-./ui/libprojektPROI2_ui.a
-./ui/cmake_install.cmake
-./ui/Makefile
-./ui/CMakeFiles
-./ui/projektPROI2_ui_autogen
+ui/libprojektPROI2_ui.a
+ui/cmake_install.cmake
+ui/Makefile
+ui/CMakeFiles
+ui/projektPROI2_ui_autogen
