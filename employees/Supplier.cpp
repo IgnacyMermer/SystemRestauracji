@@ -1,10 +1,10 @@
 #include "Employee.h"
-#include "Order.h"
+#include "../orders/Order.h"
 
-class Waiter : public Employee {
+class Supplier : public Employee {
 
 public:
-    Waiter(int id, std::string name, std::string email):Employee(id, name, "Waiter", email){};
+    Supplier(int id, std::string name, std::string email):Employee(id, name, "Supplier", email){};
     int id() {return Employee::id();};
     std::string name() {return Employee::name();};
     std::string email() {return Employee::email();};
@@ -21,13 +21,11 @@ public:
             }
         };
     };
-    void takeOrder(/*parametry potrzebne dla klasy order*/) {
-        //Order order = Order();
-        // zapis order do DB z try catch
+    void deliverOrder(/*parametry potrzebne dla klasy order*/) {
+        // pobranie zamówienia z DB
     }
 private:
-    void giveOrderToChef() {
-        // przekazanie zamówienia szefowi, który to znajdzie wolnego kucharza i jemu zleci przygotowanie posiłku
-        // chef.searchForFreeCook() 
+    void orderDelivered() {
+        // usunięcie zamówienia z DB 
     }
 };

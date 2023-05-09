@@ -2,29 +2,22 @@
 #include <vector>
 #include "../client/Client.h"
 
-
-using namespace std;
-
-void Order::updateTotalPrice() {
-    double totalPriceTemp = 0.0;
-    for(int i=0; i<meals.size(); i++){
-        totalPriceTemp+=meals[i].getPrice();
-    }
-    totalPrice = totalPriceTemp;
+Order::Order(int id, std::vector<int> mealsIds, int clientId, double totalPrice) {
+    orderId = id;
+    orderMealsIds = mealsIds;
+    orderClientId = clientId;
+    orderTotalPrice = totalPrice;
 }
 
-double Order::getTotalPrice() {
-    return totalPrice;
-}
+int Order::id() {return orderId;};
 
-void Order::setDone(bool done) {
-    this->done = done;
-}
+double Order::totalPrice() {return orderTotalPrice;};
 
-Client Order::getClient() {
-    return client;
-}
+std::vector<int> Order::mealsIds() {return orderMealsIds;};
 
-bool Order::getDone() {
-    return done;
-}
+int Order::clientId() {return orderClientId;};
+
+void Order::saveToDB() {
+    // blok try catch
+};
+

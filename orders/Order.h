@@ -6,29 +6,19 @@
 #include <vector>
 #include "../client/Client.h"
 
-using namespace std;
-
 class Order {
+    int orderId;
+    double orderTotalPrice;
+    std::vector<int> orderMealsIds;
+    int orderClientId;
 public:
-    int id;
-    Order(Client client, vector<Meal> meals): client(client), meals(meals){
-        double totalPriceTemp = 0.0;
-        for(int i=0; i<meals.size(); i++){
-            totalPriceTemp+=meals[i].getPrice();
-        }
-        totalPrice = totalPriceTemp;
-    }
-    double getTotalPrice();
-    void updateTotalPrice();
-    void setDone(bool done);
-    Client getClient();
-    bool getDone();
+    Order(int id, std::vector<int> mealsIds, int clientId, double totalPrice);
+    int id();
+    double totalPrice();
+    std::vector<int> mealsIds();
+    int clientId();
+    void saveToDB(); // zapis do DB
 private:
-    vector<Meal> meals;
-    double totalPrice;
-    Client client;
-    bool done;
-
 };
 
 

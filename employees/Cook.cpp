@@ -20,4 +20,9 @@ public:
         };
     };
 private:
+    void giveOrderToSupplier() {
+        // przekazanie zamowienia dostawcy jesli jest wolny
+        // znalezienie wolnego dostawcy
+        // supplier1.deliverOrder();
+    };
 };

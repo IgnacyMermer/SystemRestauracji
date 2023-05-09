@@ -1,20 +1,19 @@
 #ifndef PROJEKTPROI2_CLIENT_H
 #define PROJEKTPROI2_CLIENT_H
 
-#include <iostream>
-
-
-using namespace std;
-
 class Client {
+    int clientId;
+    std::string clientEmail;
+    std::string clientLogin;
+    int clientPonts;
 public:
     int id;
 private:
-    string email;
-    string login;
+    std::string email;
+    std::string login;
     int bonusPoints;
-    string address;
-    string role;
+    std::string address;
+    std::string role;
 };
 
 
