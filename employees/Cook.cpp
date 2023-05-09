@@ -1,4 +1,3 @@
-#include "Task.h"
 #include "Employee.h"
 
 class Cook : public Employee {
@@ -7,13 +6,23 @@ public:
     int id() {return Employee::id();};
     std::string name() {return Employee::name();};
     std::string email() {return Employee::email();};
-    Task createTask(int id, std::string name, std::string description, int priority) {
-        Task task = Task (id, name, description, priority);
-        // TODO: zapis do DB tasku;
-        return task;
+    bool giveTask(int id, std::string name, std::string description, int priority) {
+        // testowy
+        try {
+                createTask(id, name, description, priority);
+            } catch(const myException& e) {
+                std::cerr << e.what() << std::endl;
+                std::cerr << e.showDescription() << std::endl;
+            }
+        
+        //if (hasTask() == true) {return false;}
+        //else {
+            //try {
+                //createTask(id, name, description, priority);
+            //} catch(const myException& e) {
+                //std::cerr << e.what();
+            //}
+        //};
     };
-    Task getTask() { // wyswietlanie obecnego tasku 
-        // TODO: pobieranie z DB danych 
-    }; 
 private:
 };

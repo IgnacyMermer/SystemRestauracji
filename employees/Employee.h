@@ -1,25 +1,32 @@
 #ifndef PROJEKTPROI2_EMPLOYEE_H
 #define PROJEKTPROI2_EMPLOYEE_H
 
-#include <iostream>
 #include <vector>
-//#include "Task.h"
+#include <string>
+#include "Task.h"
+#include "exception.cpp"
 
 class Employee {
     int employeeId;
     std::string employeeName;
     std::string employeeRole;
     std::string employeeEmail;
+    bool employeeTask;
 public:
     Employee(int id, std::string name, std::string role, std::string email);
     int id();
 protected:
+    Task createTask(int id, std::string name, std::string description, int priority);
+    Task getTask();
     std::string name();
     std::string role();
     std::string email();
-    //std::vector<Task> tasks;
-    //std::vector<Task> givenTasks;
+    bool hasTask();
+    std::vector<int> tasks; // podajemy task id
+    std::vector<int> givenTasks; // podajemy task id
 };
+
+
 
 
 #endif //PROJEKTPROI2_EMPLOYEE_H
