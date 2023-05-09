@@ -3,6 +3,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const env = require('dotenv').config();
 const signingRoute = require('./routes/signingRoute');
+const mealsRoute = require('./routes/mealsRoute');
+const taskRoute = require('./routes/taskRoute');
 
 const app = express();
 
@@ -26,5 +28,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 });
 
 app.use('/', signingRoute);
+app.use('/meals', mealsRoute);
+app.use('/task', taskRoute);
 
 app.listen(3000);
