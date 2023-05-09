@@ -20,7 +20,7 @@ add_subdirectory(json_spirit_v4.08)
 FIND_PACKAGE(Boost 1.81 REQUIRED)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
-add_executable(projektPROI2 main.cpp
+add_executable(projektPROI2 main.cpp UserData.cpp UserData.h
         GetData.cpp GetData.h)
 
 include_directories(client)

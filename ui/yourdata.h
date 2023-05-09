@@ -15,6 +15,9 @@ public:
     explicit YourData(QWidget *parent = nullptr);
     ~YourData();
 
+private slots:
+    void on_pushButton_changePassword_clicked();
+
 private:
     Ui::YourData *ui;
 };

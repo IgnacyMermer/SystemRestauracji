@@ -209,6 +209,30 @@ projektPROI2_ui_autogen/fast:
 	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui_autogen.dir/build.make ui/CMakeFiles/projektPROI2_ui_autogen.dir/build
 .PHONY : projektPROI2_ui_autogen/fast
 
+addnewmeal.o: addnewmeal.cpp.o
+.PHONY : addnewmeal.o
+
+# target to build an object file
+addnewmeal.cpp.o:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o
+.PHONY : addnewmeal.cpp.o
+
+addnewmeal.i: addnewmeal.cpp.i
+.PHONY : addnewmeal.i
+
+# target to preprocess a source file
+addnewmeal.cpp.i:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.i
+.PHONY : addnewmeal.cpp.i
+
+addnewmeal.s: addnewmeal.cpp.s
+.PHONY : addnewmeal.s
+
+# target to generate assembly for a file
+addnewmeal.cpp.s:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.s
+.PHONY : addnewmeal.cpp.s
+
 mainwindow.o: mainwindow.cpp.o
 .PHONY : mainwindow.o
 
@@ -257,6 +281,30 @@ mainwindowloggedin.cpp.s:
 	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.s
 .PHONY : mainwindowloggedin.cpp.s
 
+mealsediting.o: mealsediting.cpp.o
+.PHONY : mealsediting.o
+
+# target to build an object file
+mealsediting.cpp.o:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o
+.PHONY : mealsediting.cpp.o
+
+mealsediting.i: mealsediting.cpp.i
+.PHONY : mealsediting.i
+
+# target to preprocess a source file
+mealsediting.cpp.i:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.i
+.PHONY : mealsediting.cpp.i
+
+mealsediting.s: mealsediting.cpp.s
+.PHONY : mealsediting.s
+
+# target to generate assembly for a file
+mealsediting.cpp.s:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.s
+.PHONY : mealsediting.cpp.s
+
 projektPROI2_ui_autogen/mocs_compilation.o: projektPROI2_ui_autogen/mocs_compilation.cpp.o
 .PHONY : projektPROI2_ui_autogen/mocs_compilation.o
 
@@ -280,6 +328,30 @@ projektPROI2_ui_autogen/mocs_compilation.s: projektPROI2_ui_autogen/mocs_compila
 projektPROI2_ui_autogen/mocs_compilation.cpp.s:
 	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.s
 .PHONY : projektPROI2_ui_autogen/mocs_compilation.cpp.s
+
+yourclients.o: yourclients.cpp.o
+.PHONY : yourclients.o
+
+# target to build an object file
+yourclients.cpp.o:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/yourclients.cpp.o
+.PHONY : yourclients.cpp.o
+
+yourclients.i: yourclients.cpp.i
+.PHONY : yourclients.i
+
+# target to preprocess a source file
+yourclients.cpp.i:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/yourclients.cpp.i
+.PHONY : yourclients.cpp.i
+
+yourclients.s: yourclients.cpp.s
+.PHONY : yourclients.s
+
+# target to generate assembly for a file
+yourclients.cpp.s:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/yourclients.cpp.s
+.PHONY : yourclients.cpp.s
 
 yourdata.o: yourdata.cpp.o
 .PHONY : yourdata.o
@@ -321,15 +393,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... projektPROI2_ui_autogen"
 	@echo "... projektPROI2_ui"
+	@echo "... addnewmeal.o"
+	@echo "... addnewmeal.i"
+	@echo "... addnewmeal.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
 	@echo "... mainwindowloggedin.o"
 	@echo "... mainwindowloggedin.i"
 	@echo "... mainwindowloggedin.s"
+	@echo "... mealsediting.o"
+	@echo "... mealsediting.i"
+	@echo "... mealsediting.s"
 	@echo "... projektPROI2_ui_autogen/mocs_compilation.o"
 	@echo "... projektPROI2_ui_autogen/mocs_compilation.i"
 	@echo "... projektPROI2_ui_autogen/mocs_compilation.s"
+	@echo "... yourclients.o"
+	@echo "... yourclients.i"
+	@echo "... yourclients.s"
 	@echo "... yourdata.o"
 	@echo "... yourdata.i"
 	@echo "... yourdata.s"

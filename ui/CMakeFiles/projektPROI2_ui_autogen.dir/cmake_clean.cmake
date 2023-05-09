@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/projektPROI2_ui_autogen"
+  "projektPROI2_ui_autogen/include/ui_addnewmeal.h"
   "projektPROI2_ui_autogen/include/ui_mainwindow.h"
   "projektPROI2_ui_autogen/include/ui_mainwindowloggedin.h"
+  "projektPROI2_ui_autogen/include/ui_mealsediting.h"
+  "projektPROI2_ui_autogen/include/ui_yourclients.h"
   "projektPROI2_ui_autogen/include/ui_yourdata.h"
   "projektPROI2_ui_autogen/mocs_compilation.cpp"
 )
