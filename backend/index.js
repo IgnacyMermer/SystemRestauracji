@@ -17,7 +17,7 @@ app.get('/src/app.js', (req, res, status)=>{
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ibz2cqr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.0qcpvpz.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
     {
         useUnifiedTopology: true,
         useNewUrlParser: true

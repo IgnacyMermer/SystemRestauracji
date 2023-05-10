@@ -1,6 +1,8 @@
 #ifndef PROJEKTPROI2_CLIENT_H
 #define PROJEKTPROI2_CLIENT_H
 
+#include <iostream>
+
 class Client {
     int clientId;
     std::string clientEmail;
