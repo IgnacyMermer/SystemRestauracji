@@ -13,13 +13,13 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>20</y>
-     <width>801</width>
-     <height>481</height>
+     <x>60</x>
+     <y>10</y>
+     <width>871</width>
+     <height>531</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -55,6 +55,13 @@
          <widget class="QListWidget" name="listWidget_ingredientsToChoose"/>
         </item>
         <item>
+         <widget class="QLineEdit" name="lineEdit_newIngredientCount">
+          <property name="placeholderText">
+           <string>Ilość wybranego składnika</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton_addIngredient">
           <property name="text">
            <string>Dodaj składnik</string>
@@ -88,6 +95,13 @@
        </layout>
       </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit_mealPrepareDescription">
+      <property name="placeholderText">
+       <string>Opis przygotowania</string>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton_confirm">

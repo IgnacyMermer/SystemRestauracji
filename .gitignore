@@ -19,3 +19,4 @@ ui/cmake_install.cmake
 ui/Makefile
 ui/CMakeFiles
 ui/projektPROI2_ui_autogen
+/ui/projektPROI2_ui_autogen/

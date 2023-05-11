@@ -7,6 +7,7 @@
 #include <vector>
 #include <string>
 #include "../GetData.h"
+#include "mealsediting.h"
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -63,7 +64,9 @@ void mainwindowloggedin::on_pushButton_closeRestaurant_clicked()
 
 void mainwindowloggedin::on_pushButton_changeAvailabilityMeals_clicked()
 {
-
+    MealsEditing mealsEditing;
+    mealsEditing.setModal(true);
+    mealsEditing.exec();
 }
 
 

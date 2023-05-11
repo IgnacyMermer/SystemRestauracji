@@ -1,5 +1,6 @@
 #include "mealsediting.h"
 #include "ui_mealsediting.h"
+#include "addnewmeal.h"
 
 MealsEditing::MealsEditing(QWidget *parent) :
     QDialog(parent),
@@ -15,7 +16,9 @@ MealsEditing::~MealsEditing()
 
 void MealsEditing::on_pushButton_addNewMeal_clicked()
 {
-
+    AddNewMeal addNewMeal;
+    addNewMeal.setModal(true);
+    addNewMeal.exec();
 }
 
 
