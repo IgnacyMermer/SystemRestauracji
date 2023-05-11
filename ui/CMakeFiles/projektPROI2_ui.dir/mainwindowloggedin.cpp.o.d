@@ -1468,4 +1468,5 @@ ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o: \
   /Users/ignacymermer/CLionProjects/projektPROI2/json_spirit_v4.08/json_spirit/json_spirit_writer.h \
   /Users/ignacymermer/CLionProjects/projektPROI2/json_spirit_v4.08/json_spirit/json_spirit_writer_options.h \
   /Users/ignacymermer/CLionProjects/projektPROI2/json_spirit_v4.08/json_spirit/json_spirit_utils.h \
-  /Users/ignacymermer/CLionProjects/projektPROI2/ui/../GetData.h
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/../GetData.h \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/mealsediting.h

@@ -125,10 +125,24 @@ ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.s"
 	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewmeal.cpp -o CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.s
 
+ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/flags.make
+ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o: ui/addnewdrinksauce.cpp
+ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o"
+	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o -MF CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o.d -o CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o -c /Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewdrinksauce.cpp
+
+ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.i"
+	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewdrinksauce.cpp > CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.i
+
+ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.s"
+	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewdrinksauce.cpp -o CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.s
+
 ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/flags.make
 ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o: ui/mealsediting.cpp
 ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o"
 	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o -MF CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o.d -o CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o -c /Users/ignacymermer/CLionProjects/projektPROI2/ui/mealsediting.cpp
 
 ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.i: cmake_force
@@ -142,7 +156,7 @@ ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.s: cmake_force
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/flags.make
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o: ui/mainwindowloggedin.cpp
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o"
 	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o -MF CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o.d -o CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o -c /Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.cpp
 
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.i: cmake_force
@@ -156,7 +170,7 @@ ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.s: cmake_force
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/flags.make
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o: ui/mainwindow.cpp
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o: ui/CMakeFiles/projektPROI2_ui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o"
 	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o -MF CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o.d -o CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o -c /Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindow.cpp
 
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.i: cmake_force
@@ -173,6 +187,7 @@ projektPROI2_ui_OBJECTS = \
 "CMakeFiles/projektPROI2_ui.dir/yourdata.cpp.o" \
 "CMakeFiles/projektPROI2_ui.dir/yourclients.cpp.o" \
 "CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o" \
+"CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o" \
 "CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o" \
 "CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o" \
 "CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o"
@@ -184,12 +199,13 @@ ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autog
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/yourdata.cpp.o
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/yourclients.cpp.o
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o
+ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/build.make
 ui/libprojektPROI2_ui.a: ui/CMakeFiles/projektPROI2_ui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libprojektPROI2_ui.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ignacymermer/CLionProjects/projektPROI2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libprojektPROI2_ui.a"
 	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && $(CMAKE_COMMAND) -P CMakeFiles/projektPROI2_ui.dir/cmake_clean_target.cmake
 	cd /Users/ignacymermer/CLionProjects/projektPROI2/ui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projektPROI2_ui.dir/link.txt --verbose=$(VERBOSE)
 

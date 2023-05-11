@@ -1,6 +1,6 @@
 ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o: \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/mocs_compilation.cpp \
-  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_addnewmeal.cpp \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_addnewdrinksauce.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h \
@@ -444,7 +444,7 @@ ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/wrap_iter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/assert.h \
-  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../addnewmeal.h \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../addnewdrinksauce.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
@@ -786,6 +786,8 @@ ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
   /opt/homebrew/include/QtGui/qcursor.h \
   /opt/homebrew/include/QtGui/qkeysequence.h \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_addnewmeal.cpp \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../addnewmeal.h \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_mainwindow.cpp \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../mainwindow.h \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QMainWindow \

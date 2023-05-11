@@ -41,6 +41,13 @@
      </widget>
     </item>
     <item>
+     <widget class="QPushButton" name="pushButton_addNewDrinkSauce">
+      <property name="text">
+       <string>Dodaj nowy napój/sos</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QListWidget" name="listWidget_meals"/>
     </item>
     <item>

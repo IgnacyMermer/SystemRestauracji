@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/projektPROI2_ui_autogen"
+  "projektPROI2_ui_autogen/include/ui_addnewdrinksauce.h"
   "projektPROI2_ui_autogen/include/ui_addnewmeal.h"
   "projektPROI2_ui_autogen/include/ui_mainwindow.h"
   "projektPROI2_ui_autogen/include/ui_mainwindowloggedin.h"

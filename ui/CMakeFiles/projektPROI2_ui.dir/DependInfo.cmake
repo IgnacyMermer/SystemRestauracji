@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewdrinksauce.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewmeal.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindow.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o.d"

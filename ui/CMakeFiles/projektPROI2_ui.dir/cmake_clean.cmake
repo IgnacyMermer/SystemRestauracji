@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/projektPROI2_ui_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/projektPROI2_ui_autogen.dir/ParseCache.txt"
   "projektPROI2_ui_autogen"
+  "CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o"
+  "CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o.d"
   "CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o"
   "CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o.d"
   "CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o"

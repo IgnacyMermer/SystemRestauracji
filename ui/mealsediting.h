@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_addNewMeal_clicked();
 
+    void on_pushButton_addNewDrinkSauce_clicked();
+
     void on_pushButton_editMeal_clicked();
 
     void on_pushButton_changeAvailabilityMeal_clicked();

@@ -23,6 +23,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewdrinksauce.h",
+			"MU",
+			"EWIEGA46WW/moc_addnewdrinksauce.cpp",
+			null
+		],
+		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewmeal.h",
 			"MU",
 			"EWIEGA46WW/moc_addnewmeal.cpp",
@@ -117,6 +123,11 @@
 	"SETTINGS_FILE" : "/Users/ignacymermer/CLionProjects/projektPROI2/ui/CMakeFiles/projektPROI2_ui_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewdrinksauce.cpp",
+			"MU",
+			null
+		],
 		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewmeal.cpp",
 			"MU",

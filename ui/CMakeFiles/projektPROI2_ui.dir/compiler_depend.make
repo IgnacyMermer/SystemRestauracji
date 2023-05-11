@@ -841,9 +841,648 @@ ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o: ui/addnewmeal.cpp \
   /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/QPushButton \
   /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /opt/homebrew/include/QtWidgets/QTextEdit \
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qtextedit.h \
+  /opt/homebrew/include/QtGui/qtextdocument.h \
+  /opt/homebrew/include/QtCore/qurl.h \
   /opt/homebrew/include/QtWidgets/QVBoxLayout \
   /opt/homebrew/include/QtWidgets/QWidget \
-  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qwidget.h
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qwidget.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ios \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__locale \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/locale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_locale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_xlocale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/__wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/istream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdarg \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/streambuf \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/nl_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_u_char.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_u_short.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_u_int.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_caddr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_blkcnt_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_blksize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_gid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_in_addr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_in_port_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_ino_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_ino64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_key_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_nlink_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_useconds_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_suseconds_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fd_def.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fd_setsize.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fd_set.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fd_clr.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fd_zero.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fd_isset.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fd_copy.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
+  curlpp-0.8.1/include/curlpp/cURLpp.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/curl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/curlver.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/system.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/socket.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/constrained_ctypes.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/machine/_param.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/arm/_param.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/net/net_kev.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_sa_family_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_socklen_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_iovec_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_timeval64.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_select.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/easy.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/multi.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/urlapi.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/header.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/websockets.h \
+  curlpp-0.8.1/include/curlpp/Options.hpp \
+  curlpp-0.8.1/include/curlpp/Option.hpp \
+  curlpp-0.8.1/include/curlpp/internal/OptionContainer.hpp \
+  curlpp-0.8.1/include/curlpp/internal/OptionContainerType.hpp \
+  curlpp-0.8.1/include/curlpp/internal/SList.hpp \
+  curlpp-0.8.1/include/curlpp/Form.hpp \
+  curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
+  curlpp-0.8.1/include/curlpp/Types.hpp \
+  curlpp-0.8.1/include/curlpp/internal/OptionContainer.inl \
+  curlpp-0.8.1/include/curlpp/OptionBase.hpp \
+  curlpp-0.8.1/include/curlpp/Option.inl \
+  curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp \
+  curlpp-0.8.1/include/curlpp/internal/CurlHandle.hpp \
+  curlpp-0.8.1/include/curlpp/Exception.hpp \
+  curlpp-0.8.1/include/curlpp/internal/CurlHandle.inl \
+  curlpp-0.8.1/include/curlpp/internal/OptionSetter.inl \
+  curlpp-0.8.1/include/curlpp/Exception.hpp \
+  json_spirit_v4.08/json_spirit/json_spirit.h \
+  json_spirit_v4.08/json_spirit/json_spirit_value.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/sstream \
+  /opt/homebrew/include/boost/config.hpp \
+  /opt/homebrew/include/boost/config/user.hpp \
+  /opt/homebrew/include/boost/config/detail/select_compiler_config.hpp \
+  /opt/homebrew/include/boost/config/compiler/clang.hpp \
+  /opt/homebrew/include/boost/config/compiler/clang_version.hpp \
+  /opt/homebrew/include/boost/config/detail/select_stdlib_config.hpp \
+  /opt/homebrew/include/boost/config/stdlib/libcpp.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/shared_mutex \
+  /opt/homebrew/include/boost/config/detail/select_platform_config.hpp \
+  /opt/homebrew/include/boost/config/platform/macos.hpp \
+  /opt/homebrew/include/boost/config/detail/posix_features.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/unistd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/unistd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_posix_vdisable.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_seek_set.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/select.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_uuid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/gethostuuid.h \
+  /opt/homebrew/include/boost/config/detail/suffix.hpp \
+  /opt/homebrew/include/boost/config/helper_macros.hpp \
+  /opt/homebrew/include/boost/config/detail/cxx_composite.hpp \
+  /opt/homebrew/include/boost/cstdint.hpp \
+  /opt/homebrew/include/boost/shared_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp \
+  /opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /opt/homebrew/include/boost/core/checked_delete.hpp \
+  /opt/homebrew/include/boost/core/addressof.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /opt/homebrew/include/boost/throw_exception.hpp \
+  /opt/homebrew/include/boost/exception/exception.hpp \
+  /opt/homebrew/include/boost/assert/source_location.hpp \
+  /opt/homebrew/include/boost/current_function.hpp \
+  /opt/homebrew/include/boost/config/workaround.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /opt/homebrew/include/boost/assert.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /opt/homebrew/include/boost/config/pragma_message.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /opt/homebrew/include/boost/variant.hpp \
+  /opt/homebrew/include/boost/variant/variant.hpp \
+  /opt/homebrew/include/boost/type_index.hpp \
+  /opt/homebrew/include/boost/type_index/stl_type_index.hpp \
+  /opt/homebrew/include/boost/type_index/type_index_facade.hpp \
+  /opt/homebrew/include/boost/container_hash/hash_fwd.hpp \
+  /opt/homebrew/include/boost/static_assert.hpp \
+  /opt/homebrew/include/boost/detail/workaround.hpp \
+  /opt/homebrew/include/boost/core/demangle.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cxxabi.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__cxxabi_config.h \
+  /opt/homebrew/include/boost/type_traits/conditional.hpp \
+  /opt/homebrew/include/boost/type_traits/is_const.hpp \
+  /opt/homebrew/include/boost/type_traits/integral_constant.hpp \
+  /opt/homebrew/include/boost/type_traits/is_reference.hpp \
+  /opt/homebrew/include/boost/type_traits/is_lvalue_reference.hpp \
+  /opt/homebrew/include/boost/type_traits/is_rvalue_reference.hpp \
+  /opt/homebrew/include/boost/type_traits/is_volatile.hpp \
+  /opt/homebrew/include/boost/type_traits/remove_cv.hpp \
+  /opt/homebrew/include/boost/type_traits/remove_reference.hpp \
+  /opt/homebrew/include/boost/container_hash/hash.hpp \
+  /opt/homebrew/include/boost/container_hash/is_range.hpp \
+  /opt/homebrew/include/boost/type_traits/is_integral.hpp \
+  /opt/homebrew/include/boost/type_traits/declval.hpp \
+  /opt/homebrew/include/boost/type_traits/add_rvalue_reference.hpp \
+  /opt/homebrew/include/boost/type_traits/is_void.hpp \
+  /opt/homebrew/include/boost/type_traits/is_same.hpp \
+  /opt/homebrew/include/boost/container_hash/is_contiguous_range.hpp \
+  /opt/homebrew/include/boost/container_hash/is_unordered_range.hpp \
+  /opt/homebrew/include/boost/container_hash/is_described_class.hpp \
+  /opt/homebrew/include/boost/type_traits/is_union.hpp \
+  /opt/homebrew/include/boost/type_traits/intrinsics.hpp \
+  /opt/homebrew/include/boost/type_traits/detail/config.hpp \
+  /opt/homebrew/include/boost/version.hpp \
+  /opt/homebrew/include/boost/describe/bases.hpp \
+  /opt/homebrew/include/boost/describe/modifiers.hpp \
+  /opt/homebrew/include/boost/describe/detail/config.hpp \
+  /opt/homebrew/include/boost/describe/detail/void_t.hpp \
+  /opt/homebrew/include/boost/mp11/algorithm.hpp \
+  /opt/homebrew/include/boost/mp11/list.hpp \
+  /opt/homebrew/include/boost/mp11/integral.hpp \
+  /opt/homebrew/include/boost/mp11/version.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_list.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_is_list.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_append.hpp \
+  /opt/homebrew/include/boost/mp11/utility.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_fold.hpp \
+  /opt/homebrew/include/boost/mp11/detail/config.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_front.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_rename.hpp \
+  /opt/homebrew/include/boost/mp11/set.hpp \
+  /opt/homebrew/include/boost/mp11/function.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_count.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_plus.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_min_element.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_void.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_copy_if.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_remove_if.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_map_find.hpp \
+  /opt/homebrew/include/boost/mp11/detail/mp_with_index.hpp \
+  /opt/homebrew/include/boost/mp11/integer_sequence.hpp \
+  /opt/homebrew/include/boost/describe/members.hpp \
+  /opt/homebrew/include/boost/describe/detail/cx_streq.hpp \
+  /opt/homebrew/include/boost/mp11/bind.hpp \
+  /opt/homebrew/include/boost/container_hash/detail/hash_tuple.hpp \
+  /opt/homebrew/include/boost/type_traits/enable_if.hpp \
+  /opt/homebrew/include/boost/container_hash/detail/hash_mix.hpp \
+  /opt/homebrew/include/boost/container_hash/detail/hash_range.hpp \
+  /opt/homebrew/include/boost/type_traits/is_enum.hpp \
+  /opt/homebrew/include/boost/type_traits/is_floating_point.hpp \
+  /opt/homebrew/include/boost/type_traits/is_signed.hpp \
+  /opt/homebrew/include/boost/type_traits/is_unsigned.hpp \
+  /opt/homebrew/include/boost/type_traits/make_unsigned.hpp \
+  /opt/homebrew/include/boost/type_traits/add_const.hpp \
+  /opt/homebrew/include/boost/type_traits/add_volatile.hpp \
+  /opt/homebrew/include/boost/type_traits/conjunction.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/complex \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/typeindex \
+  /opt/homebrew/include/boost/variant/detail/config.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/value_wknd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/static_cast.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/workaround.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/integral.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/msvc.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/eti.hpp \
+  /opt/homebrew/include/boost/variant/variant_fwd.hpp \
+  /opt/homebrew/include/boost/blank_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/arg.hpp \
+  /opt/homebrew/include/boost/mpl/arg_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/adl_barrier.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/adl.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/intel.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/gcc.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/nttp_decl.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/nttp.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/na.hpp \
+  /opt/homebrew/include/boost/mpl/bool.hpp \
+  /opt/homebrew/include/boost/mpl/bool_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/integral_c_tag.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/static_constant.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/na_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/ctps.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/na_assert.hpp \
+  /opt/homebrew/include/boost/mpl/assert.hpp \
+  /opt/homebrew/include/boost/mpl/not.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/na_spec.hpp \
+  /opt/homebrew/include/boost/mpl/lambda_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/void_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/lambda.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/ttp.hpp \
+  /opt/homebrew/include/boost/mpl/int.hpp \
+  /opt/homebrew/include/boost/mpl/int_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/integral_wrapper.hpp \
+  /opt/homebrew/include/boost/preprocessor/cat.hpp \
+  /opt/homebrew/include/boost/preprocessor/config/config.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/lambda_arity_param.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/template_arity_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/arity.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/dtp.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessor/params.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/preprocessor.hpp \
+  /opt/homebrew/include/boost/preprocessor/comma_if.hpp \
+  /opt/homebrew/include/boost/preprocessor/punctuation/comma_if.hpp \
+  /opt/homebrew/include/boost/preprocessor/control/if.hpp \
+  /opt/homebrew/include/boost/preprocessor/control/iif.hpp \
+  /opt/homebrew/include/boost/preprocessor/logical/bool.hpp \
+  /opt/homebrew/include/boost/preprocessor/config/limits.hpp \
+  /opt/homebrew/include/boost/preprocessor/logical/limits/bool_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/facilities/empty.hpp \
+  /opt/homebrew/include/boost/preprocessor/punctuation/comma.hpp \
+  /opt/homebrew/include/boost/preprocessor/repeat.hpp \
+  /opt/homebrew/include/boost/preprocessor/repetition/repeat.hpp \
+  /opt/homebrew/include/boost/preprocessor/debug/error.hpp \
+  /opt/homebrew/include/boost/preprocessor/detail/auto_rec.hpp \
+  /opt/homebrew/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/tuple/eat.hpp \
+  /opt/homebrew/include/boost/preprocessor/repetition/limits/repeat_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/inc.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/inc.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessor/enum.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
+  /opt/homebrew/include/boost/mpl/limits/arity.hpp \
+  /opt/homebrew/include/boost/preprocessor/logical/and.hpp \
+  /opt/homebrew/include/boost/preprocessor/logical/bitand.hpp \
+  /opt/homebrew/include/boost/preprocessor/identity.hpp \
+  /opt/homebrew/include/boost/preprocessor/facilities/identity.hpp \
+  /opt/homebrew/include/boost/preprocessor/empty.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/add.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/dec.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/control/while.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/fold_left.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/detail/fold_left.hpp \
+  /opt/homebrew/include/boost/preprocessor/control/expr_iif.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/adt.hpp \
+  /opt/homebrew/include/boost/preprocessor/detail/is_binary.hpp \
+  /opt/homebrew/include/boost/preprocessor/detail/check.hpp \
+  /opt/homebrew/include/boost/preprocessor/logical/compl.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/limits/fold_left_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/fold_right.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/detail/fold_right.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/reverse.hpp \
+  /opt/homebrew/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/control/detail/while.hpp \
+  /opt/homebrew/include/boost/preprocessor/control/detail/limits/while_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/control/limits/while_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/logical/bitor.hpp \
+  /opt/homebrew/include/boost/preprocessor/tuple/elem.hpp \
+  /opt/homebrew/include/boost/preprocessor/facilities/expand.hpp \
+  /opt/homebrew/include/boost/preprocessor/facilities/overload.hpp \
+  /opt/homebrew/include/boost/preprocessor/variadic/size.hpp \
+  /opt/homebrew/include/boost/preprocessor/facilities/check_empty.hpp \
+  /opt/homebrew/include/boost/preprocessor/variadic/has_opt.hpp \
+  /opt/homebrew/include/boost/preprocessor/variadic/limits/size_64.hpp \
+  /opt/homebrew/include/boost/preprocessor/tuple/rem.hpp \
+  /opt/homebrew/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
+  /opt/homebrew/include/boost/preprocessor/variadic/elem.hpp \
+  /opt/homebrew/include/boost/preprocessor/variadic/limits/elem_64.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
+  /opt/homebrew/include/boost/preprocessor/comparison/equal.hpp \
+  /opt/homebrew/include/boost/preprocessor/comparison/not_equal.hpp \
+  /opt/homebrew/include/boost/preprocessor/comparison/limits/not_equal_256.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
+  /opt/homebrew/include/boost/preprocessor/logical/not.hpp \
+  /opt/homebrew/include/boost/preprocessor/arithmetic/sub.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/overload_resolution.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/lambda_support.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/yes_no.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/arrays.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/gpu.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/pp_counter.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/arity_spec.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/arg_typedef.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/use_preprocessed.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/include_preprocessed.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/compiler.hpp \
+  /opt/homebrew/include/boost/preprocessor/stringize.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  /opt/homebrew/include/boost/preprocessor/enum.hpp \
+  /opt/homebrew/include/boost/preprocessor/repetition/enum.hpp \
+  /opt/homebrew/include/boost/preprocessor/enum_params.hpp \
+  /opt/homebrew/include/boost/preprocessor/repetition/enum_params.hpp \
+  /opt/homebrew/include/boost/preprocessor/enum_shifted_params.hpp \
+  /opt/homebrew/include/boost/preprocessor/repetition/enum_shifted_params.hpp \
+  /opt/homebrew/include/boost/variant/detail/substitute_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/template_arity.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/type_wrapper.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
+  /opt/homebrew/include/boost/preprocessor/seq/size.hpp \
+  /opt/homebrew/include/boost/preprocessor/seq/limits/size_256.hpp \
+  /opt/homebrew/include/boost/variant/detail/backup_holder.hpp \
+  /opt/homebrew/include/boost/variant/detail/enable_recursive_fwd.hpp \
+  /opt/homebrew/include/boost/variant/detail/forced_return.hpp \
+  /opt/homebrew/include/boost/variant/detail/initializer.hpp \
+  /opt/homebrew/include/boost/call_traits.hpp \
+  /opt/homebrew/include/boost/detail/call_traits.hpp \
+  /opt/homebrew/include/boost/type_traits/is_arithmetic.hpp \
+  /opt/homebrew/include/boost/type_traits/is_pointer.hpp \
+  /opt/homebrew/include/boost/detail/reference_content.hpp \
+  /opt/homebrew/include/boost/type_traits/has_nothrow_copy.hpp \
+  /opt/homebrew/include/boost/type_traits/is_copy_constructible.hpp \
+  /opt/homebrew/include/boost/type_traits/is_constructible.hpp \
+  /opt/homebrew/include/boost/type_traits/is_destructible.hpp \
+  /opt/homebrew/include/boost/type_traits/is_complete.hpp \
+  /opt/homebrew/include/boost/type_traits/is_function.hpp \
+  /opt/homebrew/include/boost/type_traits/detail/is_function_cxx_11.hpp \
+  /opt/homebrew/include/boost/type_traits/detail/yes_no_type.hpp \
+  /opt/homebrew/include/boost/type_traits/is_default_constructible.hpp \
+  /opt/homebrew/include/boost/type_traits/is_array.hpp \
+  /opt/homebrew/include/boost/variant/recursive_wrapper_fwd.hpp \
+  /opt/homebrew/include/boost/type_traits/is_nothrow_move_constructible.hpp \
+  /opt/homebrew/include/boost/variant/detail/move.hpp \
+  /opt/homebrew/include/boost/move/utility_core.hpp \
+  /opt/homebrew/include/boost/move/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/move/detail/workaround.hpp \
+  /opt/homebrew/include/boost/move/core.hpp \
+  /opt/homebrew/include/boost/move/detail/config_end.hpp \
+  /opt/homebrew/include/boost/move/detail/meta_utils.hpp \
+  /opt/homebrew/include/boost/move/detail/meta_utils_core.hpp \
+  /opt/homebrew/include/boost/move/detail/addressof.hpp \
+  /opt/homebrew/include/boost/move/adl_move_swap.hpp \
+  /opt/homebrew/include/boost/mpl/iter_fold.hpp \
+  /opt/homebrew/include/boost/mpl/begin_end.hpp \
+  /opt/homebrew/include/boost/mpl/begin_end_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/begin_end_impl.hpp \
+  /opt/homebrew/include/boost/mpl/sequence_tag_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/void.hpp \
+  /opt/homebrew/include/boost/mpl/eval_if.hpp \
+  /opt/homebrew/include/boost/mpl/if.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/has_begin.hpp \
+  /opt/homebrew/include/boost/mpl/has_xxx.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/has_xxx.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/msvc_typename.hpp \
+  /opt/homebrew/include/boost/preprocessor/array/elem.hpp \
+  /opt/homebrew/include/boost/preprocessor/array/data.hpp \
+  /opt/homebrew/include/boost/preprocessor/array/size.hpp \
+  /opt/homebrew/include/boost/preprocessor/repetition/enum_trailing_params.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/traits_lambda_spec.hpp \
+  /opt/homebrew/include/boost/mpl/sequence_tag.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/has_tag.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/is_msvc_eti_arg.hpp \
+  /opt/homebrew/include/boost/mpl/O1_size.hpp \
+  /opt/homebrew/include/boost/mpl/O1_size_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/O1_size_impl.hpp \
+  /opt/homebrew/include/boost/mpl/long.hpp \
+  /opt/homebrew/include/boost/mpl/long_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/has_size.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/forwarding.hpp \
+  /opt/homebrew/include/boost/mpl/lambda.hpp \
+  /opt/homebrew/include/boost/mpl/bind.hpp \
+  /opt/homebrew/include/boost/mpl/bind_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/bind.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/placeholders.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  /opt/homebrew/include/boost/mpl/next.hpp \
+  /opt/homebrew/include/boost/mpl/next_prior.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/common_name_wknd.hpp \
+  /opt/homebrew/include/boost/mpl/protect.hpp \
+  /opt/homebrew/include/boost/mpl/apply_wrap.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/has_apply.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/has_apply.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/msvc_never_true.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/full_lambda.hpp \
+  /opt/homebrew/include/boost/mpl/quote.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/has_type.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/config/bcc.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/iter_fold_impl.hpp \
+  /opt/homebrew/include/boost/mpl/apply.hpp \
+  /opt/homebrew/include/boost/mpl/apply_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp \
+  /opt/homebrew/include/boost/mpl/deref.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/msvc_type.hpp \
+  /opt/homebrew/include/boost/mpl/pair.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/msvc_eti_base.hpp \
+  /opt/homebrew/include/boost/variant/detail/make_variant_list.hpp \
+  /opt/homebrew/include/boost/mpl/list.hpp \
+  /opt/homebrew/include/boost/mpl/limits/list.hpp \
+  /opt/homebrew/include/boost/mpl/list/list20.hpp \
+  /opt/homebrew/include/boost/mpl/list/list10.hpp \
+  /opt/homebrew/include/boost/mpl/list/list0.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/push_front.hpp \
+  /opt/homebrew/include/boost/mpl/push_front_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/item.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/tag.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/pop_front.hpp \
+  /opt/homebrew/include/boost/mpl/pop_front_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/push_back.hpp \
+  /opt/homebrew/include/boost/mpl/push_back_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/front.hpp \
+  /opt/homebrew/include/boost/mpl/front_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/clear.hpp \
+  /opt/homebrew/include/boost/mpl/clear_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/O1_size.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/size.hpp \
+  /opt/homebrew/include/boost/mpl/size_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/empty.hpp \
+  /opt/homebrew/include/boost/mpl/empty_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/begin_end.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/iterator.hpp \
+  /opt/homebrew/include/boost/mpl/iterator_tags.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/lambda_spec.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/include_preprocessed.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/preprocessed/plain/list10.hpp \
+  /opt/homebrew/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/list.hpp \
+  /opt/homebrew/include/boost/variant/detail/over_sequence.hpp \
+  /opt/homebrew/include/boost/variant/detail/visitation_impl.hpp \
+  /opt/homebrew/include/boost/variant/detail/cast_storage.hpp \
+  /opt/homebrew/include/boost/mpl/identity.hpp \
+  /opt/homebrew/include/boost/mpl/or.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /opt/homebrew/include/boost/variant/detail/hash_variant.hpp \
+  /opt/homebrew/include/boost/variant/static_visitor.hpp \
+  /opt/homebrew/include/boost/type_traits/is_base_and_derived.hpp \
+  /opt/homebrew/include/boost/variant/apply_visitor.hpp \
+  /opt/homebrew/include/boost/variant/detail/apply_visitor_unary.hpp \
+  /opt/homebrew/include/boost/move/utility.hpp \
+  /opt/homebrew/include/boost/move/traits.hpp \
+  /opt/homebrew/include/boost/move/detail/type_traits.hpp \
+  /opt/homebrew/include/boost/mpl/distance.hpp \
+  /opt/homebrew/include/boost/mpl/distance_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/iterator_range.hpp \
+  /opt/homebrew/include/boost/mpl/tag.hpp \
+  /opt/homebrew/include/boost/mpl/advance.hpp \
+  /opt/homebrew/include/boost/mpl/advance_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/less.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/comparison_op.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/numeric_op.hpp \
+  /opt/homebrew/include/boost/mpl/numeric_cast.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/numeric_cast_utils.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/less.hpp \
+  /opt/homebrew/include/boost/mpl/negate.hpp \
+  /opt/homebrew/include/boost/mpl/integral_c.hpp \
+  /opt/homebrew/include/boost/mpl/integral_c_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/advance_forward.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/advance_backward.hpp \
+  /opt/homebrew/include/boost/mpl/prior.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp \
+  /opt/homebrew/include/boost/mpl/size.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/size_impl.hpp \
+  /opt/homebrew/include/boost/utility/declval.hpp \
+  /opt/homebrew/include/boost/core/enable_if.hpp \
+  /opt/homebrew/include/boost/type_traits/copy_cv_ref.hpp \
+  /opt/homebrew/include/boost/type_traits/copy_cv.hpp \
+  /opt/homebrew/include/boost/type_traits/copy_reference.hpp \
+  /opt/homebrew/include/boost/type_traits/add_lvalue_reference.hpp \
+  /opt/homebrew/include/boost/type_traits/add_reference.hpp \
+  /opt/homebrew/include/boost/variant/detail/has_result_type.hpp \
+  /opt/homebrew/include/boost/variant/detail/apply_visitor_binary.hpp \
+  /opt/homebrew/include/boost/variant/detail/apply_visitor_delayed.hpp \
+  /opt/homebrew/include/boost/functional/hash_fwd.hpp \
+  /opt/homebrew/include/boost/variant/detail/std_hash.hpp \
+  /opt/homebrew/include/boost/blank.hpp \
+  /opt/homebrew/include/boost/detail/templated_streams.hpp \
+  /opt/homebrew/include/boost/type_traits/is_empty.hpp \
+  /opt/homebrew/include/boost/type_traits/is_convertible.hpp \
+  /opt/homebrew/include/boost/type_traits/is_class.hpp \
+  /opt/homebrew/include/boost/type_traits/is_pod.hpp \
+  /opt/homebrew/include/boost/type_traits/is_scalar.hpp \
+  /opt/homebrew/include/boost/type_traits/is_member_pointer.hpp \
+  /opt/homebrew/include/boost/type_traits/is_member_function_pointer.hpp \
+  /opt/homebrew/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+  /opt/homebrew/include/boost/type_traits/is_stateless.hpp \
+  /opt/homebrew/include/boost/type_traits/has_trivial_constructor.hpp \
+  /opt/homebrew/include/boost/type_traits/has_trivial_copy.hpp \
+  /opt/homebrew/include/boost/type_traits/has_trivial_destructor.hpp \
+  /opt/homebrew/include/boost/integer/common_factor_ct.hpp \
+  /opt/homebrew/include/boost/integer_fwd.hpp \
+  /opt/homebrew/include/boost/limits.hpp \
+  /opt/homebrew/include/boost/type_traits/aligned_storage.hpp \
+  /opt/homebrew/include/boost/type_traits/alignment_of.hpp \
+  /opt/homebrew/include/boost/type_traits/type_with_alignment.hpp \
+  /opt/homebrew/include/boost/type_traits/has_nothrow_constructor.hpp \
+  /opt/homebrew/include/boost/type_traits/is_nothrow_move_assignable.hpp \
+  /opt/homebrew/include/boost/type_traits/has_trivial_move_assign.hpp \
+  /opt/homebrew/include/boost/type_traits/is_assignable.hpp \
+  /opt/homebrew/include/boost/type_traits/has_nothrow_assign.hpp \
+  /opt/homebrew/include/boost/core/no_exceptions_support.hpp \
+  /opt/homebrew/include/boost/mpl/empty.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/empty_impl.hpp \
+  /opt/homebrew/include/boost/mpl/find_if.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/find_if_pred.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/iter_apply.hpp \
+  /opt/homebrew/include/boost/mpl/iter_fold_if.hpp \
+  /opt/homebrew/include/boost/mpl/logical.hpp \
+  /opt/homebrew/include/boost/mpl/and.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  /opt/homebrew/include/boost/mpl/always.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessor/default_params.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/iter_fold_if_impl.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp \
+  /opt/homebrew/include/boost/mpl/fold.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/fold_impl.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp \
+  /opt/homebrew/include/boost/mpl/front.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/front_impl.hpp \
+  /opt/homebrew/include/boost/mpl/insert_range.hpp \
+  /opt/homebrew/include/boost/mpl/insert_range_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/insert_range_impl.hpp \
+  /opt/homebrew/include/boost/mpl/insert.hpp \
+  /opt/homebrew/include/boost/mpl/insert_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/insert_impl.hpp \
+  /opt/homebrew/include/boost/mpl/reverse_fold.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/reverse_fold_impl.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp \
+  /opt/homebrew/include/boost/mpl/clear.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/clear_impl.hpp \
+  /opt/homebrew/include/boost/mpl/push_front.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/push_front_impl.hpp \
+  /opt/homebrew/include/boost/mpl/joint_view.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/joint_iter.hpp \
+  /opt/homebrew/include/boost/mpl/plus.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/arithmetic_op.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/largest_int.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/iter_push_front.hpp \
+  /opt/homebrew/include/boost/type_traits/same_traits.hpp \
+  /opt/homebrew/include/boost/mpl/is_sequence.hpp \
+  /opt/homebrew/include/boost/mpl/max_element.hpp \
+  /opt/homebrew/include/boost/mpl/same_as.hpp \
+  /opt/homebrew/include/boost/mpl/size_t.hpp \
+  /opt/homebrew/include/boost/mpl/size_t_fwd.hpp \
+  /opt/homebrew/include/boost/mpl/sizeof.hpp \
+  /opt/homebrew/include/boost/mpl/transform.hpp \
+  /opt/homebrew/include/boost/mpl/pair_view.hpp \
+  /opt/homebrew/include/boost/mpl/iterator_category.hpp \
+  /opt/homebrew/include/boost/mpl/min_max.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/inserter_algorithm.hpp \
+  /opt/homebrew/include/boost/mpl/back_inserter.hpp \
+  /opt/homebrew/include/boost/mpl/push_back.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/push_back_impl.hpp \
+  /opt/homebrew/include/boost/mpl/inserter.hpp \
+  /opt/homebrew/include/boost/mpl/front_inserter.hpp \
+  /opt/homebrew/include/boost/variant/detail/variant_io.hpp \
+  /opt/homebrew/include/boost/variant/recursive_variant.hpp \
+  /opt/homebrew/include/boost/variant/detail/enable_recursive.hpp \
+  /opt/homebrew/include/boost/variant/detail/substitute.hpp \
+  /opt/homebrew/include/boost/mpl/aux_/preprocessor/repeat.hpp \
+  /opt/homebrew/include/boost/preprocessor/iterate.hpp \
+  /opt/homebrew/include/boost/preprocessor/iteration/iterate.hpp \
+  /opt/homebrew/include/boost/preprocessor/slot/slot.hpp \
+  /opt/homebrew/include/boost/preprocessor/slot/detail/def.hpp \
+  /opt/homebrew/include/boost/variant/recursive_wrapper.hpp \
+  /opt/homebrew/include/boost/mpl/equal.hpp \
+  /opt/homebrew/include/boost/variant/get.hpp \
+  /opt/homebrew/include/boost/utility/addressof.hpp \
+  /opt/homebrew/include/boost/variant/detail/element_index.hpp \
+  /opt/homebrew/include/boost/type_traits/add_pointer.hpp \
+  /opt/homebrew/include/boost/variant/visitor_ptr.hpp \
+  /opt/homebrew/include/boost/variant/bad_visit.hpp \
+  json_spirit_v4.08/json_spirit/json_spirit_reader.h \
+  json_spirit_v4.08/json_spirit/json_spirit_error_position.h \
+  json_spirit_v4.08/json_spirit/json_spirit_writer.h \
+  json_spirit_v4.08/json_spirit/json_spirit_writer_options.h \
+  json_spirit_v4.08/json_spirit/json_spirit_utils.h \
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QMessageBox \
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /opt/homebrew/include/QtWidgets/qdialog.h
 
 ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o: ui/mainwindow.cpp \
   ui/mainwindow.h \
@@ -3785,7 +4424,8 @@ ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o: ui/mainwindowloggedi
   json_spirit_v4.08/json_spirit/json_spirit_writer.h \
   json_spirit_v4.08/json_spirit/json_spirit_writer_options.h \
   json_spirit_v4.08/json_spirit/json_spirit_utils.h \
-  GetData.h
+  GetData.h \
+  ui/mealsediting.h
 
 ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o: ui/mealsediting.cpp \
   ui/mealsediting.h \
@@ -4620,7 +5260,8 @@ ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o: ui/mealsediting.cpp \
   /opt/homebrew/include/QtWidgets/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/QWidget \
-  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qwidget.h
+  /opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qwidget.h \
+  ui/addnewmeal.h
 
 ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o: ui/projektPROI2_ui_autogen/mocs_compilation.cpp \
   ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_addnewmeal.cpp \
@@ -7155,6 +7796,26 @@ ui/mealsediting.h:
 
 ui/projektPROI2_ui_autogen/include/ui_mainwindowloggedin.h:
 
+ui/mainwindowloggedin.h:
+
+/opt/homebrew/include/QtWidgets/QStatusBar:
+
+/opt/homebrew/include/QtWidgets/qmenu.h:
+
+/opt/homebrew/include/QtWidgets/QMenuBar:
+
+/opt/homebrew/include/QtWidgets/QMainWindow:
+
+ui/projektPROI2_ui_autogen/include/ui_mainwindow.h:
+
+/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QMainWindow:
+
+ui/mainwindow.h:
+
+/opt/homebrew/include/QtWidgets/qdialog.h:
+
+/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qmessagebox.h:
+
 json_spirit_v4.08/json_spirit/json_spirit_utils.h:
 
 json_spirit_v4.08/json_spirit/json_spirit_writer.h:
@@ -7312,6 +7973,10 @@ ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /opt/homebrew/include/boost/mpl/list/aux_/begin_end.hpp:
 
 /opt/homebrew/include/boost/mpl/list/aux_/size.hpp:
+
+/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qmenubar.h:
+
+/opt/homebrew/include/boost/mpl/push_back_fwd.hpp:
 
 /opt/homebrew/include/boost/mpl/list/aux_/tag.hpp:
 
@@ -7488,6 +8153,12 @@ ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_addnewmeal.cpp:
 /opt/homebrew/include/boost/preprocessor/logical/bitand.hpp:
 
 /opt/homebrew/include/boost/preprocessor/logical/and.hpp:
+
+/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QMessageBox:
+
+/opt/homebrew/include/boost/integer/common_factor_ct.hpp:
+
+/opt/homebrew/include/boost/preprocessor/arithmetic/limits/inc_256.hpp:
 
 /opt/homebrew/include/boost/preprocessor/repetition/repeat.hpp:
 
@@ -7775,59 +8446,7 @@ ui/mainwindowloggedin.cpp:
 
 json_spirit_v4.08/json_spirit/json_spirit.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h:
-
-/opt/homebrew/include/boost/detail/templated_streams.hpp:
-
-/opt/homebrew/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/nl_types.h:
-
-/opt/homebrew/include/boost/config/user.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdarg:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_wctype.h:
-
-/opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_wchar.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_time.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_stdio.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/__wctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/streambuf:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_xlocale.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_locale.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h:
-
-/opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
-
-/opt/homebrew/include/boost/preprocessor/list/reverse.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__locale:
-
-/opt/homebrew/include/boost/preprocessor/logical/limits/bool_256.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ios:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream:
-
 curlpp-0.8.1/include/curlpp/Exception.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_stdlib.h:
-
-curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp:
 
 /opt/homebrew/include/boost/type_traits/has_trivial_destructor.hpp:
 
@@ -7864,6 +8483,14 @@ curlpp-0.8.1/include/curlpp/Option.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/constrained_ctypes.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/socket.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/system.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/curlver.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/curl.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h:
 
 /opt/homebrew/include/boost/mpl/aux_/config/arrays.hpp:
 
@@ -7919,49 +8546,61 @@ ui/mealsediting.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_blkcnt_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_caddr_t.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_u_char.h:
 
 /opt/homebrew/include/boost/config.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/system.h:
+/opt/homebrew/include/boost/detail/templated_streams.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/curlver.h:
+/opt/homebrew/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/curl/curl.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/nl_types.h:
 
-ui/mainwindowloggedin.h:
+/opt/homebrew/include/boost/config/user.hpp:
 
-/opt/homebrew/include/QtWidgets/QStatusBar:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdarg:
 
-/opt/homebrew/include/QtWidgets/qmenu.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale:
 
-/opt/homebrew/include/boost/mpl/push_back_fwd.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_wctype.h:
 
-/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qmenubar.h:
+/opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp:
 
-/opt/homebrew/include/QtWidgets/QMenuBar:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_wchar.h:
 
-/opt/homebrew/include/QtWidgets/QMainWindow:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_time.h:
 
-ui/projektPROI2_ui_autogen/include/ui_mainwindow.h:
+curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp:
 
-/opt/homebrew/include/QtWidgets/qdialog.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_stdlib.h:
 
-/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qmessagebox.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/_stdio.h:
 
-/opt/homebrew/include/boost/integer/common_factor_ct.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale/__wctype.h:
 
-/opt/homebrew/include/boost/preprocessor/arithmetic/limits/inc_256.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/streambuf:
 
-/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QMessageBox:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_xlocale.h:
 
-/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/QMainWindow:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/xlocale.h:
 
-ui/mainwindow.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_locale.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h:
+
+/opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
+
+/opt/homebrew/include/boost/preprocessor/list/reverse.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__locale:
+
+/opt/homebrew/include/boost/preprocessor/logical/limits/bool_256.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ios:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream:
 
 /opt/homebrew/include/boost/variant/variant.hpp:
 
@@ -7976,6 +8615,12 @@ ui/mainwindow.h:
 ui/projektPROI2_ui_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/include/QtWidgets/QVBoxLayout:
+
+/opt/homebrew/include/QtGui/qtextdocument.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_caddr_t.h:
+
+/opt/homebrew/include/QtWidgets/QTextEdit:
 
 /opt/homebrew/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp:
 
@@ -9849,6 +10494,8 @@ curlpp-0.8.1/include/curlpp/Options.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/remove_pointer.h:
 
+/opt/homebrew/Cellar/qt@5/5.15.8_2/lib/QtWidgets.framework/Headers/qtextedit.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bit_reference:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
@@ -9896,6 +10543,8 @@ curlpp-0.8.1/include/curlpp/Options.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/arm/types.h:
 
 json_spirit_v4.08/json_spirit/json_spirit_reader.h:
+
+/opt/homebrew/include/QtCore/qurl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__string/extern_template_lists.h:
 

@@ -209,6 +209,30 @@ projektPROI2_ui_autogen/fast:
 	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui_autogen.dir/build.make ui/CMakeFiles/projektPROI2_ui_autogen.dir/build
 .PHONY : projektPROI2_ui_autogen/fast
 
+addnewdrinksauce.o: addnewdrinksauce.cpp.o
+.PHONY : addnewdrinksauce.o
+
+# target to build an object file
+addnewdrinksauce.cpp.o:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.o
+.PHONY : addnewdrinksauce.cpp.o
+
+addnewdrinksauce.i: addnewdrinksauce.cpp.i
+.PHONY : addnewdrinksauce.i
+
+# target to preprocess a source file
+addnewdrinksauce.cpp.i:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.i
+.PHONY : addnewdrinksauce.cpp.i
+
+addnewdrinksauce.s: addnewdrinksauce.cpp.s
+.PHONY : addnewdrinksauce.s
+
+# target to generate assembly for a file
+addnewdrinksauce.cpp.s:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/addnewdrinksauce.cpp.s
+.PHONY : addnewdrinksauce.cpp.s
+
 addnewmeal.o: addnewmeal.cpp.o
 .PHONY : addnewmeal.o
 
@@ -393,6 +417,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... projektPROI2_ui_autogen"
 	@echo "... projektPROI2_ui"
+	@echo "... addnewdrinksauce.o"
+	@echo "... addnewdrinksauce.i"
+	@echo "... addnewdrinksauce.s"
 	@echo "... addnewmeal.o"
 	@echo "... addnewmeal.i"
 	@echo "... addnewmeal.s"
