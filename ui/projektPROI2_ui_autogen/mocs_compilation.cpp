@@ -3,6 +3,7 @@
 #include "EWIEGA46WW/moc_addnewmeal.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_mainwindowloggedin.cpp"
+#include "EWIEGA46WW/moc_mainwindowloggedinclient.cpp"
 #include "EWIEGA46WW/moc_mealsediting.cpp"
 #include "EWIEGA46WW/moc_yourclients.cpp"
 #include "EWIEGA46WW/moc_yourdata.cpp"

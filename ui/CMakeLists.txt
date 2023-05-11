@@ -11,6 +11,7 @@ add_library(projektPROI2_ui yourdata.cpp yourdata.h yourdata.ui
         addnewmeal.cpp addnewmeal.h addnewmeal.ui
         addnewdrinksauce.cpp addnewdrinksauce.h addnewdrinksauce.ui
         mealsediting.cpp mealsediting.h mealsediting.ui
+        mainwindowloggedinclient.cpp mainwindowloggedinclient.h mainwindowloggedinclient.ui
         mainwindowloggedin.cpp mainwindowloggedin.h mainwindowloggedin.ui
         mainwindow.cpp mainwindow.h mainwindow.ui)
 

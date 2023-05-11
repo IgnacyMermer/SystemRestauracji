@@ -47,6 +47,12 @@
 			null
 		],
 		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedinclient.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindowloggedinclient.cpp",
+			null
+		],
+		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mealsediting.h",
 			"MU",
 			"EWIEGA46WW/moc_mealsediting.cpp",
@@ -140,6 +146,11 @@
 		],
 		[
 			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedinclient.cpp",
 			"MU",
 			null
 		],

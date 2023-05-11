@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/addnewmeal.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/addnewmeal.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindow.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedin.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o.d"
+  "/Users/ignacymermer/CLionProjects/projektPROI2/ui/mainwindowloggedinclient.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedinclient.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedinclient.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/mealsediting.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/mocs_compilation.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o.d"
   "/Users/ignacymermer/CLionProjects/projektPROI2/ui/yourclients.cpp" "ui/CMakeFiles/projektPROI2_ui.dir/yourclients.cpp.o" "gcc" "ui/CMakeFiles/projektPROI2_ui.dir/yourclients.cpp.o.d"

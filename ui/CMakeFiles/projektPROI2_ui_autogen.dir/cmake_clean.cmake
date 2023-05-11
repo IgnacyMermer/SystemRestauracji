@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "projektPROI2_ui_autogen/include/ui_addnewmeal.h"
   "projektPROI2_ui_autogen/include/ui_mainwindow.h"
   "projektPROI2_ui_autogen/include/ui_mainwindowloggedin.h"
+  "projektPROI2_ui_autogen/include/ui_mainwindowloggedinclient.h"
   "projektPROI2_ui_autogen/include/ui_mealsediting.h"
   "projektPROI2_ui_autogen/include/ui_yourclients.h"
   "projektPROI2_ui_autogen/include/ui_yourdata.h"

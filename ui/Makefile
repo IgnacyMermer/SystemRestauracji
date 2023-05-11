@@ -305,6 +305,30 @@ mainwindowloggedin.cpp.s:
 	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.s
 .PHONY : mainwindowloggedin.cpp.s
 
+mainwindowloggedinclient.o: mainwindowloggedinclient.cpp.o
+.PHONY : mainwindowloggedinclient.o
+
+# target to build an object file
+mainwindowloggedinclient.cpp.o:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedinclient.cpp.o
+.PHONY : mainwindowloggedinclient.cpp.o
+
+mainwindowloggedinclient.i: mainwindowloggedinclient.cpp.i
+.PHONY : mainwindowloggedinclient.i
+
+# target to preprocess a source file
+mainwindowloggedinclient.cpp.i:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedinclient.cpp.i
+.PHONY : mainwindowloggedinclient.cpp.i
+
+mainwindowloggedinclient.s: mainwindowloggedinclient.cpp.s
+.PHONY : mainwindowloggedinclient.s
+
+# target to generate assembly for a file
+mainwindowloggedinclient.cpp.s:
+	cd /Users/ignacymermer/CLionProjects/projektPROI2 && $(MAKE) $(MAKESILENT) -f ui/CMakeFiles/projektPROI2_ui.dir/build.make ui/CMakeFiles/projektPROI2_ui.dir/mainwindowloggedinclient.cpp.s
+.PHONY : mainwindowloggedinclient.cpp.s
+
 mealsediting.o: mealsediting.cpp.o
 .PHONY : mealsediting.o
 
@@ -429,6 +453,9 @@ help:
 	@echo "... mainwindowloggedin.o"
 	@echo "... mainwindowloggedin.i"
 	@echo "... mainwindowloggedin.s"
+	@echo "... mainwindowloggedinclient.o"
+	@echo "... mainwindowloggedinclient.i"
+	@echo "... mainwindowloggedinclient.s"
 	@echo "... mealsediting.o"
 	@echo "... mealsediting.i"
 	@echo "... mealsediting.s"

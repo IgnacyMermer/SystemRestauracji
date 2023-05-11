@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/projektPROI2_ui.dir/mainwindow.cpp.o.d"
   "CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o"
   "CMakeFiles/projektPROI2_ui.dir/mainwindowloggedin.cpp.o.d"
+  "CMakeFiles/projektPROI2_ui.dir/mainwindowloggedinclient.cpp.o"
+  "CMakeFiles/projektPROI2_ui.dir/mainwindowloggedinclient.cpp.o.d"
   "CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o"
   "CMakeFiles/projektPROI2_ui.dir/mealsediting.cpp.o.d"
   "CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o"

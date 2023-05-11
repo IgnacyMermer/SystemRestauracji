@@ -799,6 +799,8 @@ ui/CMakeFiles/projektPROI2_ui.dir/projektPROI2_ui_autogen/mocs_compilation.cpp.o
   /opt/homebrew/include/QtWidgets/qdialog.h \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_mainwindowloggedin.cpp \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../mainwindowloggedin.h \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_mainwindowloggedinclient.cpp \
+  /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../mainwindowloggedinclient.h \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_mealsediting.cpp \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/../../mealsediting.h \
   /Users/ignacymermer/CLionProjects/projektPROI2/ui/projektPROI2_ui_autogen/EWIEGA46WW/moc_yourclients.cpp \
