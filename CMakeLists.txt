@@ -48,3 +48,4 @@ target_link_libraries(projektPROI2
         ${Boost_LIBRARIES}
         )
 
+add_subdirectory(tests)
