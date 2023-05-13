@@ -1,11 +1,10 @@
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.22)
 project(projektPROI2)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
-
 
 find_package(Qt5 COMPONENTS
         Core
@@ -17,7 +16,7 @@ include_directories(curlpp-0.8.1/include)
 add_subdirectory(curlpp-0.8.1)
 include_directories(json_spirit_v4.08/json_spirit)
 add_subdirectory(json_spirit_v4.08)
-FIND_PACKAGE(Boost 1.81 REQUIRED)
+FIND_PACKAGE(Boost 1.74 REQUIRED)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
 add_executable(projektPROI2 main.cpp UserData.cpp UserData.h
