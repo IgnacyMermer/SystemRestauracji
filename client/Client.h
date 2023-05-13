@@ -7,15 +7,15 @@ class Client {
     int clientId;
     std::string clientEmail;
     std::string clientLogin;
-    int clientPonts;
+    int clientPoints;
 public:
     int id;
+    Client(int id, std::string email, std::string login);
+    void addOrder();
 private:
-    std::string email;
-    std::string login;
+    std::string email();
+    std::string login();
     int bonusPoints;
-    std::string address;
-    std::string role;
 };
 
 
