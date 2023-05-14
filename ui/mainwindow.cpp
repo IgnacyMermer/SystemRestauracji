@@ -42,10 +42,10 @@ void mainwindow::on_pushButton_Login_clicked(){
     string username = (ui->lineEdit_username->text()).toStdString();
     string password = (ui->lineEdit_password->text()).toStdString();
 
-    //string body = "{\"login\" : \""+username+"\", \"password\": \""+password+"\"}";
-    map<string, string> body = {};
-    body["login"] = username;
-    body["password"] = password;
+    string body = "{\"login\" : \""+username+"\", \"password\": \""+password+"\"}";
+    //map<string, string> body = {};
+    //body["login"] = username;
+    //body["password"] = password;
     PostData postData = PostData("http://localhost:3000/signin", body);
     postData.send_request();
 

@@ -8,10 +8,11 @@
 using namespace std;
 
 class PostData:public Data {
-    map<string, string> body;
+    //map<string, string> body;
+    string body;
 public:
 
-    PostData(string url, map<string, string> bodyRequest):Data(url){
+    PostData(string url, string bodyRequest):Data(url){
             body = bodyRequest;
     }
 
