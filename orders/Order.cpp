@@ -4,15 +4,12 @@
 #include "../client/Client.h"
 
 
-Order::Order(int id, std::vector<int> mealsIds, int clientId, double totalPrice) {
-    orderId = id;
+Order::Order(std::vector<int> mealsIds, int clientId, double totalPrice) {
     orderMealsIds = mealsIds;
     orderClientId = clientId;
     orderTotalPrice = totalPrice;
     orderCompletion = false;
 }
-
-int Order::id() {return orderId;};
 
 double Order::totalPrice() {return orderTotalPrice;};
 

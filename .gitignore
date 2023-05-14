@@ -48,3 +48,4 @@ tests/lib
 /data/projektPROI2_data_autogen/
 /data/CMakeFiles/
 /ui/CTestTestfile.cmake
+/Makefile
