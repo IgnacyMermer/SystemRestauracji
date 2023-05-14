@@ -48,3 +48,4 @@ target_link_libraries(projektPROI2
         )
 
 add_subdirectory(tests)
+enable_testing()

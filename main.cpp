@@ -17,7 +17,6 @@ int main(int argc, char *argv[]) {
     button.show();*/
     mainwindow w;
     w.show();
-    Client c;
-    c.id = 2;
+    //Client c = Cli
     return QApplication::exec();
 }
