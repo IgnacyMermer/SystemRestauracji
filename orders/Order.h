@@ -7,14 +7,12 @@
 #include "../client/Client.h"
 
 class Order {
-    int orderId;
     double orderTotalPrice;
     std::vector<int> orderMealsIds;
     int orderClientId;
     bool orderCompletion;
 public:
-    Order(int id, std::vector<int> mealsIds, int clientId, double totalPrice);
-    int id();
+    Order(std::vector<int> mealsIds, int clientId, double totalPrice);
     double totalPrice();
     int getNumberOfMeals();
     void addMeal(int mealId);

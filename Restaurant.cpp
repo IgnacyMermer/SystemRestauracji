@@ -44,7 +44,7 @@ vector<Order> Restaurant::getOrders() {
 vector<Order> Restaurant::getUndoneOrders() {
     vector<Order> undoneOrders;
     for(int i=0; i<orders.size(); i++){
-        if(orders[i].getDone()){
+        if(orders[i].isOrderComplete()){
             undoneOrders.push_back(orders[i]);
         }
     }
