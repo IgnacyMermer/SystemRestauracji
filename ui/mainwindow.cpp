@@ -7,6 +7,7 @@
 #include <cstdarg>
 #include <json_spirit.h>
 #include <string>
+#include "../data/PostData.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -42,33 +43,13 @@ void mainwindow::on_pushButton_Login_clicked(){
     string username = (ui->lineEdit_username->text()).toStdString();
     string password = (ui->lineEdit_password->text()).toStdString();
 
-    CURL *curl;
-    CURLcode res;
-    struct curl_slist *headers = NULL;
-    string s;
-
-    curl = curl_easy_init();
-
-    headers = curl_slist_append(headers, "Expect:");
-    headers = curl_slist_append(headers, "Content-Type: application/json");
-    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-
-    curl_easy_setopt(curl, CURLOPT_URL, "http://localhost:3000/signin");
-
     string body = "{\"login\" : \""+username+"\", \"password\": \""+password+"\"}";
-    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, body.c_str());
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeToString);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
+    PostData postData = PostData("http://localhost:3000/signin", body);
+    postData.send_request();
 
-    res = curl_easy_perform(curl);
-
-    long http_code = 0;
-    curl_easy_getinfo (curl, CURLINFO_RESPONSE_CODE, &http_code);
-
-    if(http_code==200){
+    if(postData.http_code==200){
         Value value;
-
-        cout<<s<<'\n';
+        string s = postData.getResponse();
         read( s, value );
         cout<<value.get_obj()[0].value_.get_obj()[0].value_.get_str();
 

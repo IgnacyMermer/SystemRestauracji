@@ -20,8 +20,10 @@ FIND_PACKAGE(Boost 1.74 REQUIRED)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
 add_executable(projektPROI2 main.cpp UserData.cpp UserData.h
-        GetData.cpp GetData.h)
+        data/GetData.cpp data/GetData.h)
 
+include_directories(data)
+add_subdirectory(data)
 include_directories(client)
 add_subdirectory(client)
 include_directories(employees)
@@ -37,6 +39,7 @@ target_link_libraries(projektPROI2
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        projektPROI2_data
         projektPROI2_client
         projektPROI2_employee
         projektPROI2_meal

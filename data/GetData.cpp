@@ -3,6 +3,3 @@
 
 using namespace std;
 
-string GetData::getResponse() {
-    return GetData::response;
-}

@@ -6,7 +6,7 @@
 #include <json_spirit.h>
 #include <vector>
 #include <string>
-#include "../GetData.h"
+#include "../data/GetData.h"
 #include "mealsediting.h"
 
 using namespace curlpp::options;

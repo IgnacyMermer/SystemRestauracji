@@ -42,3 +42,8 @@ tests/lib
 /employees/cmake_install.cmake
 /employees/libprojektPROI2_employee.a
 /client/cmake_install.cmake
+/data/cmake_install.cmake
+/data/libprojektPROI2_data.a
+/data/Makefile
+/data/projektPROI2_data_autogen/
+/data/CMakeFiles/
