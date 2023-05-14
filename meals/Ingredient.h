@@ -5,17 +5,18 @@
 using namespace std;
 
 class Ingredient {
+protected:
+    int foodid;
+    string foodshortname;
+    string foodname;
+    bool foodavailability;
+    int foodproductsCount;
 public:
-    int id;
-    string shortname;
-    string name;
-    bool availability;
-    int productsCount;
-
+    Ingredient(int id, std::string name, std::string shortname, bool availability, int productsCount);
     void setProductsCount(int productsCount);
     bool checkAvailability();
+    virtual bool getAvailability();
 
-private:
 
 };
 

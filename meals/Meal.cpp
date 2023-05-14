@@ -5,6 +5,12 @@
 
 using namespace std;
 
+
+Meal::Meal(int id, std::string shortname, std::string name, bool availability, int productsCount,vector<Ingredient> ingredients,double price):Ingredient(id,shortname,name,availability,productsCount){
+    this -> price = price;
+    this -> ingredients = ingredients;
+}
+
 void Meal::refreshAvailability() {
     bool availabilityTemp = true;
     for(int i=0; i<ingredients.size(); i++){
@@ -13,20 +19,14 @@ void Meal::refreshAvailability() {
             break;
         }
     }
-    availability = availabilityTemp;
+    foodavailability = availabilityTemp;
 }
 
-bool Meal::getAvailability() {
-    return availability;
-}
 
 vector<Ingredient> Meal::getIngredients() {
     return ingredients;
 }
 
-void Meal::setProductsCount(int productsCount) {
-    this->productsCount = productsCount;
-}
 
 void Meal::refreshPrice(double price) {
     this->price = price;

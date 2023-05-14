@@ -7,9 +7,12 @@
 
 using namespace std;
 
-class Meal {
+class Meal: public Ingredient {
+
+    vector<Ingredient> ingredients;
+    double price;
 public:
-    Meal(vector<Ingredient> ingredients): ingredients(ingredients){
+    Meal(int id, std::string shortname, std::string name, bool availability, int productsCount,vector<Ingredient> ingredients, double price): Ingredient(id,shortname,name,availability,productsCount){
         bool availabilityTemp = true;
         for(int i=0; i<ingredients.size(); i++){
             if(!ingredients[i].checkAvailability()){
@@ -19,19 +22,15 @@ public:
         }
         availability = availabilityTemp;
     }
-    int id;
-    vector<Ingredient> ingredients;
-    bool availability;
-    double price;
-    int productsCount;
 
-    void refreshAvailability();
+
+    virtual void refreshAvailability() =0;
     void refreshPrice(double price);
-    double getPrice();
-    bool getAvailability();
-    vector<Ingredient> getIngredients();
-    void refreshProductsCount(); //maybe it could check ingredients counts and set meal count.
-    void setProductsCount(int productsCount);
+    virtual double getPrice() =0;
+    virtual bool getAvailability()=0;
+    virtual vector<Ingredient> getIngredients()=0;
+    virtual void refreshProductsCount()=0; //maybe it could check ingredients counts and set meal count.
+    
 
 
 private:
