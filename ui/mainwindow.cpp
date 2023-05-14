@@ -2,12 +2,11 @@
 #include "./ui_mainwindow.h"
 #include <QMessageBox>
 #include "mainwindowloggedin.h"
-#include <curlpp/cURLpp.hpp>
-#include <curlpp/Options.hpp>
 #include <cstdarg>
 #include <json_spirit.h>
 #include <string>
 #include "../data/PostData.h"
+#include <map>
 
 using namespace std;
 using namespace json_spirit;
@@ -43,11 +42,14 @@ void mainwindow::on_pushButton_Login_clicked(){
     string username = (ui->lineEdit_username->text()).toStdString();
     string password = (ui->lineEdit_password->text()).toStdString();
 
-    string body = "{\"login\" : \""+username+"\", \"password\": \""+password+"\"}";
+    //string body = "{\"login\" : \""+username+"\", \"password\": \""+password+"\"}";
+    map<string, string> body = {};
+    body["login"] = username;
+    body["password"] = password;
     PostData postData = PostData("http://localhost:3000/signin", body);
     postData.send_request();
 
-    if(postData.http_code==200){
+    if(postData.getHttpCode()==200){
         Value value;
         string s = postData.getResponse();
         read( s, value );
