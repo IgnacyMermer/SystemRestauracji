@@ -32,6 +32,7 @@ mainwindow::mainwindow(QWidget *parent)
         , ui(new Ui::mainwindow)
 {
     ui->setupUi(this);
+    UserData::mainwindowScreen = this;
 }
 
 mainwindow::~mainwindow()

@@ -15,6 +15,7 @@
 #include "../orders/Order.h"
 #include "../UserData.h"
 #include "../data/PostData.h"
+#include "../ui/mainwindow.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -80,7 +81,9 @@ void MainWindowLoggedInClient::on_pushButton_yourOrders_clicked()
 
 void MainWindowLoggedInClient::on_pushButton_logOut_clicked()
 {
-
+    UserData::setId("");
+    this->hide();
+    UserData::mainwindowScreen->show();
 }
 
 
@@ -185,7 +188,6 @@ void MainWindowLoggedInClient::on_pushButton_confirmOrder_clicked()
         string s = postData.getResponse();
         read( s, value );
         order.setId(value.get_obj()[0].value_.get_obj()[3].value_.get_str());
-        cout<<"Id:\t"<<order.getId()<<"\n";
     }
     else{
         QMessageBox::information(this, "Zamowienie", "Wystapil blad");

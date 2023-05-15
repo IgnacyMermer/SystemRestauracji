@@ -1,11 +1,13 @@
 #ifndef PROJEKTPROI2_USERDATA_H
 #define PROJEKTPROI2_USERDATA_H
 #include <iostream>
+#include "./ui/mainwindow.h"
 
 using namespace std;
 
 class UserData {
 public:
+    static mainwindow* mainwindowScreen;
     static string id;
     static string role;
     static int bonusPoints;
