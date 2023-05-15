@@ -7,6 +7,7 @@
 #include <string>
 #include "../data/PostData.h"
 #include <map>
+#include "mainwindowloggedinclient.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -53,12 +54,19 @@ void mainwindow::on_pushButton_Login_clicked(){
         Value value;
         string s = postData.getResponse();
         read( s, value );
-        cout<<value.get_obj()[0].value_.get_obj()[0].value_.get_str();
 
-        this->hide();
-        mainwindowloggedin mainWindowLoggedIn;
-        mainWindowLoggedIn.setModal(true);
-        mainWindowLoggedIn.exec();
+        if(value.get_obj()[0].value_.get_obj()[3].value_.get_str()=="Client"){
+            this->hide();
+            MainWindowLoggedInClient mainWindowLoggedInClient;
+            mainWindowLoggedInClient.setModal(true);
+            mainWindowLoggedInClient.exec();
+        }
+        else {
+            this->hide();
+            mainwindowloggedin mainWindowLoggedIn;
+            mainWindowLoggedIn.setModal(true);
+            mainWindowLoggedIn.exec();
+        }
     }
     else{
         QMessageBox::information(this, "Login", "Wrong credentials");

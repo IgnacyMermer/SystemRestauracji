@@ -2,6 +2,8 @@
 #define MAINWINDOWLOGGEDINCLIENT_H
 
 #include <QDialog>
+#include <vector>
+#include "../meals/Meal.h"
 
 namespace Ui {
 class MainWindowLoggedInClient;
@@ -14,6 +16,8 @@ class MainWindowLoggedInClient : public QDialog
 public:
     explicit MainWindowLoggedInClient(QWidget *parent = nullptr);
     ~MainWindowLoggedInClient();
+    std::vector<Meal> meals;
+    std::vector<Meal*> yourOrder;
 
 private slots:
     void on_pushButton_yourData_clicked();

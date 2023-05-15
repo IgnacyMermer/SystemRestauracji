@@ -1,12 +1,13 @@
 #include "Ingredient.h"
 
+using namespace std;
 
-Ingredient::Ingredient(int id, std::string name, std::string shortname, bool availability, int productsCount){
-    int foodid = id; 
-    string foodshortname = shortname;
-    string foodname = name;
-    bool foodavailability = availability;
-    int foodproductsCount = productsCount;
+Ingredient::Ingredient(std::string id, std::string name, std::string shortname, bool availability, int productsCount){
+    foodid = id;
+    foodshortname = shortname;
+    foodname = name;
+    foodavailability = availability;
+    foodproductsCount = productsCount;
 }
 
 bool Ingredient::checkAvailability() {
@@ -26,6 +27,6 @@ void Ingredient::setProductsCount(int productsCount) {
     }
 }
 
- bool Ingredient::getAvailability(){
+bool Ingredient::getAvailability(){
     return foodavailability;
-    }
+}

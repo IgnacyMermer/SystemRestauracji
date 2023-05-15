@@ -6,25 +6,16 @@
 using namespace std;
 
 
-Meal::Meal(int id, std::string shortname, std::string name, bool availability, int productsCount,vector<Ingredient> ingredients,double price):Ingredient(id,shortname,name,availability,productsCount){
+Meal::Meal(string id, std::string shortname, std::string name, bool availability, int productsCount,vector<Ingredient> ingredients,double price){
+    this->id = id;
+    this->shortname = shortname;
+    cout<<shortname<<'\n';
+    cout<<name<<'\n';
+    this->name = name;
+    this->availability = availability;
+    this->productsCount = productsCount;
     this -> price = price;
     this -> ingredients = ingredients;
-}
-
-void Meal::refreshAvailability() {
-    bool availabilityTemp = true;
-    for(int i=0; i<ingredients.size(); i++){
-        if(!ingredients[i].checkAvailability()){
-            availabilityTemp = false;
-            break;
-        }
-    }
-    foodavailability = availabilityTemp;
-}
-
-
-vector<Ingredient> Meal::getIngredients() {
-    return ingredients;
 }
 
 
@@ -32,6 +23,4 @@ void Meal::refreshPrice(double price) {
     this->price = price;
 }
 
-double Meal::getPrice() {
-    return price;
-}
+

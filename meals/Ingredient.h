@@ -6,16 +6,19 @@ using namespace std;
 
 class Ingredient {
 protected:
-    int foodid;
+    string foodid;
     string foodshortname;
     string foodname;
     bool foodavailability;
     int foodproductsCount;
 public:
-    Ingredient(int id, std::string name, std::string shortname, bool availability, int productsCount);
+    Ingredient(string id, std::string name, std::string shortname, bool availability, int productsCount);
+    string getName(){
+        return foodname;
+    }
     void setProductsCount(int productsCount);
     bool checkAvailability();
-    virtual bool getAvailability();
+    bool getAvailability();
 
 
 };
