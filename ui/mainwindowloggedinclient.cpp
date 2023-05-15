@@ -111,13 +111,11 @@ void MainWindowLoggedInClient::on_pushButton_addToOrder_clicked()
     string s = stream.str();
     string priceText = "Cena całkowita: "+s+" zł";
     ui->label_totalPrice->setText(QString::fromStdString(priceText));
-    //const QString& s = ui->listWidget_meals->currentItem()->text();
     stringstream stream2;
     stream2 << std::fixed << std::setprecision(2) << chosenMeal->getPrice();
     string s2 = stream2.str();
     string itemText = chosenMeal->getName()+"\t-\t"+ s2 + "zł";
     ui->listWidget_yourOrder->addItem(QString::fromStdString(itemText));
-    //cout<<yourOrder[0]->getName();
 }
 
 
@@ -149,10 +147,8 @@ void MainWindowLoggedInClient::on_pushButton_removeFromOrder_clicked()
     string s = stream.str();
     string priceText = "Cena całkowita: "+s+" zł";
     ui->label_totalPrice->setText(QString::fromStdString(priceText));
-    //const QString& s = ui->listWidget_meals->currentItem()->text();
     QListWidgetItem *it = ui->listWidget_yourOrder->takeItem(ui->listWidget_yourOrder->currentRow());
     delete it;
-    //cout<<yourOrder[0]->getName();
 }
 
 
@@ -183,6 +179,16 @@ void MainWindowLoggedInClient::on_pushButton_confirmOrder_clicked()
     body+=mealsIDs+"]}";
     PostData postData = PostData("http://localhost:3000/order/addneworder", body);
     postData.send_request();
-    cout<<postData.getHttpCode();
+    if(postData.getHttpCode()==200){
+        QMessageBox::information(this, "Zamowienie", "Zamowienie dodane");
+        Value value;
+        string s = postData.getResponse();
+        read( s, value );
+        order.setId(value.get_obj()[0].value_.get_obj()[3].value_.get_str());
+        cout<<"Id:\t"<<order.getId()<<"\n";
+    }
+    else{
+        QMessageBox::information(this, "Zamowienie", "Wystapil blad");
+    }
 }
 

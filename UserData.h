@@ -16,6 +16,7 @@ public:
     static string getId(){
         return UserData::id;
     };
+    static void setId(string newId);
     static string getLogin(){
         return UserData::login;
     };

@@ -8,6 +8,7 @@
 #include "../data/PostData.h"
 #include <map>
 #include "mainwindowloggedinclient.h"
+#include "../UserData.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -49,12 +50,11 @@ void mainwindow::on_pushButton_Login_clicked(){
     //body["password"] = password;
     PostData postData = PostData("http://localhost:3000/signin", body);
     postData.send_request();
-
     if(postData.getHttpCode()==200){
         Value value;
         string s = postData.getResponse();
         read( s, value );
-
+        UserData::setId(value.get_obj()[0].value_.get_obj()[0].value_.get_str());
         if(value.get_obj()[0].value_.get_obj()[3].value_.get_str()=="Client"){
             this->hide();
             MainWindowLoggedInClient mainWindowLoggedInClient;

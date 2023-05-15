@@ -70,6 +70,14 @@ std::vector<Meal> Order::mealsIds() {return orderMealsIds;};
 
 string Order::clientId() {return orderClientId;};
 
+void Order::setId(string newId) {
+    id = newId;
+}
+
+string Order::getId() {
+    return id;
+}
+
 void Order::saveToDB() {
     // blok try catch
 };

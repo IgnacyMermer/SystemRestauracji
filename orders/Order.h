@@ -7,6 +7,7 @@
 #include "../client/Client.h"
 
 class Order {
+    std::string id;
     double orderTotalPrice;
     std::vector<Meal> orderMealsIds;
     string orderClientId;
@@ -31,6 +32,8 @@ public:
     time_t getTime();
     int getEstimatedTime();
     time_t getCompletionTime();
+    void setId(std::string newId);
+    std::string getId();
     void saveToDB(); // zapis do DB
 private:
 };
