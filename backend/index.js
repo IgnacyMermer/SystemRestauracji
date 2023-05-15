@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const env = require('dotenv').config();
 const signingRoute = require('./routes/signingRoute');
 const mealsRoute = require('./routes/mealsRoute');
+const orderRoute = require('./routes/orderRoute');
 const taskRoute = require('./routes/taskRoute');
 
 const app = express();
@@ -30,5 +31,6 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 app.use('/', signingRoute);
 app.use('/meals', mealsRoute);
 app.use('/task', taskRoute);
+app.use('/order', orderRoute);
 
 app.listen(3000);

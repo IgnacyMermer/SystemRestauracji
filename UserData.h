@@ -6,13 +6,16 @@ using namespace std;
 
 class UserData {
 public:
-    static int id;
+    static string id;
     static string role;
     static int bonusPoints;
     static string login;
     static string name;
     static string address;
     static string email;
+    static string getId(){
+        return UserData::id;
+    };
     static string getLogin(){
         return UserData::login;
     };

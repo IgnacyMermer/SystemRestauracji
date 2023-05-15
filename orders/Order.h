@@ -8,23 +8,23 @@
 
 class Order {
     double orderTotalPrice;
-    std::vector<int> orderMealsIds;
-    int orderClientId;
+    std::vector<Meal> orderMealsIds;
+    string orderClientId;
     bool orderCompletion;
 public:
-    Order(std::vector<int> mealsIds, int clientId, double totalPrice);
+    Order(std::vector<Meal> mealsIds, string clientId, double totalPrice);
     double totalPrice();
     int getNumberOfMeals();
-    void addMeal(int mealId);
-    void removeMeal(int mealId);
+    void addMeal(Meal mealId);
+    void removeMeal(Meal mealId);
     void removeLastMeal();
     bool isMealEmpty();
     void setClientId(int clientId);
     void setOrderComplete();
     bool isOrderComplete();
     void setDiscount(int discount);
-    std::vector<int> mealsIds();
-    int clientId();
+    std::vector<Meal> mealsIds();
+    string clientId();
     void saveToDB(); // zapis do DB
 private:
 };

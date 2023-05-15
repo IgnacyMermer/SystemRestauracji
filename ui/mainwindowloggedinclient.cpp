@@ -12,6 +12,9 @@
 #include "../meals/Ingredient.h"
 #include <iomanip>
 #include <sstream>
+#include "../orders/Order.h"
+#include "../UserData.h"
+#include "../data/PostData.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -155,12 +158,31 @@ void MainWindowLoggedInClient::on_pushButton_removeFromOrder_clicked()
 
 void MainWindowLoggedInClient::on_pushButton_removeOrder_clicked()
 {
-
+    ui->listWidget_yourOrder->clear();
+    yourOrder.clear();
+    totalPrice = 0;
+    string priceText = "Cena całkowita: ";
+    ui->label_totalPrice->setText(QString::fromStdString(priceText));
 }
 
 
 void MainWindowLoggedInClient::on_pushButton_confirmOrder_clicked()
 {
-
+    vector<Meal> orderMeals;
+    string mealsIDs = "";
+    for(int i=0; i<yourOrder.size(); i++){
+        if(mealsIDs!=""){
+            mealsIDs+=", ";
+        }
+        orderMeals.push_back(*yourOrder[i]);
+        mealsIDs+="\""+yourOrder[i]->getId()+"\"";
+    }
+    Order order = Order(orderMeals, UserData::getId(), totalPrice);
+    string body = "{";
+    body+="\"clientId\": \""+UserData::getId()+"\", \"totalPrice\": "+to_string(totalPrice)+", \"mealsIds\": [";
+    body+=mealsIDs+"]}";
+    PostData postData = PostData("http://localhost:3000/order/addneworder", body);
+    postData.send_request();
+    cout<<postData.getHttpCode();
 }
 

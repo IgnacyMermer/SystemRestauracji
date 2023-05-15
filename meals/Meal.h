@@ -25,6 +25,9 @@ public:
     string getName(){
         return name;
     }
+    string getId(){
+        return id;
+    }
     double getPrice(){return price;}
     bool getAvailability(){return availability;}
     vector<Ingredient> getIngredients(){return ingredients;}

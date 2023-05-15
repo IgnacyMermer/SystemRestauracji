@@ -2,16 +2,19 @@
 #include "FamilyOrder.h"
 #include <vector>
 #include <algorithm>
+#include "../meals/Meal.h"
 
-FamilyOrder::FamilyOrder(std::vector<int> mealsIds, std::vector<int> clientIds, double totalPrice) : Order(mealsIds, clientIds[0], totalPrice) {
+using namespace std;
+
+FamilyOrder::FamilyOrder(std::vector<Meal> mealsIds, std::vector<string> clientIds, double totalPrice) : Order(mealsIds, clientIds[0], totalPrice) {
     orderClientIds = clientIds;
 }
 
-void FamilyOrder::addClient(int clientId) {
+void FamilyOrder::addClient(string clientId) {
     orderClientIds.push_back(clientId);
 }
 
-void FamilyOrder::removeClient(int clientId) {
+void FamilyOrder::removeClient(string clientId) {
     auto it = std::find(orderClientIds.begin(), orderClientIds.end(), clientId);
     orderClientIds.erase(it);
 }
@@ -32,7 +35,7 @@ double FamilyOrder::splitTotalPrice() {
     return Order::totalPrice() / orderClientIds.size();
 }
 
-std::vector<int> FamilyOrder::clientIds() {
+std::vector<string> FamilyOrder::clientIds() {
     return orderClientIds;
 }
 

@@ -4,7 +4,7 @@
 #include "../client/Client.h"
 
 
-Order::Order(std::vector<int> mealsIds, int clientId, double totalPrice) {
+Order::Order(std::vector<Meal> mealsIds, string clientId, double totalPrice) {
     orderMealsIds = mealsIds;
     orderClientId = clientId;
     orderTotalPrice = totalPrice;
@@ -13,7 +13,7 @@ Order::Order(std::vector<int> mealsIds, int clientId, double totalPrice) {
 
 double Order::totalPrice() {return orderTotalPrice;};
 
-void Order::addMeal(int mealId) {
+void Order::addMeal(Meal mealId) {
     orderMealsIds.push_back(mealId);
 };
 
@@ -21,9 +21,9 @@ int Order::getNumberOfMeals() {
     return orderMealsIds.size();
 };
 
-void Order::removeMeal(int mealId) {
-    auto it = std::find(orderMealsIds.begin(), orderMealsIds.end(), mealId);
-    orderMealsIds.erase(it);
+void Order::removeMeal(Meal mealId) {
+    //auto it = std::find(orderMealsIds.begin(), orderMealsIds.end(), mealId);
+    //orderMealsIds.erase(it);
 };
 
 void Order::removeLastMeal() {
@@ -49,9 +49,9 @@ void Order::setDiscount(int discount) {
 };
 
 
-std::vector<int> Order::mealsIds() {return orderMealsIds;};
+std::vector<Meal> Order::mealsIds() {return orderMealsIds;};
 
-int Order::clientId() {return orderClientId;};
+string Order::clientId() {return orderClientId;};
 
 void Order::saveToDB() {
     // blok try catch

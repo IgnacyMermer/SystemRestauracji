@@ -2,9 +2,8 @@ const order = require('../models/orderModel');
 
 exports.addNewOrder = (req, res, status) => {
     try{
-        const {id, totalPrice, mealsIds, clientId} = req.body;
+        const {totalPrice, mealsIds, clientId} = req.body;
         const newOrder = new order({
-            id,
             totalPrice,
             mealsIds,
             clientId
