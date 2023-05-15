@@ -7,6 +7,9 @@ YourData::YourData(QWidget *parent) :
     ui(new Ui::YourData)
 {
     ui->setupUi(this);
+    ui->label_name->setText(QString::fromStdString(UserData::name));
+    ui->label_login->setText(QString::fromStdString(UserData::login));
+    ui->label_role->setText(QString::fromStdString(UserData::role));
 
 }
 

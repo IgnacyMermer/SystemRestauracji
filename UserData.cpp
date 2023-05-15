@@ -3,6 +3,10 @@
 using namespace std;
 
 string UserData::id = "";
+string UserData::login = "";
+string UserData::name = "";
+string UserData::role = "";
+string UserData::email = "";
 mainwindow* UserData::mainwindowScreen = nullptr;
 
 void UserData::setId(string newId) {

@@ -8,6 +8,7 @@
 #include <string>
 #include "../data/GetData.h"
 #include "mealsediting.h"
+#include "yourdata.h"
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -29,10 +30,10 @@ mainwindowloggedin::~mainwindowloggedin()
 
 void mainwindowloggedin::on_pushButton_YourData_clicked()
 {
-    ui->listWidget->addItem("lalal");
-    GetData getData = GetData("https://fakestoreapi.com/products");
-    cout<<getData.getResponse()<<'\n';
-
+    this->hide();
+    YourData yourData;
+    yourData.setModal(true);
+    yourData.exec();
 }
 
 

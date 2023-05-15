@@ -16,6 +16,7 @@
 #include "../UserData.h"
 #include "../data/PostData.h"
 #include "../ui/mainwindow.h"
+#include "../ui/yourdata.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -69,7 +70,10 @@ MainWindowLoggedInClient::~MainWindowLoggedInClient()
 
 void MainWindowLoggedInClient::on_pushButton_yourData_clicked()
 {
-
+    this->hide();
+    YourData yourData;
+    yourData.setModal(true);
+    yourData.exec();
 }
 
 

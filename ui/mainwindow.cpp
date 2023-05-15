@@ -56,6 +56,9 @@ void mainwindow::on_pushButton_Login_clicked(){
         string s = postData.getResponse();
         read( s, value );
         UserData::setId(value.get_obj()[0].value_.get_obj()[0].value_.get_str());
+        UserData::login = value.get_obj()[0].value_.get_obj()[1].value_.get_str();
+        UserData::role = value.get_obj()[0].value_.get_obj()[3].value_.get_str();
+        UserData::name = value.get_obj()[0].value_.get_obj()[4].value_.get_str();
         if(value.get_obj()[0].value_.get_obj()[3].value_.get_str()=="Client"){
             this->hide();
             MainWindowLoggedInClient mainWindowLoggedInClient;
