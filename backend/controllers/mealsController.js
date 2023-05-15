@@ -99,3 +99,25 @@ exports.addNewMeal = (req, res, status)=>{
         });
     }
 }
+
+exports.changeMealAvailability = (req, res, status)=>{
+    try{
+        const {availability} = req.body;
+        const {id} = req.params;
+        meal.findOneAndUpdate({_id: id}, {availability: availability}).then(meal=>{
+            return res.status(200).json({
+                meal
+            });
+        }).catch(error=>{
+            return res.status(400).json({
+                error
+            });
+        })
+
+    }
+    catch(e){
+        return res.status(400).json({
+            error: e
+        });
+    }
+}

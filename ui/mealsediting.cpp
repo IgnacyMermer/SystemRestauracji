@@ -3,6 +3,7 @@
 #include "addnewmeal.h"
 #include "addnewdrinksauce.h"
 #include "../data/GetData.h"
+#include "../data/PostData.h"
 #include "../meals/Meal.h"
 #include "../meals/Ingredient.h"
 #include "../meals/Mainmeal.h"
@@ -66,7 +67,7 @@ void MealsEditing::on_pushButton_editMeal_clicked()
 
 void MealsEditing::on_pushButton_changeAvailabilityMeal_clicked()
 {
-
+    //PostData postData = PostData("http://localhost:3000/meals/changemealavailability/"+)
 }
 
 
