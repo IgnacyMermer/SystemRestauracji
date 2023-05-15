@@ -22,6 +22,7 @@ public:
     void setClientId(int clientId);
     void setOrderComplete();
     bool isOrderComplete();
+    void setDiscount(int discount);
     std::vector<int> mealsIds();
     int clientId();
     void saveToDB(); // zapis do DB

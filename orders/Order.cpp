@@ -44,6 +44,11 @@ void Order::setOrderComplete() {
 
 bool Order::isOrderComplete() {return orderCompletion;};
 
+void Order::setDiscount(int discount) {
+    orderTotalPrice = orderTotalPrice * (100 - discount)/10;
+};
+
+
 std::vector<int> Order::mealsIds() {return orderMealsIds;};
 
 int Order::clientId() {return orderClientId;};
