@@ -10,6 +10,8 @@
 #include <string>
 #include "../meals/Mainmeal.h"
 #include "../meals/Ingredient.h"
+#include <iomanip>
+#include <sstream>
 
 using namespace std;
 using namespace json_spirit;
@@ -18,6 +20,7 @@ MainWindowLoggedInClient::MainWindowLoggedInClient(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainWindowLoggedInClient)
 {
+    totalPrice = 0;
     ui->setupUi(this);
     GetData getData = GetData("http://localhost:3000/meals/getallmeals");
     getData.send_request();
@@ -43,7 +46,11 @@ MainWindowLoggedInClient::MainWindowLoggedInClient(QWidget *parent) :
             Mainmeal meal = Mainmeal(obj[0].value_.get_str(), obj[1].value_.get_str(), obj[2].value_.get_str(), obj[4].value_.get_bool(),
                              obj[5].value_.get_int(), ingredientsList, obj[6].value_.get_real(), "");
             meals.push_back(meal);
-            ui->listWidget_meals->addItem(QString::fromStdString(meal.getName()));
+            std::stringstream stream;
+            stream << std::fixed << std::setprecision(2) << meal.getPrice();
+            std::string s = stream.str();
+            string itemText = meal.getName()+"\t- "+ s + "zł";
+            ui->listWidget_meals->addItem(QString::fromStdString(itemText));
         }
     }
     else{
@@ -78,22 +85,71 @@ void MainWindowLoggedInClient::on_pushButton_addToOrder_clicked()
 {
     Meal* chosenMeal;
     for(int i=0; i<meals.size(); i++){
-        if((ui->listWidget_meals->currentItem()->text()).toStdString() == meals[i].getName()){
+        string text = (ui->listWidget_meals->currentItem()->text()).toStdString();
+        string mealName = "";
+        for(int i=0; i<text.length(); i++){
+            if(text[i]=='-'){
+                break;
+            }
+            else{
+                mealName+=text[i];
+            }
+        }
+        mealName = mealName.substr(0, mealName.length()-1);
+        if(mealName == meals[i].getName()){
             chosenMeal = &meals[i];
             break;
         }
     }
     yourOrder.push_back(chosenMeal);
-    //cout<<chosenMeal->getName()<<'\n';
+    totalPrice += chosenMeal->getPrice();
+    stringstream stream;
+    stream << std::fixed << std::setprecision(2) << totalPrice;
+    string s = stream.str();
+    string priceText = "Cena całkowita: "+s+" zł";
+    ui->label_totalPrice->setText(QString::fromStdString(priceText));
     //const QString& s = ui->listWidget_meals->currentItem()->text();
-    ui->listWidget_yourOrder->addItem(QString::fromStdString(chosenMeal->getName()));
+    stringstream stream2;
+    stream2 << std::fixed << std::setprecision(2) << chosenMeal->getPrice();
+    string s2 = stream2.str();
+    string itemText = chosenMeal->getName()+"\t-\t"+ s2 + "zł";
+    ui->listWidget_yourOrder->addItem(QString::fromStdString(itemText));
     //cout<<yourOrder[0]->getName();
 }
 
 
 void MainWindowLoggedInClient::on_pushButton_removeFromOrder_clicked()
 {
+    Meal* chosenMeal;
+    for(int i=0; i<meals.size(); i++){
+        string text = (ui->listWidget_yourOrder->currentItem()->text()).toStdString();
+        string mealName = "";
+        for(int i=0; i<text.length(); i++){
+            if(text[i]=='-'){
+                break;
+            }
+            else{
+                mealName+=text[i];
+            }
+        }
+        mealName = mealName.substr(0, mealName.length()-1);
+        if(mealName == meals[i].getName()){
+            chosenMeal = &meals[i];
+            break;
+        }
+    }
+    std::remove(yourOrder.begin(), yourOrder.end(),chosenMeal);
+    totalPrice -= chosenMeal->getPrice();
 
+    stringstream stream;
+    stream << std::fixed << std::setprecision(2) << totalPrice;
+    string s = stream.str();
+    string priceText = "Cena całkowita: "+s+" zł";
+    ui->label_totalPrice->setText(QString::fromStdString(priceText));
+    //const QString& s = ui->listWidget_meals->currentItem()->text();
+    QListWidgetItem *it = ui->listWidget_yourOrder->takeItem(ui->listWidget_yourOrder->currentRow());
+    delete it;
+    //cout<<yourOrder[0]->getName();
 }
 
 

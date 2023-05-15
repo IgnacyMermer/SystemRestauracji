@@ -18,6 +18,7 @@ public:
     ~MainWindowLoggedInClient();
     std::vector<Meal> meals;
     std::vector<Meal*> yourOrder;
+    double totalPrice;
 
 private slots:
     void on_pushButton_yourData_clicked();

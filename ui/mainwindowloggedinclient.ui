@@ -122,6 +122,16 @@
          <widget class="QListWidget" name="listWidget_yourOrder"/>
         </item>
         <item>
+         <widget class="QLabel" name="label_totalPrice">
+          <property name="text">
+           <string>Cena całkowita: </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton_removeFromOrder">
           <property name="text">
            <string>Usuń z zamówienia</string>
