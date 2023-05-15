@@ -11,6 +11,9 @@ class Order {
     std::vector<int> orderMealsIds;
     int orderClientId;
     bool orderCompletion;
+    time_t orderTime;
+    int estimatedTime;
+    time_t CopletionTime;
 public:
     Order(std::vector<int> mealsIds, int clientId, double totalPrice);
     double totalPrice();
@@ -23,6 +26,9 @@ public:
     void setOrderComplete();
     bool isOrderComplete();
     void setDiscount(int discount);
+    time_t getTime();
+    int getEstimatedTime();
+    time_t getCompletionTime();
     std::vector<int> mealsIds();
     int clientId();
     void saveToDB(); // zapis do DB
