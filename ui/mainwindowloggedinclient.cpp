@@ -34,23 +34,9 @@ MainWindowLoggedInClient::MainWindowLoggedInClient(QWidget *parent) :
         Value value;
         read( getData.getResponse(), value );
         Array& arr = value.get_obj()[0].value_.get_array();
-        for(int i=0; i<arr.size(); i++){
-            Object& obj = arr[i].get_obj();
-
-            std::vector<Value> dest = obj[7].value_.get_array();
-            vector<Value>::iterator it;
-            vector<Ingredient> ingredientsList;
-
-            for(it = dest.begin(); it!=dest.end(); it++){
-                Object& objTemp = it->get_obj();
-                Ingredient ingredient = Ingredient(objTemp[0].value_.get_str(), objTemp[2].value_.get_str(), objTemp[1].value_.get_str(),
-                                   objTemp[3].value_.get_bool(),objTemp[4].value_.get_int());
-                ingredientsList.push_back(ingredient);
-            }
-
-            Mainmeal meal = Mainmeal(obj[0].value_.get_str(), obj[1].value_.get_str(), obj[2].value_.get_str(), obj[4].value_.get_bool(),
-                             obj[5].value_.get_int(), ingredientsList, obj[6].value_.get_real(), "");
-            meals.push_back(meal);
+        meals = getData.getMeals(arr);
+        for(int i=0; i<meals.size(); i++){
+            Meal meal = meals[i];
             std::stringstream stream;
             stream << std::fixed << std::setprecision(2) << meal.getPrice();
             std::string s = stream.str();

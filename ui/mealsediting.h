@@ -2,6 +2,7 @@
 #define MEALSEDITING_H
 
 #include <QDialog>
+#include "../meals/Meal.h"
 
 namespace Ui {
 class MealsEditing;
@@ -14,6 +15,7 @@ class MealsEditing : public QDialog
 public:
     explicit MealsEditing(QWidget *parent = nullptr);
     ~MealsEditing();
+    std::vector<Meal> meals;
 
 private slots:
     void on_pushButton_addNewMeal_clicked();

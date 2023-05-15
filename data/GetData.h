@@ -7,6 +7,8 @@
 #include <json_spirit.h>
 #include <iostream>
 #include "Data.h"
+#include "../meals/Meal.h"
+#include "json_spirit.h"
 
 using namespace std;
 
@@ -17,6 +19,7 @@ public:
     }
 
     void send_request();
+    vector<Meal> getMeals(json_spirit::Array& arr);
 
 };
 
