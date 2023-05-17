@@ -21,8 +21,8 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
 add_executable(projektPROI2 main.cpp UserData.cpp UserData.h)
 
-include_directories(data)
-add_subdirectory(data)
+include_directories(ui)
+add_subdirectory(ui)
 include_directories(client)
 add_subdirectory(client)
 include_directories(employees)
@@ -31,23 +31,20 @@ include_directories(meals)
 add_subdirectory(meals)
 include_directories(orders)
 add_subdirectory(orders)
-include_directories(ui)
-add_subdirectory(ui)
+include_directories(data)
+add_subdirectory(data)
 
 target_link_libraries(projektPROI2
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
-        projektPROI2_data
+        projektPROI2_ui
         projektPROI2_client
         projektPROI2_employee
         projektPROI2_meal
         projektPROI2_order
-        projektPROI2_ui
+        projektPROI2_data
         curlpp
         json_spirit
         ${Boost_LIBRARIES}
         )
-
-add_subdirectory(tests)
-enable_testing()
