@@ -111,7 +111,6 @@ void MainWindowLoggedInClient::on_pushButton_addToOrder_clicked()
     ui->listWidget_yourOrder->addItem(QString::fromStdString(itemText));
 }
 
-
 void MainWindowLoggedInClient::on_pushButton_removeFromOrder_clicked()
 {
     Meal* chosenMeal;
@@ -132,7 +131,18 @@ void MainWindowLoggedInClient::on_pushButton_removeFromOrder_clicked()
             break;
         }
     }
-    std::remove(yourOrder.begin(), yourOrder.end(),chosenMeal);
+    vector<Meal*> newYourOrder;
+    bool deleted = false;
+    for(int j=0; j<yourOrder.size(); j++){
+        if(yourOrder[j]->getId()!=chosenMeal->getId() || deleted){
+            newYourOrder.push_back(yourOrder[j]);
+        }
+        else{
+            deleted=true;
+        }
+    }
+    yourOrder = newYourOrder;
+    //yourOrder = remove(yourOrder.begin(), yourOrder.end(),chosenMeal);
     totalPrice -= chosenMeal->getPrice();
 
     stringstream stream;
