@@ -8,11 +8,11 @@ public:
     int id() {return Employee::id();};
     std::string name() {return Employee::name();};
     std::string email() {return Employee::email();};
-    bool giveTask(int id, std::string name, std::string description, int priority) {
+    bool giveTask(std::string name, std::string description) {
         if (hasTask() == true) {return false;}
         else {
             try {
-                createTask(id, name, description, priority);
+                createTask(name, description);
                 return true;
             } catch(const myException& e) {
                 std::cerr << e.what() << std::endl;

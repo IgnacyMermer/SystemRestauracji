@@ -1,15 +1,12 @@
 #include "Task.h"
 
-Task::Task(int id, std::string name, std::string description, int priority) {
-    taskId = id; taskName = taskName; 
+Task::Task(std::string name, std::string description, int employeeID) {
+    taskName = name;
     taskDescription = description;
+    taskEmployeeId = employeeID;
     done = false; 
-    taskPriority = priority; 
 }
 
-int Task::id() {
-    return taskId;
-}
 
 std::string Task::name() {
     return taskName;
@@ -21,10 +18,6 @@ std::string Task::description() {
 
 bool Task::isDone() {
     return done;
-}
-
-int Task::priority() {
-    return taskPriority;
 }
 
 void Task::setTrueDone() {
