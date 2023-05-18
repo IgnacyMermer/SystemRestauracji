@@ -3,16 +3,15 @@
 #include <iostream>
 
 class Task {
-    int taskId;
     std::string taskName;
     std::string taskDescription;
+    int taskEmployeeId;
     bool done;
-    int taskPriority;
 public:
-    Task(int id, std::string name, std::string description, int priority);
-    int id();
+    Task(std::string name, std::string description, int employeeID);
     std::string name();
     std::string description();
+    int employeeId();
     bool isDone();
     int priority();
 protected:

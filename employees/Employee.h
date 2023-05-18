@@ -16,7 +16,7 @@ public:
     Employee(int id, std::string name, std::string role, std::string email);
     int id();
 protected:
-    void createTask(int id, std::string name, std::string description, int priority);
+    void createTask(std::string name, std::string description);
     Task getTask();
     std::string name();
     std::string role();
