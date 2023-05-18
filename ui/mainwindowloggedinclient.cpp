@@ -17,6 +17,7 @@
 #include "../data/PostData.h"
 #include "../ui/mainwindow.h"
 #include "../ui/yourdata.h"
+#include "../ui/yourorders.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -65,7 +66,10 @@ void MainWindowLoggedInClient::on_pushButton_yourData_clicked()
 
 void MainWindowLoggedInClient::on_pushButton_yourOrders_clicked()
 {
-
+    this->hide();
+    YourOrders yourOrders;
+    yourOrders.setModal(true);
+    yourOrders.exec();
 }
 
 
