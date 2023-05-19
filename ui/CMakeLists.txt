@@ -6,7 +6,10 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_library(projektPROI2_ui yourdata.cpp yourdata.h yourdata.ui
+add_library(projektPROI2_ui
+        yourorderdetails.cpp yourorderdetails.h yourorderdetails.ui
+        mealdetails.cpp mealdetails.h mealdetails.ui
+        yourdata.cpp yourdata.h yourdata.ui
         yourorders.cpp yourorders.h yourorders.ui
         yourclients.cpp yourclients.h yourclients.ui
         addnewmeal.cpp addnewmeal.h addnewmeal.ui

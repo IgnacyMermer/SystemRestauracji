@@ -4,6 +4,8 @@
 #include "../data/GetData.h"
 #include "../UserData.h"
 #include "QMessageBox"
+#include "./yourorderdetails.h"
+
 
 using namespace std;
 using namespace json_spirit;
@@ -45,5 +47,7 @@ void YourOrders::on_pushButton_clicked()
 
 void YourOrders::on_listWidget_yourOrders_itemDoubleClicked(QListWidgetItem *item)
 {
-
+    YourOrderDetails yourOrderDetails;
+    yourOrderDetails.setModal(true);
+    yourOrderDetails.exec();
 }
