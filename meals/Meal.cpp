@@ -9,8 +9,6 @@ using namespace std;
 Meal::Meal(string id, std::string shortname, std::string name, bool availability, int productsCount,vector<Ingredient> ingredients,double price){
     this->id = id;
     this->shortname = shortname;
-    cout<<shortname<<'\n';
-    cout<<name<<'\n';
     this->name = name;
     this->availability = availability;
     this->productsCount = productsCount;

@@ -47,7 +47,8 @@ void YourOrders::on_pushButton_clicked()
 
 void YourOrders::on_listWidget_yourOrders_itemDoubleClicked(QListWidgetItem *item)
 {
-    YourOrderDetails yourOrderDetails;
+    YourOrderDetails yourOrderDetails("64651c78161686a2ab79054d");
+    //yourOrderDetails.setOrderId("64651c78161686a2ab79054d");
     yourOrderDetails.setModal(true);
     yourOrderDetails.exec();
 }
