@@ -17,6 +17,7 @@ class Meal{
     double price;
 public:
     Meal(string id, std::string shortname, std::string name, bool availability, int productsCount,vector<Ingredient> ingredients, double price);
+    Meal(string id, std::string shortname, std::string name, bool availability, int productsCount,vector<string> ingredients, double price);
 
     void refreshPrice(double price);
     void refreshAvailability(){

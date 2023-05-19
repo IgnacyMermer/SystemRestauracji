@@ -3,6 +3,9 @@
 
 #include <QDialog>
 #include <QListWidgetItem>
+#include <vector>
+#include "../orders/Order.h"
+#include "json_spirit.h"
 
 namespace Ui {
 class YourOrders;
@@ -22,6 +25,7 @@ private slots:
 
 private:
     Ui::YourOrders *ui;
+    std::vector<Order> orders;
 };
 
 #endif // YOURORDERS_H

@@ -53,7 +53,6 @@ void mainwindowloggedin::on_pushButton_YourClients_clicked()
     QString listItem = QString::fromStdString(value.get_obj()[0].value_.get_str());
     QString temp = "lalalal";
     ui->listWidget->addItem(listItem);
-    std::cout<<value.get_obj()[0].value_.get_str();
 }
 
 

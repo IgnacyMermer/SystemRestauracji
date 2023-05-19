@@ -3,8 +3,11 @@
 #include "../data/GetData.h"
 #include <QMessageBox>
 #include <json_spirit.h>
+#include <iomanip>
+#include <sstream>
 
 using namespace json_spirit;
+using namespace std;
 
 YourOrderDetails::YourOrderDetails(std::string id, QWidget *parent) :
     QDialog(parent),
@@ -12,15 +15,20 @@ YourOrderDetails::YourOrderDetails(std::string id, QWidget *parent) :
     ui(new Ui::YourOrderDetails)
 {
     ui->setupUi(this);
+    cout<<orderId<<'\n';
     string url = "http://localhost:3000/order/getorder/"+orderId;
+    cout<<url<<'\n';
     GetData getData = GetData(url);
     getData.send_request();
     if(getData.getHttpCode()==200){
         Value value;
         read( getData.getResponse(), value );
-        std::cout<<value.get_obj()[0].value_.get_obj()[1].value_.get_real();
+        string price = to_string(value.get_obj()[0].value_.get_obj()[1].value_.get_real());
+        price = price.substr(0, price.length()-3);
+        ui->label_price->setText(QString::fromStdString(price));
     }
     else{
+        cout<<getData.getResponse();
         QMessageBox::information(this, "Error", "There was an error during getting order details");
     }
 }
