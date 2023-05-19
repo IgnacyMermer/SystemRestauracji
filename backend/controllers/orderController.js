@@ -24,3 +24,26 @@ exports.addNewOrder = (req, res, status) => {
         })
     }
 }
+
+exports.getAllClientOrders = (req, res, status)=>{
+    try{
+        const{clientId} = req.params;
+        order.find({clientId: clientId}).populate('mealsIds').exec().then(orders=>{
+            if(orders!=undefined){
+                return res.status(200).json({
+                    orders
+                });
+            }
+            else{
+                return res.status(400).json({
+                    error: "Error during get orders"
+                })
+            }
+        })
+    }
+    catch(e){
+        return res.status(400).json({
+            error
+        });
+    }
+}
