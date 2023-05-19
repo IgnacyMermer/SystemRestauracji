@@ -47,3 +47,26 @@ exports.getAllClientOrders = (req, res, status)=>{
         });
     }
 }
+
+exports.getOrderById = (req, res, status)=>{
+    try{
+        const {orderId} = req.params;
+        order.findOne({_id: orderId}).populate('mealsIds').exec().then(order=>{
+           if(order!=undefined){
+               return res.status(200).json({
+                  order
+               });
+           }
+           else{
+                return res.status(400).json({
+                    error: "No order found"
+                });
+           }
+        });
+    }
+    catch(e){
+        return res.status(400).json({
+            error:e
+        });
+    }
+}

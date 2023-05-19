@@ -17,6 +17,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void on_listWidget_yourOrders_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     Ui::YourOrders *ui;

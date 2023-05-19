@@ -41,8 +41,9 @@ YourOrders::~YourOrders()
 void YourOrders::on_pushButton_clicked()
 {
     this->hide();
-    MainWindowLoggedInClient mainWindowLoggedInClient;
-    mainWindowLoggedInClient.setModal(true);
-    mainWindowLoggedInClient.exec();
 }
 
+void YourOrders::on_listWidget_yourOrders_itemDoubleClicked(QListWidgetItem *item)
+{
+
+}

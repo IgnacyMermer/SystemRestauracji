@@ -57,7 +57,6 @@ MainWindowLoggedInClient::~MainWindowLoggedInClient()
 
 void MainWindowLoggedInClient::on_pushButton_yourData_clicked()
 {
-    this->hide();
     YourData yourData;
     yourData.setModal(true);
     yourData.exec();
@@ -66,7 +65,6 @@ void MainWindowLoggedInClient::on_pushButton_yourData_clicked()
 
 void MainWindowLoggedInClient::on_pushButton_yourOrders_clicked()
 {
-    this->hide();
     YourOrders yourOrders;
     yourOrders.setModal(true);
     yourOrders.exec();
