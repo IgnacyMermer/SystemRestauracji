@@ -190,9 +190,15 @@ void MainWindowLoggedInClient::on_pushButton_confirmOrder_clicked()
         string s = postData.getResponse();
         read( s, value );
         order.setId(value.get_obj()[0].value_.get_obj()[3].value_.get_str());
+        ui->listWidget_yourOrder->clear();
+        yourOrder.clear();
+        totalPrice = 0;
+        string priceText = "Cena całkowita: ";
+        ui->label_totalPrice->setText(QString::fromStdString(priceText));
     }
     else{
         QMessageBox::information(this, "Zamowienie", "Wystapil blad");
     }
+
 }
 

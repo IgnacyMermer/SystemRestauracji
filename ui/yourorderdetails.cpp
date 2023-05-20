@@ -29,6 +29,16 @@ YourOrderDetails::YourOrderDetails(std::string id, QWidget *parent) :
         ui->label_price->setText(QString::fromStdString(price));
         vector<Meal> meals = getData.getMealsWithoutMeals(value.get_obj()[0].value_.get_obj()[2].value_.get_array());
         for(int i=0; i<meals.size(); i++){
+            string date = "";
+            try{
+                date = value.get_obj()[0].value_.get_obj()[5].value_.get_str();
+                date = date.substr(0, date.length()-8);
+            }
+            catch(exception e){
+                date="No date";
+            }
+            ui->label_date->setText(QString::fromStdString(date));
+            ui->label_status->setText(QString::fromStdString(value.get_obj()[0].value_.get_obj()[4].value_.get_str()));
             ui->listWidget_meals->addItem(QString::fromStdString(meals[i].getName()));
         }
     }

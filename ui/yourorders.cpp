@@ -51,7 +51,18 @@ YourOrders::YourOrders(QWidget *parent) :
             Order order = Order(meals, arr[i].get_obj()[3].value_.get_str(), arr[i].get_obj()[1].value_.get_real());
             order.setId(arr[i].get_obj()[0].value_.get_str());
             orders.push_back(order);
-            string item = order.getId()+" - Zamowienie kwota: "+to_string(order.totalPrice());
+            string price = to_string(order.totalPrice());
+            price = price.substr(0, price.length()-4);
+            string item = order.getId()+" - Zamowienie kwota: "+price;
+            string date = "";
+            try{
+                date = arr[i].get_obj()[5].value_.get_str();
+                date = date.substr(0, date.length()-8);
+            }
+            catch(exception e){
+                date = "No date";
+            }
+            item += " "+date;
             ui->listWidget_yourOrders->addItem(QString::fromStdString(item));
         }
 
