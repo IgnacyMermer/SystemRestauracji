@@ -31,7 +31,8 @@ MealsEditing::MealsEditing(QWidget *parent) :
             std::stringstream stream;
             stream << std::fixed << std::setprecision(2) << meal.getPrice();
             std::string s = stream.str();
-            string itemText = meal.getName()+"\t- "+ s + "zł";
+            string stringAvailability = meal.getAvailability()==0?"false":"true";
+            string itemText = meal.getName()+" - "+ s + "zł\tDostepny: "+ stringAvailability;
             ui->listWidget_meals->addItem(QString::fromStdString(itemText));
         }
 
@@ -67,7 +68,44 @@ void MealsEditing::on_pushButton_editMeal_clicked()
 
 void MealsEditing::on_pushButton_changeAvailabilityMeal_clicked()
 {
-    //PostData postData = PostData("http://localhost:3000/meals/changemealavailability/"+)
+    string text = (ui->listWidget_meals->currentItem()->text()).toStdString();
+    string mealName = "";
+    for(int i=0; i<text.length(); i++){
+        if(text[i]!='-'){
+            mealName+=text[i];
+        }
+        else{
+            break;
+        }
+    }
+    mealName = mealName.substr(0, mealName.length() - 1);
+    cout<<mealName;
+    string id = "";
+    bool availability = false;
+    for(int i=0; i<meals.size(); i++){
+        if(meals[i].getName()==mealName){
+            cout<<meals[i].getId()<<'\n';
+            cout<<meals[i].getAvailability();
+            id = meals[i].getId();
+            availability = !meals[i].getAvailability();
+            break;
+        }
+    }
+    if(id!=""){
+        string stringAvailability = availability==0?"false":"true";
+        string body = "{\"availability\":" +stringAvailability+"}";
+        PostData postData = PostData("http://localhost:3000/meals/changemealavailability/"+id, body);
+        postData.send_request();
+        if(postData.getHttpCode()==200){
+            string itemtext = ui->listWidget_meals->currentItem()->text().toStdString();
+            int toSubText = stringAvailability=="false"?4:5;
+            ui->listWidget_meals->currentItem()->setText(QString::fromStdString(itemtext.substr(0, itemtext.length()-toSubText)+stringAvailability));
+        }
+        else{
+            cout<<"Whyyyy";
+        }
+    }
+
 }
 
 

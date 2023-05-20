@@ -104,6 +104,8 @@ exports.changeMealAvailability = (req, res, status)=>{
     try{
         const {availability} = req.body;
         const {id} = req.params;
+        console.log(id);
+        console.log(availability);
         meal.findOneAndUpdate({_id: id}, {availability: availability}).then(meal=>{
             return res.status(200).json({
                 meal

@@ -9,6 +9,7 @@
 #include "../data/GetData.h"
 #include "mealsediting.h"
 #include "yourdata.h"
+#include "./yourclients.h"
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -39,20 +40,9 @@ void mainwindowloggedin::on_pushButton_YourData_clicked()
 
 void mainwindowloggedin::on_pushButton_YourClients_clicked()
 {
-    ui->listWidget->addItem("lalalal");
-    string name;
-    GetData getData = GetData("http://localhost:3000/src/app.js");
-    cout<<getData.getResponse()<<'\n';
-    //string jsonStr("{\"name\":\"Tom\", \"lech\":\"tom\", \"array\":{\"lechu\":[1, 2, 3]}");
-    string jsonStr(getData.getResponse());
-
-    Value value;
-
-    read( jsonStr, value );
-
-    QString listItem = QString::fromStdString(value.get_obj()[0].value_.get_str());
-    QString temp = "lalalal";
-    ui->listWidget->addItem(listItem);
+    YourClients yourClients;
+    yourClients.setModal(true);
+    yourClients.exec();
 }
 
 
