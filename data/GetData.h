@@ -20,6 +20,7 @@ public:
 
     void send_request();
     vector<Meal> getMeals(json_spirit::Array& arr);
+    vector<Meal> getMealsWithoutMeals(json_spirit::Array& arr);
 
 };
 
