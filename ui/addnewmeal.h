@@ -26,6 +26,7 @@ private slots:
 
 private:
     vector<Ingredient> ingredients;
+    vector<Ingredient> chosenIngredients;
     Ui::AddNewMeal *ui;
 };
 

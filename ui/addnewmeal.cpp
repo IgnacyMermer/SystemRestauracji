@@ -54,8 +54,17 @@ AddNewMeal::~AddNewMeal()
 void AddNewMeal::on_pushButton_addIngredient_clicked()
 {
     const QString& s = ui->listWidget_ingredientsToChoose->currentItem()->text();
+    string ingredientName = s.toStdString();
     const QString& sCount = ui->lineEdit_newIngredientCount->text();
+    int countInt = sCount.toStdString()!=""?stoi(sCount.toStdString()):100;
     const QString& countText = QString::fromStdString(" - Ilość: ");
+    for(int i=0; i<ingredients.size(); i++){
+        if(ingredients[i].getName() == ingredientName){
+            Ingredient newIngredient = Ingredient(ingredients[i].getId(), ingredients[i].getName(), ingredients[i].getName(),
+                                                  ingredients[i].getAvailability(), countInt);
+            chosenIngredients.push_back(newIngredient);
+        }
+    }
     ui->listWidget_chosenIngredients->addItem(s+countText+sCount);
 }
 
@@ -75,15 +84,15 @@ void AddNewMeal::on_pushButton_removeIngredient_clicked()
     itemText = itemText.substr(0, itemText.length()-1);
     vector<Ingredient> newIngredients;
     bool deleted = false;
-    for(int j=0; j<ingredients.size(); j++){
-        if(ingredients[j].getName()!=itemText || deleted){
-            newIngredients.push_back(ingredients[j]);
+    for(int j=0; j<chosenIngredients.size(); j++){
+        if(chosenIngredients[j].getName()!=itemText || deleted){
+            newIngredients.push_back(chosenIngredients[j]);
         }
         else{
             deleted=true;
         }
     }
-    ingredients = newIngredients;
+    chosenIngredients = newIngredients;
     QListWidgetItem *it = ui->listWidget_chosenIngredients->takeItem(ui->listWidget_chosenIngredients->currentRow());
     delete it;
 }
@@ -96,18 +105,17 @@ void AddNewMeal::on_pushButton_confirm_clicked()
     string description = ui->textEdit_mealPrepareDescription->toPlainText().toStdString();
     string body = "{\"shortName\":\""+name+"\", \"name\":\""+name+"\", \"description\":\""+description+"\",";
     body+=" \"productsCount\": 100, \"price\":"+priceStr+", \"ingredients\": [";
-    for(int i=0; i<ingredients.size(); i++){
+    for(int i=0; i<chosenIngredients.size(); i++){
         string itemBody = "";
-        Ingredient ingredient = ingredients[i];
+        Ingredient ingredient = chosenIngredients[i];
         itemBody+="{\"_id\": \""+ingredient.getId()+"\", ";
         itemBody+="\"shortName\": \""+ingredient.getName()+"\", \"name\": \""+ingredient.getName()+"\", ";
-        itemBody+="\"availability\": true, \"productsCount\": 100}";
+        string productsCount= to_string(ingredient.getProductsCount());
+        itemBody+="\"availability\": true, \"productsCount\":"+ productsCount +"}";
         body+=itemBody+", ";
     }
     body = body.substr(0, body.length()-2);
-    //body+="{\"_id\": \"645cfbd6f1aa6a220b7b4268\", \"shortName\": \"Ogórki zielone\", \"name\": \"Ogórki zielone\", \"availability\": true, \"productsCount\": 100}";
     body+="], \"type\": \"meal\"}";
-    cout<<body;
     PostData postData = PostData("http://localhost:3000/meals/addnewmeal", body);
     postData.send_request();
     if(postData.getHttpCode()==200){
