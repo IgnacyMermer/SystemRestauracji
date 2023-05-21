@@ -25,14 +25,14 @@ include_directories(client)
 add_subdirectory(client)
 include_directories(employees)
 add_subdirectory(employees)
-include_directories(orders)
-add_subdirectory(orders)
 include_directories(ui)
 add_subdirectory(ui)
-include_directories(meals)
-add_subdirectory(meals)
 include_directories(data)
 add_subdirectory(data)
+include_directories(meals)
+add_subdirectory(meals)
+include_directories(orders)
+add_subdirectory(orders)
 
 target_link_libraries(projektPROI2
         Qt5::Core
@@ -40,10 +40,10 @@ target_link_libraries(projektPROI2
         Qt5::Widgets
         projektPROI2_client
         projektPROI2_employee
-        projektPROI2_order
         projektPROI2_ui
-        projektPROI2_meal
         projektPROI2_data
+        projektPROI2_meal
+        projektPROI2_order
         curlpp
         json_spirit
         ${Boost_LIBRARIES}
