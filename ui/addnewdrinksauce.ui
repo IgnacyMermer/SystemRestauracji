@@ -66,6 +66,13 @@
      </widget>
     </item>
     <item>
+     <widget class="QLineEdit" name="lineEdit_price">
+      <property name="placeholderText">
+       <string>Cena</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QTextEdit" name="textEdit_description">
       <property name="placeholderText">
        <string>Opis</string>

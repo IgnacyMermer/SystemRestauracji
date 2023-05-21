@@ -75,13 +75,18 @@ exports.getAllMeals = (req, res, status)=>{
 exports.addNewMeal = (req, res, status)=>{
     try{
         const {productsCount, shortName, name, price, ingredients, description} = req.body;
+        let type = req.body.type;
+        if(type==undefined){
+            type="meal";
+        }
         const newMeal = new meal({
             shortName,
             name,
             description,
             productsCount,
             price,
-            ingredients
+            ingredients,
+            type
         });
         newMeal.save().then(meal=>{
             return res.status(200).json({

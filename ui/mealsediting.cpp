@@ -31,7 +31,7 @@ MealsEditing::MealsEditing(QWidget *parent) :
             std::stringstream stream;
             stream << std::fixed << std::setprecision(2) << meal.getPrice();
             std::string s = stream.str();
-            string stringAvailability = meal.getAvailability()==0?"false":"true";
+            string stringAvailability = meal.getAvailability()==0?"nie":"tak";
             string itemText = meal.getName()+" - "+ s + "zł\tDostepny: "+ stringAvailability;
             ui->listWidget_meals->addItem(QString::fromStdString(itemText));
         }
@@ -93,13 +93,14 @@ void MealsEditing::on_pushButton_changeAvailabilityMeal_clicked()
     }
     if(id!=""){
         string stringAvailability = availability==0?"false":"true";
+        string stringAvailabilityScreen = availability==0?"nie":"tak";
         string body = "{\"availability\":" +stringAvailability+"}";
+        availability = !availability;
         PostData postData = PostData("http://localhost:3000/meals/changemealavailability/"+id, body);
         postData.send_request();
         if(postData.getHttpCode()==200){
             string itemtext = ui->listWidget_meals->currentItem()->text().toStdString();
-            int toSubText = stringAvailability=="false"?4:5;
-            ui->listWidget_meals->currentItem()->setText(QString::fromStdString(itemtext.substr(0, itemtext.length()-toSubText)+stringAvailability));
+            ui->listWidget_meals->currentItem()->setText(QString::fromStdString(itemtext.substr(0, itemtext.length()-3)+stringAvailabilityScreen));
         }
         else{
             cout<<"Whyyyy";
