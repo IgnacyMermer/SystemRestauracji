@@ -49,7 +49,7 @@ void AddNewDrinkSauce::on_pushButton_confirm_clicked()
         QMessageBox::information(this, "Meal", "Meal added");
     }
     else{
-        QMessageBox::information(this, "Meal", "Error during getting your orders");
+        QMessageBox::information(this, "Meal", "Error during adding meal");
     }
 }
 

@@ -2,6 +2,7 @@
 #define ADDNEWMEAL_H
 
 #include <QDialog>
+#include "../meals/Ingredient.h"
 
 
 namespace Ui {
@@ -24,6 +25,7 @@ private slots:
     void on_pushButton_confirm_clicked();
 
 private:
+    vector<Ingredient> ingredients;
     Ui::AddNewMeal *ui;
 };
 
