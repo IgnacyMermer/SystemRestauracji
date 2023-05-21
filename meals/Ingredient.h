@@ -16,6 +16,9 @@ public:
     string getName(){
         return foodname;
     }
+    string getId(){
+        return foodid;
+    }
     void setProductsCount(int productsCount);
     bool checkAvailability();
     bool getAvailability();

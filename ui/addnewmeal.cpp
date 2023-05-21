@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include "../data/GetData.h"
 #include "../meals/Ingredient.h"
+#include "../data/PostData.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -90,7 +91,31 @@ void AddNewMeal::on_pushButton_removeIngredient_clicked()
 
 void AddNewMeal::on_pushButton_confirm_clicked()
 {
-    string body = "";
-
+    string name = ui->lineEdit_mealName->text().toStdString();
+    string priceStr = ui->lineEdit_price->text().toStdString();
+    string description = ui->textEdit_mealPrepareDescription->toPlainText().toStdString();
+    string body = "{\"shortName\":\""+name+"\", \"name\":\""+name+"\", \"description\":\""+description+"\",";
+    body+=" \"productsCount\": 100, \"price\":"+priceStr+", \"ingredients\": [";
+    for(int i=0; i<ingredients.size(); i++){
+        string itemBody = "";
+        Ingredient ingredient = ingredients[i];
+        itemBody+="{\"_id\": \""+ingredient.getId()+"\", ";
+        itemBody+="\"shortName\": \""+ingredient.getName()+"\", \"name\": \""+ingredient.getName()+"\", ";
+        itemBody+="\"availability\": true, \"productsCount\": 100}";
+        body+=itemBody+", ";
+    }
+    body = body.substr(0, body.length()-2);
+    //body+="{\"_id\": \"645cfbd6f1aa6a220b7b4268\", \"shortName\": \"Ogórki zielone\", \"name\": \"Ogórki zielone\", \"availability\": true, \"productsCount\": 100}";
+    body+="], \"type\": \"meal\"}";
+    cout<<body;
+    PostData postData = PostData("http://localhost:3000/meals/addnewmeal", body);
+    postData.send_request();
+    if(postData.getHttpCode()==200){
+        this->hide();
+        QMessageBox::information(this, "Meal", "Meal added");
+    }
+    else{
+        QMessageBox::information(this, "Meal", "Error during adding meal");
+    }
 }
 

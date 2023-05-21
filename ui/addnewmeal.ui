@@ -31,6 +31,13 @@
      </widget>
     </item>
     <item>
+     <widget class="QLineEdit" name="lineEdit_price">
+      <property name="placeholderText">
+       <string>Cena</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QCheckBox" name="checkBox_mealAvailability">
       <property name="text">
        <string>Dostępny</string>
