@@ -10,6 +10,8 @@
 #include "mealsediting.h"
 #include "yourdata.h"
 #include "./yourclients.h"
+#include "../UserData.h"
+#include <QMessageBox>
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -20,6 +22,24 @@ mainwindowloggedin::mainwindowloggedin(QWidget *parent) :
     ui(new Ui::mainwindowloggedin)
 {
     ui->setupUi(this);
+    string url = "http://localhost:3000/task/getemployeetask/"+UserData::getId();
+    cout<<url<<'\n';
+    GetData getData = GetData(url);
+    getData.send_request();
+    if(getData.getHttpCode()==200){
+        string s = getData.getResponse();
+        Value value;
+        read(s, value);
+        Array& arr = value.get_obj()[0].value_.get_array();
+        for(int i=0; i<arr.size(); i++){
+            cout<<arr[0].get_obj()[0].value_.get_str();
+            string itemText = arr[i].get_obj()[1].value_.get_str()+" - "+arr[i].get_obj()[2].value_.get_str();
+            ui->listWidget->addItem(QString::fromStdString(itemText));
+        }
+    }
+    else{
+        QMessageBox::information(this, "Error", "Error during get tasks");
+    }
 }
 
 mainwindowloggedin::~mainwindowloggedin()
@@ -31,7 +51,6 @@ mainwindowloggedin::~mainwindowloggedin()
 
 void mainwindowloggedin::on_pushButton_YourData_clicked()
 {
-    this->hide();
     YourData yourData;
     yourData.setModal(true);
     yourData.exec();

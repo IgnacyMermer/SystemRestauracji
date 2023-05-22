@@ -27,11 +27,11 @@ exports.addNewTask = (req, res, status)=>{
 
 exports.getEmployeeTask = (req, res, status)=>{
     try{
-        const{employeeId} = req.params;
-        task.find({employeeId: employeeId}).populate('name').exec().then(task=>{
-            if(task!=undefined){
+        const {employeeId} = req.params;
+        task.find({employeeId: employeeId}).populate('name').exec().then(tasks=>{
+            if(tasks!=undefined){
                 return res.status(200).json({
-                    task
+                    tasks
                 });
             }
             else{
