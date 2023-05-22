@@ -2,6 +2,7 @@
 #define MAINWINDOWLOGGEDIN_H
 
 #include <QDialog>
+#include "../employees/Task.h"
 
 namespace Ui {
 class mainwindowloggedin;
@@ -30,6 +31,7 @@ private slots:
 
 private:
     Ui::mainwindowloggedin *ui;
+    vector<Task> tasks;
 };
 
 #endif // MAINWINDOWLOGGEDIN_H
