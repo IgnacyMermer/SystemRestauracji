@@ -24,7 +24,6 @@ YourOrders::YourOrders(QWidget *parent) :
     if(getData.getHttpCode()==200){
         Value value;
         read(getData.getResponse(), value);
-        cout<<value.get_obj()[0].value_.get_array()[0].get_obj()[0].value_.get_str();
         Array& arr = value.get_obj()[0].value_.get_array();
         for(int i=0; i<arr.size(); i++){
             vector<Meal> meals;

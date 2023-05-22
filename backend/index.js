@@ -6,6 +6,7 @@ const signingRoute = require('./routes/signingRoute');
 const mealsRoute = require('./routes/mealsRoute');
 const orderRoute = require('./routes/orderRoute');
 const taskRoute = require('./routes/taskRoute');
+const employeeRoute = require('./routes/employeeRoute');
 
 const app = express();
 
@@ -32,5 +33,6 @@ app.use('/', signingRoute);
 app.use('/meals', mealsRoute);
 app.use('/task', taskRoute);
 app.use('/order', orderRoute);
+app.use('/employees', employeeRoute);
 
 app.listen(3000);
