@@ -13,6 +13,7 @@
 #include "../UserData.h"
 #include <QMessageBox>
 #include "../employees/Employee.h"
+#include "./taskdetails.h"
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -32,8 +33,11 @@ mainwindowloggedin::mainwindowloggedin(QWidget *parent) :
         read(s, value);
         Array& arr = value.get_obj()[0].value_.get_array();
         for(int i=0; i<arr.size(); i++){
-
-            string itemText = arr[i].get_obj()[1].value_.get_str()+" - "+arr[i].get_obj()[2].value_.get_str();
+            Task task = Task(arr[i].get_obj()[0].value_.get_str(), arr[i].get_obj()[1].value_.get_str(),
+                             arr[i].get_obj()[2].value_.get_str(), arr[i].get_obj()[3].value_.get_str(),
+                             arr[i].get_obj()[4].value_.get_str());
+            string itemText = task.name()+" - "+task.description();
+            tasks.push_back(task);
             ui->listWidget->addItem(QString::fromStdString(itemText));
         }
     }
@@ -87,6 +91,36 @@ void mainwindowloggedin::on_pushButton_changeAvailabilityIngredients_clicked()
 
 void mainwindowloggedin::on_pushButton_confirmOrder_clicked()
 {
-    std::string itemtext = ui->listWidget->currentItem()->text().toStdString();
+    std::string itemtextS = ui->listWidget->currentItem()->text().toStdString();
+    string itemText = "";
+    string itemTextDescription = "";
+    bool isDescription = false;
+    for(int i=0; i<itemtextS.length(); i++){
+        if(itemtextS[i]=='-'){
+            isDescription = true;
+        }
+        else{
+            if(!isDescription){
+                itemText+=itemtextS[i];
+            }
+            else{
+                itemTextDescription+=itemtextS[i];
+            }
 
+        }
+    }
+    itemText = itemText.substr(0, itemText.length()-1);
+    itemTextDescription = itemTextDescription.substr(1);
+    vector<Task>::iterator iterator;
+    Task chosenTask;
+    for(iterator = tasks.begin(); iterator!=tasks.end(); iterator++){
+        if(iterator->name() == itemText && itemTextDescription == iterator->description()){
+            chosenTask = Task(iterator->getId(), iterator->name(), iterator->description(),
+                              iterator->getEmployeeId(), iterator->getBossId());
+            break;
+        }
+    }
+    TaskDetails taskDetails(chosenTask);
+    taskDetails.setModal(this);
+    taskDetails.exec();
 }

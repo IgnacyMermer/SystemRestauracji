@@ -2,11 +2,12 @@ const task = require('../models/taskModel');
 
 exports.addNewTask = (req, res, status)=>{
     try{
-        const {name, description, employeeId} = req.body;
+        const {name, description, employeeId, bossId} = req.body;
         const newTask = new task({
             name,
             description,
-            employeeId
+            employeeId,
+            bossId
         });
         newTask.save().then(newTask=>{
             return res.status(200).json({

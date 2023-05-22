@@ -31,7 +31,7 @@ private slots:
 
 private:
     Ui::mainwindowloggedin *ui;
-    vector<Task> tasks;
+    std::vector<Task> tasks;
 };
 
 #endif // MAINWINDOWLOGGEDIN_H

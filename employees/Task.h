@@ -5,13 +5,17 @@
 class Task {
     std::string taskName;
     std::string taskDescription;
-    int taskEmployeeId;
+    std::string taskEmployeeId;
+    std::string bossId, id;
     bool done;
 public:
-    Task(std::string name, std::string description, int employeeID);
+    Task();
+    Task(std::string id, std::string name, std::string description, std::string employeeID, std::string bossId);
     std::string name();
     std::string description();
-    int employeeId();
+    std::string getEmployeeId();
+    std::string getBossId();
+    std::string getId();
     bool isDone();
     int priority();
 protected:

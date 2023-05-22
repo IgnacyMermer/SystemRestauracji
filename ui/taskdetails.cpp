@@ -1,12 +1,14 @@
 #include "taskdetails.h"
 #include "ui_taskdetails.h"
+#include "../employees/Task.h"
 
-TaskDetails::TaskDetails(std::string id, QWidget *parent) :
+TaskDetails::TaskDetails(Task task, QWidget *parent) :
     QDialog(parent),
-    id(id),
+    task(task),
     ui(new Ui::TaskDetails)
 {
     ui->setupUi(this);
+    std::cout<<task.getId();
 }
 
 TaskDetails::~TaskDetails()

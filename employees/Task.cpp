@@ -1,6 +1,8 @@
 #include "Task.h"
 
-Task::Task(std::string name, std::string description, int employeeID) {
+Task::Task() {}
+
+Task::Task(std::string id, std::string name, std::string description, std::string employeeID, std::string bossId):bossId(bossId), id(id) {
     taskName = name;
     taskDescription = description;
     taskEmployeeId = employeeID;
@@ -30,4 +32,16 @@ void Task::setFalseDone() {
 
 void Task::updateDescription(std::string newDescription) {
     taskDescription = newDescription;
+}
+
+std::string Task::getBossId(){
+    return bossId;
+}
+
+std::string Task::getEmployeeId(){
+    return taskEmployeeId;
+}
+
+std::string Task::getId() {
+    return id;
 }

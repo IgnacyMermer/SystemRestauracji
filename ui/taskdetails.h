@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <iostream>
+#include "../employees/Task.h"
 
 
 namespace Ui {
@@ -14,7 +15,7 @@ class TaskDetails : public QDialog
     Q_OBJECT
 
 public:
-    explicit TaskDetails(std::string id, QWidget *parent = nullptr);
+    explicit TaskDetails(Task task, QWidget *parent = nullptr);
     ~TaskDetails();
 
 private slots:
@@ -22,7 +23,7 @@ private slots:
 
 private:
     Ui::TaskDetails *ui;
-    std::string id;
+    Task task;
 };
 
 #endif // TASKDETAILS_H
