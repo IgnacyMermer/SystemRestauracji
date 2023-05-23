@@ -86,7 +86,6 @@ void mainwindowloggedin::on_pushButton_changeAvailabilityMeals_clicked()
 
 void mainwindowloggedin::on_pushButton_addTasks_clicked()
 {
-    std::cout<<"waaaa";
     if(UserData::getRole()!="Manager"&&UserData::getRole()!="Chef"){
         QMessageBox::information(this, "Brak uprawnien", "Nie masz uprawnień do tej operacji");
     }

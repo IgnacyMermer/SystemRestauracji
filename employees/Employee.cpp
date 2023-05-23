@@ -1,7 +1,8 @@
 #include "Employee.h"
 #include "../data/PostData.h"
 
-Employee::Employee(int id, std::string name, std::string role, std::string email) {
+
+Employee::Employee(std::string id, std::string name, std::string role, std::string email) {
     employeeId = id;
     employeeName = name;
     employeeRole = role;
@@ -9,15 +10,14 @@ Employee::Employee(int id, std::string name, std::string role, std::string email
     employeeTask = false; 
 }
 
-int Employee::id() {
+std::string Employee::id() {
     return employeeId;
 }
 
 void Employee::createTask(std::string name, std::string description) {
     //Task task = Task(name, description, employeeID);
     // TODO: zapis do DB tasku;
-    std::string employeeID = std::to_string(this->employeeId); // nie wiem czy tak pobiera się id unikalnego obiektu
-    std::string body = "{\"name\" : \""+name+"\", \"description\": \""+description+"\", \"employeeId\" : \""+employeeID+"\"}";
+    std::string body = "{\"name\" : \""+name+"\", \"description\": \""+description+"\", \"employeeId\" : \""+employeeId+"\"}";
 
     PostData postData = PostData("http://localhost:3000/", body); // potrzebne URL
     postData.send_request();

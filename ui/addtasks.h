@@ -2,6 +2,7 @@
 #define ADDTASKS_H
 
 #include <QDialog>
+#include "../employees/Employee.h"
 
 namespace Ui {
 class AddTasks;
@@ -17,9 +18,11 @@ public:
 
 private slots:
     void on_pushButton_comeback_clicked();
+    void on_pushButton_confirm_clicked();
 
 private:
     Ui::AddTasks *ui;
+    std::vector<Employee> employees;
 };
 
 #endif // ADDTASKS_H

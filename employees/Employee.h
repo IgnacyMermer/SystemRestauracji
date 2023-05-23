@@ -7,20 +7,22 @@
 #include "exception.cpp"
 
 class Employee {
-    int employeeId;
+    std::string employeeId;
     std::string employeeName;
     std::string employeeRole;
     std::string employeeEmail;
     bool employeeTask;
 public:
-    Employee(int id, std::string name, std::string role, std::string email);
-    int id();
-protected:
-    void createTask(std::string name, std::string description);
-    Task getTask();
+    Employee(){}
+    Employee(std::string id, std::string name, std::string role, std::string email);
+    std::string id();
     std::string name();
     std::string role();
     std::string email();
+protected:
+    void createTask(std::string name, std::string description);
+    Task getTask();
+
     bool hasTask();
     std::vector<int> tasks; // podajemy task id
     std::vector<int> givenTasks; // podajemy task id
