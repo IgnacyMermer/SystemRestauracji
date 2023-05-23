@@ -49,6 +49,29 @@ exports.getEmployeeTask = (req, res, status)=>{
     }
 }
 
+exports.getEmployeeTaskUnDone = (req, res, status)=>{
+    try{
+        const {employeeId} = req.params;
+        task.find({employeeId: employeeId, done: false}).exec().then(tasks=>{
+            if(tasks!=undefined){
+                return res.status(200).json({
+                    tasks
+                });
+            }
+            else{
+                return res.status(400).json({
+                    error: "Error during get task"
+                })
+            }
+        })
+    }
+    catch(e){
+        return res.status(400).json({
+            error
+        });
+    }
+}
+
 exports.getEmployeeTaskByName = (req, res, status)=>{
     try{
         const {employeeName} = req.params;

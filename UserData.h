@@ -31,6 +31,9 @@ public:
     static string getEmail(){
         return UserData::email;
     };
+    static string getRole(){
+        return UserData::role;
+    }
 private:
 
 };

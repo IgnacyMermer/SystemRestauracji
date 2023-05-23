@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include "../employees/Employee.h"
 #include "./taskdetails.h"
+#include "./addtasks.h"
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -24,7 +25,7 @@ mainwindowloggedin::mainwindowloggedin(QWidget *parent) :
     ui(new Ui::mainwindowloggedin)
 {
     ui->setupUi(this);
-    string url = "http://localhost:3000/task/getemployeetask/"+UserData::getId();
+    string url = "http://localhost:3000/task/getemployeetaskundone/"+UserData::getId();
     GetData getData = GetData(url);
     getData.send_request();
     if(getData.getHttpCode()==200){
@@ -83,8 +84,17 @@ void mainwindowloggedin::on_pushButton_changeAvailabilityMeals_clicked()
 }
 
 
-void mainwindowloggedin::on_pushButton_changeAvailabilityIngredients_clicked()
+void mainwindowloggedin::on_pushButton_addTasks_clicked()
 {
+    std::cout<<"waaaa";
+    if(UserData::getRole()!="Manager"&&UserData::getRole()!="Chef"){
+        QMessageBox::information(this, "Brak uprawnien", "Nie masz uprawnień do tej operacji");
+    }
+    else{
+        AddTasks addTasks;
+        addTasks.setModal(true);
+        addTasks.exec();
+    }
 
 }
 

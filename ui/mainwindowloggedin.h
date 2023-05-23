@@ -25,7 +25,7 @@ private slots:
 
     void on_pushButton_changeAvailabilityMeals_clicked();
 
-    void on_pushButton_changeAvailabilityIngredients_clicked();
+    void on_pushButton_addTasks_clicked();
 
     void on_pushButton_confirmOrder_clicked();
 
