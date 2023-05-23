@@ -2,7 +2,7 @@
 
 Task::Task() {}
 
-Task::Task(std::string id, std::string name, std::string description, std::string employeeID, std::string bossId):bossId(bossId), id(id) {
+Task::Task(std::string id, std::string name, std::string description, std::string employeeID, std::string bossId, bool done):bossId(bossId), id(id), done(done) {
     taskName = name;
     taskDescription = description;
     taskEmployeeId = employeeID;

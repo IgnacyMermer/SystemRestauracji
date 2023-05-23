@@ -3,6 +3,8 @@
 #include "../employees/Task.h"
 #include "../data/GetData.h"
 #include "json_spirit.h"
+#include "../data/PostData.h"
+#include <QMessageBox>
 
 using namespace json_spirit;
 
@@ -21,7 +23,7 @@ TaskDetails::TaskDetails(Task task, QWidget *parent) :
         ui->label_boss->setText(QString::fromStdString(bossName));
     }
     ui->label_title->setText(QString::fromStdString(task.name()));
-
+    ui->textBrowser_description->setText(QString::fromStdString(task.description()));
 }
 
 TaskDetails::~TaskDetails()
@@ -32,5 +34,15 @@ TaskDetails::~TaskDetails()
 void TaskDetails::on_pushButton_comeback_clicked()
 {
     this->hide();
+}
+
+void TaskDetails::on_pushButton_taskDone_clicked()
+{
+    PostData postData = PostData("http://localhost:3000/task/changetaskdone/"+task.getId(), "{\"done\": "+to_string(!task.isDone())+"}");
+    postData.send_request();
+    if(postData.getHttpCode()==200){
+        QMessageBox::information(this, "Done", "changed");
+    }
+
 }
 

@@ -71,3 +71,28 @@ exports.getEmployeeTaskByName = (req, res, status)=>{
         });
     }
 }
+
+exports.changeDone = (req, res, status)=>{
+    try {
+        const{id} = req.params;
+        const{done} = req.body;
+        console.log(done);
+        task.findOneAndUpdate({_id:id}, {done:done}).exec().then(newTask=>{
+            if(newTask!=undefined){
+                return res.status(200).json({
+                    taks: newTask
+                });
+            }
+            else{
+                return res.status(400).json({
+                    error: "Error during changing task's done"
+                });
+            }
+        })
+    }
+    catch(e){
+        return res.status(400).json({
+            error
+        });
+    }
+}

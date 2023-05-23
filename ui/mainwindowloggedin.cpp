@@ -35,7 +35,7 @@ mainwindowloggedin::mainwindowloggedin(QWidget *parent) :
         for(int i=0; i<arr.size(); i++){
             Task task = Task(arr[i].get_obj()[0].value_.get_str(), arr[i].get_obj()[1].value_.get_str(),
                              arr[i].get_obj()[2].value_.get_str(), arr[i].get_obj()[3].value_.get_str(),
-                             arr[i].get_obj()[4].value_.get_str());
+                             arr[i].get_obj()[4].value_.get_str(), arr[i].get_obj()[5].value_.get_bool());
             string itemText = task.name()+" - "+task.description();
             tasks.push_back(task);
             ui->listWidget->addItem(QString::fromStdString(itemText));
@@ -116,7 +116,7 @@ void mainwindowloggedin::on_pushButton_confirmOrder_clicked()
     for(iterator = tasks.begin(); iterator!=tasks.end(); iterator++){
         if(iterator->name() == itemText && itemTextDescription == iterator->description()){
             chosenTask = Task(iterator->getId(), iterator->name(), iterator->description(),
-                              iterator->getEmployeeId(), iterator->getBossId());
+                              iterator->getEmployeeId(), iterator->getBossId(), iterator->isDone());
             break;
         }
     }
