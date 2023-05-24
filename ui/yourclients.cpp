@@ -3,6 +3,7 @@
 #include "../data/GetData.h"
 #include "json_spirit.h"
 #include "../client/Client.h"
+#include "./clientdetails.h"
 
 using namespace json_spirit;
 
@@ -33,7 +34,7 @@ YourClients::~YourClients()
 
 void YourClients::on_pushButton_clicked()
 {
-    std::string itemText = ui->currentItem()->text().toStdString();
+    std::string itemText = ui->listWidget->currentItem()->text().toStdString();
     std::string name = "";
     std::string login = "";
     bool isLogin = false;
@@ -56,6 +57,8 @@ void YourClients::on_pushButton_clicked()
             chosenClient=clients[i];
         }
     }
-
+    ClientDetails clientDetails(chosenClient);
+    clientDetails.setModal(this);
+    clientDetails.exec();
 }
 
