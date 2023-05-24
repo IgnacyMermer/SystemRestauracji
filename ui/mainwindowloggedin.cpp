@@ -133,3 +133,33 @@ void mainwindowloggedin::on_pushButton_confirmOrder_clicked()
     taskDetails.setModal(this);
     taskDetails.exec();
 }
+
+void mainwindowloggedin::on_pushButton_refresh_clicked() {
+    string url = "http://localhost:3000/task/getemployeetaskundone/"+UserData::getId();
+    GetData getData = GetData(url);
+    getData.send_request();
+    if(getData.getHttpCode()==200){
+        string s = getData.getResponse();
+        Value value;
+        read(s, value);
+        ui->listWidget->clear();
+        Array& arr = value.get_obj()[0].value_.get_array();
+        for(int i=0; i<arr.size(); i++){
+            Task task = Task(arr[i].get_obj()[0].value_.get_str(), arr[i].get_obj()[1].value_.get_str(),
+                             arr[i].get_obj()[2].value_.get_str(), arr[i].get_obj()[3].value_.get_str(),
+                             arr[i].get_obj()[4].value_.get_str(), arr[i].get_obj()[5].value_.get_bool());
+            string itemText = task.name()+" - "+task.description();
+            tasks.push_back(task);
+            ui->listWidget->addItem(QString::fromStdString(itemText));
+        }
+    }
+    else{
+        QMessageBox::information(this, "Error", "Error during get tasks");
+    }
+}
+
+void mainwindowloggedin::on_pushButton_logout_clicked() {
+    UserData::setId("");
+    this->hide();
+    UserData::mainwindowScreen->show();
+}

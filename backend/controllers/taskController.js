@@ -3,7 +3,6 @@ const task = require('../models/taskModel');
 exports.addNewTask = (req, res, status)=>{
     try{
         const {name, description, employeeId, bossId} = req.body;
-        console.log(employeeId);
         var myFalse = false;
         const newTask = new task({
             name,
@@ -12,7 +11,6 @@ exports.addNewTask = (req, res, status)=>{
             bossId,
             done: myFalse
         });
-        console.log(newTask);
         newTask.save().then(newTask=>{
             return res.status(200).json({
                 task: newTask

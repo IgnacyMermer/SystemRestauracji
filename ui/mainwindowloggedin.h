@@ -27,6 +27,10 @@ private slots:
 
     void on_pushButton_addTasks_clicked();
 
+    void on_pushButton_refresh_clicked();
+
+    void on_pushButton_logout_clicked();
+
     void on_pushButton_confirmOrder_clicked();
 
 private:
