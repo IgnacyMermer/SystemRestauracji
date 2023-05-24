@@ -2,6 +2,7 @@
 #define YOURCLIENTS_H
 
 #include <QDialog>
+#include "../client/Client.h"
 
 namespace Ui {
 class YourClients;
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::YourClients *ui;
+    std::vector<Client> clients;
 };
 
 #endif // YOURCLIENTS_H

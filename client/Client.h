@@ -9,14 +9,16 @@ class Client {
     std::string clientLogin;
     int clientPoints;
 public:
+    Client(){};
     Client(std::string id, std::string name, std::string login);
     std::string id();
     void addOrder();
     void addPoints(int points);
     std::string name();
     std::string login();
-protected:
     int myPoint();
+protected:
+
 };
 
 
