@@ -2,6 +2,7 @@
 #define ORDERSEDITING_H
 
 #include <QDialog>
+#include "../orders/Order.h"
 
 namespace Ui {
 class ordersEditing;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::ordersEditing *ui;
+    std::vector<Order> orders;
 };
 
 #endif // ORDERSEDITING_H

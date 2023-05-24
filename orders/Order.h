@@ -16,6 +16,7 @@ class Order {
     int estimatedTime;
     time_t CopletionTime;
 public:
+    Order(){}
     Order(std::vector<Meal> mealsIds, string clientId, double totalPrice);
     double totalPrice();
     int getNumberOfMeals();

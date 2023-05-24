@@ -70,3 +70,41 @@ exports.getOrderById = (req, res, status)=>{
         });
     }
 }
+
+exports.getALlOrders = (req, res, status)=>{
+    try{
+        order.find({status: 'in progress'}).populate('mealsIds clientId').exec().then(orders=>{
+            if(orders!=undefined){
+                return res.status(200).json({
+                    orders
+                });
+            }
+            else{
+                return res.status(400).json({
+                    error: "No order found"
+                });
+            }
+        });
+    }
+    catch (e) {
+        return res.status(400).json({
+            error:e
+        });
+    }
+}
+
+exports.setOrderAsDone = (req, res ,status)=>{
+    const{id} = req.params;
+    try{
+        order.findOneAndUpdate({_id: id}, {status: "done"}).exec().then(newOrder=>{
+            return res.status(200).json({
+                order: newOrder
+            });
+        })
+    }
+    catch (e) {
+        return res.status(400).json({
+            error:e
+        });
+    }
+}
