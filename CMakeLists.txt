@@ -21,6 +21,8 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
 add_executable(projektPROI2 main.cpp UserData.cpp UserData.h)
 
+include_directories(tests)
+add_subdirectory(tests)
 include_directories(client)
 add_subdirectory(client)
 include_directories(ui)
@@ -33,6 +35,8 @@ include_directories(orders)
 add_subdirectory(orders)
 include_directories(employees)
 add_subdirectory(employees)
+
+
 
 target_link_libraries(projektPROI2
         Qt5::Core
