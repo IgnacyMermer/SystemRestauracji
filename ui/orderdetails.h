@@ -2,6 +2,7 @@
 #define ORDERDETAILS_H
 
 #include <QDialog>
+#include "../orders/Order.h"
 
 namespace Ui {
 class OrderDetails;
@@ -12,7 +13,7 @@ class OrderDetails : public QDialog
     Q_OBJECT
 
 public:
-    explicit OrderDetails(QWidget *parent = nullptr);
+    explicit OrderDetails(Order order, QWidget *parent = nullptr);
     ~OrderDetails();
 
 private slots:
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::OrderDetails *ui;
+    Order order;
 };
 
 #endif // ORDERDETAILS_H

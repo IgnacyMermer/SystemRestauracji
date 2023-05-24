@@ -8,6 +8,7 @@
 #include "../meals/Meal.h"
 #include "../orders/Order.h"
 #include <QListWidgetItem>
+#include "./orderdetails.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -42,7 +43,8 @@ ordersEditing::ordersEditing(QWidget *parent) :
                                          obj[5].value_.get_int(), ingredientsList, obj[6].value_.get_real(), "");
                 meals.push_back(meal);
             }
-            Order order = Order(meals, arr[i].get_obj()[3].value_.get_str(), arr[i].get_obj()[1].value_.get_real());
+            Order order = Order(meals, arr[i].get_obj()[3].value_.get_obj()[0].value_.get_str(), arr[i].get_obj()[1].value_.get_real(),
+                                arr[i].get_obj()[3].value_.get_obj()[4].value_.get_str(), arr[i].get_obj()[4].value_.get_str());
             order.setId(arr[i].get_obj()[0].value_.get_str());
             orders.push_back(order);
             string price = to_string(order.totalPrice());
@@ -117,6 +119,25 @@ void ordersEditing::on_pushButton_orderDone_clicked()
 
 void ordersEditing::on_pushButton_showDetails_clicked()
 {
-
+    string itemText = ui->listWidget->currentItem()->text().toStdString();
+    string id = "";
+    for(int i=0; i<itemText.length(); i++){
+        if(itemText[i]=='-'){
+            break;
+        }
+        else{
+            id+=itemText[i];
+        }
+    }
+    id = id.substr(0, id.length()-1);
+    Order chosenOrder;
+    for(int i=0; i<orders.size(); i++){
+        if(id==orders[i].getId()){
+            chosenOrder = orders[i];
+        }
+    }
+    OrderDetails orderDetails(chosenOrder);
+    orderDetails.setModal(true);
+    orderDetails.exec();
 }
 
