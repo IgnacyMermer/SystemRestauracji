@@ -7,6 +7,7 @@ const mealsRoute = require('./routes/mealsRoute');
 const orderRoute = require('./routes/orderRoute');
 const taskRoute = require('./routes/taskRoute');
 const employeeRoute = require('./routes/employeeRoute');
+const clientRoute = require('./routes/clientRoute');
 
 const app = express();
 
@@ -34,5 +35,6 @@ app.use('/meals', mealsRoute);
 app.use('/task', taskRoute);
 app.use('/order', orderRoute);
 app.use('/employees', employeeRoute);
+app.use('/clients', clientRoute);
 
 app.listen(3000);
