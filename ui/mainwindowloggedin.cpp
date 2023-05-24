@@ -15,6 +15,7 @@
 #include "../employees/Employee.h"
 #include "./taskdetails.h"
 #include "./addtasks.h"
+#include "./ordersediting.h"
 
 using namespace curlpp::options;
 using namespace json_spirit;
@@ -162,4 +163,10 @@ void mainwindowloggedin::on_pushButton_logout_clicked() {
     UserData::setId("");
     this->hide();
     UserData::mainwindowScreen->show();
+}
+
+void mainwindowloggedin::on_pushButton_viewOrders_clicked() {
+    ordersEditing ordersediting;
+    ordersediting.setModal(true);
+    ordersediting.exec();
 }

@@ -31,7 +31,10 @@ private slots:
 
     void on_pushButton_logout_clicked();
 
+    void on_pushButton_viewOrders_clicked();
+
     void on_pushButton_confirmOrder_clicked();
+
 
 private:
     Ui::mainwindowloggedin *ui;
