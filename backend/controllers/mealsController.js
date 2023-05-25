@@ -72,6 +72,28 @@ exports.getAllMeals = (req, res, status)=>{
     }
 }
 
+exports.getAllMealsAvailable = (req, res, status)=>{
+    try{
+        meal.find({availability: true}).populate('ingredients').exec().then(async meals=>{
+            if(meals!=undefined){
+                return res.status(200).json({
+                    meals
+                })
+            }
+            else{
+                return res.status(400).json({
+                    error: "Error during get ingredients"
+                })
+            }
+        })
+    }
+    catch(e){
+        return res.status(400).json({
+            error: e
+        });
+    }
+}
+
 exports.addNewMeal = (req, res, status)=>{
     try{
         const {productsCount, shortName, name, price, ingredients, description} = req.body;

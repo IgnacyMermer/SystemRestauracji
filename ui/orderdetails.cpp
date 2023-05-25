@@ -27,4 +27,3 @@ void OrderDetails::on_pushButton_comeback_clicked()
 {
     this->hide();
 }
-
