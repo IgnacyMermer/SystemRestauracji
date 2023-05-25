@@ -22,10 +22,12 @@ public:
 private slots:
     void on_pushButton_clicked();
     void on_listWidget_yourOrders_itemDoubleClicked(QListWidgetItem *item);
+    void on_listWidget_yourOrdersDone_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     Ui::YourOrders *ui;
     std::vector<Order> orders;
+    std::vector<Order> ordersDone;
 };
 
 #endif // YOURORDERS_H
