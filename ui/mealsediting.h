@@ -28,6 +28,8 @@ private slots:
 
     void on_pushButton_removeMeal_clicked();
 
+    void on_pushButton_refresh_clicked();
+
 private:
     Ui::MealsEditing *ui;
 };

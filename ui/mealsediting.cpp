@@ -14,31 +14,36 @@
 
 using namespace std;
 using namespace json_spirit;
+vector<Meal> getMealsFromDB();
 
 MealsEditing::MealsEditing(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MealsEditing)
 {
     ui->setupUi(this);
+    meals = getMealsFromDB();
+    for(int i=0; i<meals.size(); i++){
+        Meal meal = meals[i];
+        std::stringstream stream;
+        stream << std::fixed << std::setprecision(2) << meal.getPrice();
+        std::string s = stream.str();
+        string stringAvailability = meal.getAvailability()==0?"nie":"tak";
+        string itemText = meal.getName()+" - "+ s + "zł\tDostepny: "+ stringAvailability;
+        ui->listWidget_meals->addItem(QString::fromStdString(itemText));
+    }
+}
+
+vector<Meal> getMealsFromDB(){
+    vector<Meal> mealsTemp;
     GetData getData = GetData("http://localhost:3000/meals/getallmeals");
     getData.send_request();
+
     if(getData.getHttpCode() == 200){
         Value value;
         read( getData.getResponse(), value );
         Array& arr = value.get_obj()[0].value_.get_array();
-        meals = getData.getMeals(arr);
-        for(int i=0; i<meals.size(); i++){
-            Meal meal = meals[i];
-            std::stringstream stream;
-            stream << std::fixed << std::setprecision(2) << meal.getPrice();
-            std::string s = stream.str();
-            string stringAvailability = meal.getAvailability()==0?"nie":"tak";
-            string itemText = meal.getName()+" - "+ s + "zł\tDostepny: "+ stringAvailability;
-            ui->listWidget_meals->addItem(QString::fromStdString(itemText));
-        }
-
+        mealsTemp = getData.getMeals(arr);
     }
-
 }
 
 MealsEditing::~MealsEditing()
@@ -140,3 +145,16 @@ void MealsEditing::on_pushButton_removeMeal_clicked()
     }
 }
 
+void MealsEditing::on_pushButton_refresh_clicked() {
+    meals = getMealsFromDB();
+    ui->listWidget_meals->clear();
+    for(int i=0; i<meals.size(); i++){
+        Meal meal = meals[i];
+        std::stringstream stream;
+        stream << std::fixed << std::setprecision(2) << meal.getPrice();
+        std::string s = stream.str();
+        string stringAvailability = meal.getAvailability()==0?"nie":"tak";
+        string itemText = meal.getName()+" - "+ s + "zł\tDostepny: "+ stringAvailability;
+        ui->listWidget_meals->addItem(QString::fromStdString(itemText));
+    }
+}
