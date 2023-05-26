@@ -14,12 +14,6 @@
 using namespace std;
 using namespace json_spirit;
 
-static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
-{
-    ((std::string*)userp)->append((char*)contents, size * nmemb);
-    return size * nmemb;
-}
-
 
 AddNewMeal::AddNewMeal(QWidget *parent) :
     QDialog(parent),
@@ -129,7 +123,26 @@ void AddNewMeal::on_pushButton_confirm_clicked()
 }
 
 void AddNewMeal::on_pushButton_refreshIngredients_clicked() {
-
+    GetData getData = GetData("http://localhost:3000/meals/getallingredients");
+    getData.send_request();
+    vector<Ingredient> newIngredients;
+    if(getData.getHttpCode()==200){
+        Value value;
+        ui->listWidget_ingredientsToChoose->clear();
+        read( getData.getResponse(), value );
+        Array& arr = value.get_obj()[0].value_.get_array();
+        for(int i=0; i<arr.size(); i++){
+            Object& obj = arr[i].get_obj();
+            Ingredient ingredient = Ingredient(obj[0].value_.get_str(), obj[2].value_.get_str(), obj[1].value_.get_str(),
+                                               obj[3].value_.get_bool(), obj[4].value_.get_int());
+            newIngredients.push_back(ingredient);
+            ui->listWidget_ingredientsToChoose->addItem(QString::fromStdString(ingredient.getName()));
+        }
+        ingredients = newIngredients;
+    }
+    else{
+        QMessageBox::information(this, "Ingredients", "houston we have problem");
+    }
 }
 
 void AddNewMeal::on_pushButton_addIngredientToDB_clicked() {
