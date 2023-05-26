@@ -20,6 +20,10 @@ public:
 private slots:
     void on_pushButton_addIngredient_clicked();
 
+    void on_pushButton_addIngredientToDB_clicked();
+
+    void on_pushButton_refreshIngredients_clicked();
+
     void on_pushButton_removeIngredient_clicked();
 
     void on_pushButton_confirm_clicked();

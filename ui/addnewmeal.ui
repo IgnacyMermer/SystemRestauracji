@@ -75,6 +75,20 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_refreshIngredients">
+          <property name="text">
+           <string>Odśwież produkty</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_addIngredientToDB">
+          <property name="text">
+           <string>Dodaj składnik do bazy</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
       <item>

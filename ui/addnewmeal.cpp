@@ -9,6 +9,7 @@
 #include "../data/GetData.h"
 #include "../meals/Ingredient.h"
 #include "../data/PostData.h"
+#include "./addingredient.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -125,5 +126,16 @@ void AddNewMeal::on_pushButton_confirm_clicked()
     else{
         QMessageBox::information(this, "Meal", "Error during adding meal");
     }
+}
+
+void AddNewMeal::on_pushButton_refreshIngredients_clicked() {
+
+}
+
+void AddNewMeal::on_pushButton_addIngredientToDB_clicked() {
+    AddIngredient addIngredient;
+    addIngredient.setModal(this);
+    addIngredient.exec();
+
 }
 
