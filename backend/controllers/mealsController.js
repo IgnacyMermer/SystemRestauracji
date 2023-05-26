@@ -131,8 +131,6 @@ exports.changeMealAvailability = (req, res, status)=>{
     try{
         const {availability} = req.body;
         const {id} = req.params;
-        console.log(id);
-        console.log(availability);
         meal.findOneAndUpdate({_id: id}, {availability: availability}).then(meal=>{
             return res.status(200).json({
                 meal
@@ -143,6 +141,29 @@ exports.changeMealAvailability = (req, res, status)=>{
             });
         })
 
+    }
+    catch(e){
+        return res.status(400).json({
+            error: e
+        });
+    }
+}
+
+exports.removeMeal = (req, res, status)=>{
+    try{
+        const{mealId} = req.params;
+        meal.findByIdAndRemove({_id: mealId}).exec().then(result=>{
+           if(result!=undefined){
+               return res.status(200).json({
+                   message: "Meal removed"
+               });
+           }
+           else{
+               return res.status(400).json({
+                   error: "Error during removing meal from db"
+               });
+           }
+        });
     }
     catch(e){
         return res.status(400).json({

@@ -9,6 +9,7 @@
 #include "../meals/Mainmeal.h"
 #include <iomanip>
 #include <sstream>
+#include <QMessageBox>
 
 
 using namespace std;
@@ -79,13 +80,10 @@ void MealsEditing::on_pushButton_changeAvailabilityMeal_clicked()
         }
     }
     mealName = mealName.substr(0, mealName.length() - 1);
-    cout<<mealName;
     string id = "";
     bool availability = false;
     for(int i=0; i<meals.size(); i++){
         if(meals[i].getName()==mealName){
-            cout<<meals[i].getId()<<'\n';
-            cout<<meals[i].getAvailability();
             id = meals[i].getId();
             availability = !meals[i].getAvailability();
             break;
@@ -103,7 +101,7 @@ void MealsEditing::on_pushButton_changeAvailabilityMeal_clicked()
             ui->listWidget_meals->currentItem()->setText(QString::fromStdString(itemtext.substr(0, itemtext.length()-3)+stringAvailabilityScreen));
         }
         else{
-            cout<<"Whyyyy";
+
         }
     }
 
@@ -112,6 +110,33 @@ void MealsEditing::on_pushButton_changeAvailabilityMeal_clicked()
 
 void MealsEditing::on_pushButton_removeMeal_clicked()
 {
-
+    string text = (ui->listWidget_meals->currentItem()->text()).toStdString();
+    string mealName = "";
+    for(int i=0; i<text.length(); i++){
+        if(text[i]!='-'){
+            mealName+=text[i];
+        }
+        else{
+            break;
+        }
+    }
+    mealName = mealName.substr(0, mealName.length() - 1);
+    string id = "";
+    bool availability = false;
+    for(int i=0; i<meals.size(); i++){
+        if(meals[i].getName()==mealName){
+            id = meals[i].getId();
+            availability = !meals[i].getAvailability();
+            break;
+        }
+    }
+    PostData postData = PostData("http://localhost:3000/meals/removemeal/"+id, "{}");
+    postData.send_request();
+    if(postData.getHttpCode()==200){
+        QMessageBox::information(this, "Success", "Meal removed successfully");
+    }
+    else{
+        QMessageBox::information(this, "Error", "Error during removing, try again later");
+    }
 }
 
