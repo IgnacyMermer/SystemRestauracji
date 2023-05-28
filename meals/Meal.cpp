@@ -33,4 +33,13 @@ void Meal::refreshPrice(double price) {
     this->price = price;
 }
 
+void Meal::setProductsCount(int productsCount){
+    this->productsCount = productsCount;
+    if(this->productsCount<=0){
+        availability=false;
+    }
+    else{
+        availability=true;
+    }
+}
 

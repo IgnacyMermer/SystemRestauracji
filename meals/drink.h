@@ -10,7 +10,8 @@ class Drink: public Meal{
     string type;
 
     public:
-        Drink(int id, std::string shortname, std::string name, bool availability, int productsCount,vector<Ingredient> ingredients,double price,string type): Meal(id,shortname,name,availability,productsCount,ingredients,price){
+        Drink(string id, std::string shortname, std::string name,string description, bool availability, int productsCount,vector<Ingredient> ingredients,double price,string type): Meal(id,shortname,name,description,availability,productsCount,ingredients,price){
+        this -> type = type;
         bool availabilityTemp = true;
         for(int i=0; i<ingredients.size(); i++){
             if(!ingredients[i].checkAvailability()){
@@ -20,11 +21,4 @@ class Drink: public Meal{
         }
         availability = availabilityTemp;
     }
-    void refreshAvailability(){return Meal::refreshAvailability();};
-    double getPrice(){return Meal::getPrice();};
-    bool getAvailability(){return Meal::getAvailability();};
-    vector<Ingredient> getIngredients(){return Meal::getIngredients();};
-    void refreshProductsCount(){return Meal::refreshProductsCount();};
-
-    
 };
