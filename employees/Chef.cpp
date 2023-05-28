@@ -16,5 +16,6 @@ private:
         // i klasa Chef będzie pełniła pośrednika między kelnerem a kucharzem
         // przypisanie Tasku kucharzowi
         // cook1.giveTask() if true => Order.done() = True
+        // zrobione w klasie PostData oraz w UI
     };
 };

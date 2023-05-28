@@ -15,7 +15,7 @@ int Employee::id() {
 
 void Employee::createTask(std::string name, std::string description) {
     //Task task = Task(name, description, employeeID);
-    // TODO: zapis do DB tasku;
+    // TODO: zapis do DB tasku; zrobione w klasie PostData
     std::string employeeID = std::to_string(this->employeeId); // nie wiem czy tak pobiera się id unikalnego obiektu
     std::string body = "{\"name\" : \""+name+"\", \"description\": \""+description+"\", \"employeeId\" : \""+employeeID+"\"}";
 
@@ -28,8 +28,8 @@ void Employee::createTask(std::string name, std::string description) {
     }
 }
 
-Task Employee::getTask() { // wyswietlanie obecnego tasku 
-        // TODO: pobieranie z DB danych 
+Task Employee::getTask() { // wyswietlanie obecnego tasku  
+        // zrobione w UI
 }
 
 std::string Employee::name() {

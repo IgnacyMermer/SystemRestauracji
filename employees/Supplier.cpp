@@ -23,9 +23,11 @@ public:
     };
     void deliverOrder(/*parametry potrzebne dla klasy order*/) {
         // pobranie zamówienia z DB
+        // zrobione w klasie GetData
     }
 private:
     void orderDelivered() {
         // usunięcie zamówienia z DB 
+        // zrobione w klasie PostData
     }
 };
