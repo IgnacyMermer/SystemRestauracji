@@ -2,6 +2,10 @@
 #include "../employees/Task.h"
 #include "../employees/Employee.h"
 #include "../data/PostData.h"
+#include "../employees/Cook.cpp"
+#include "../employees/Chef.cpp"
+#include "../employees/Janitor.cpp"
+#include "../employees/Supplier.cpp"
 
 TEST(TaskTest1, Initial) {
     Task task;
@@ -85,4 +89,88 @@ TEST(EmployeeTest3, GetTask) {
     };
     Test test;
     EXPECT_FALSE(test.hasTask());
+}
+
+TEST(CookTest1, Constructor) {
+    Cook cook("1", "name", "email");
+    EXPECT_EQ(cook.id(), "1");
+    EXPECT_EQ(cook.name(), "name");
+    EXPECT_EQ(cook.email(), "email");
+}
+
+TEST(CookTest2, GiveTask) {
+    class CookTest : public Cook {
+        public:
+            CookTest(const std::string& id, const std::string& name, const std::string& email)
+                : Cook(id, name, email) {}
+
+    bool hasTaskWrapper() {
+        return hasTask();
+    }
+};
+    CookTest test("1", "name", "email");
+    EXPECT_FALSE(test.giveTask("name", "description"));
+    EXPECT_FALSE(test.hasTaskWrapper());
+}
+
+TEST(ChefTest1, Constructor) {
+    Chef chef("1", "name", "email");
+    EXPECT_EQ(chef.id(), "1");
+    EXPECT_EQ(chef.name(), "name");
+    EXPECT_EQ(chef.email(), "email");
+}
+
+TEST(exceptionTest, What) {
+    myException ex;
+    EXPECT_STREQ("Something went wrong", ex.what());
+}
+
+TEST(exceptionTest, ShowDescription) {
+    myException ex;
+    ex.setDescription("Custom description");
+    EXPECT_EQ("Custom description", ex.showDescription());
+}
+
+TEST(SJanitorTest1, Constructor) {
+    Janitor janitor("1", "name", "email");
+    EXPECT_EQ(janitor.id(), "1");
+    EXPECT_EQ(janitor.name(), "name");
+    EXPECT_EQ(janitor.email(), "email");
+}
+
+TEST(JanitorTest2, GiveTask) {
+    class JanitorTest : public Janitor {
+        public:
+            JanitorTest(const std::string& id, const std::string& name, const std::string& email)
+                : Janitor(id, name, email) {}
+
+    bool hasTaskWrapper() {
+        return hasTask();
+    }
+};
+    JanitorTest test("1", "name", "email");
+    EXPECT_FALSE(test.giveTask("name", "description"));
+    EXPECT_FALSE(test.hasTaskWrapper());
+}
+
+TEST(SupplierTest1, Constructor) {
+    Supplier supplier("1", "name", "email");
+    EXPECT_EQ(supplier.id(), "1");
+    EXPECT_EQ(supplier.name(), "name");
+    EXPECT_EQ(supplier.email(), "email");
+}
+
+TEST(SupplierTest2, GiveTask) {
+    class SupplierTest : public Supplier {
+        public:
+            SupplierTest(const std::string& id, const std::string& name, const std::string& email)
+                : Supplier(id, name, email) {}
+
+    bool hasTaskWrapper() {
+        return hasTask();
+    }
+};
+    SupplierTest test("1", "name", "email");
+    EXPECT_FALSE(test.giveTask("name", "description"));
+    EXPECT_FALSE(test.hasTaskWrapper());
 }
