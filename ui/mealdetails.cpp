@@ -8,6 +8,10 @@ MealDetails::MealDetails(Meal meal, QWidget *parent) :
     ui(new Ui::MealDetails)
 {
     ui->setupUi(this);
+    ui->label_shortName->setText(QString::fromStdString(meal.getShortName()));
+    ui->label_name->setText(QString::fromStdString(meal.getName()));
+    ui->label_description->setText(QString::fromStdString(meal.getDescription()));
+
 }
 
 MealDetails::~MealDetails()
@@ -17,6 +21,6 @@ MealDetails::~MealDetails()
 
 void MealDetails::on_pushButton_clicked()
 {
-
+    this->hide();
 }
 

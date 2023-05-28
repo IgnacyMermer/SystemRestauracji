@@ -42,7 +42,7 @@ ClientDetails::ClientDetails(Client client, QWidget *parent) :
                     ingredientsList.push_back(objTemp);
                 }
 
-                Mainmeal meal = Mainmeal(obj[0].value_.get_str(), obj[1].value_.get_str(), obj[2].value_.get_str(),
+                Mainmeal meal = Mainmeal(obj[0].value_.get_str(), obj[1].value_.get_str(), obj[2].value_.get_str(), obj[2].value_.get_str(),
                                          obj[4].value_.get_bool(),
                                          obj[5].value_.get_int(), ingredientsList, obj[6].value_.get_real(), "");
                 meals.push_back(meal);
