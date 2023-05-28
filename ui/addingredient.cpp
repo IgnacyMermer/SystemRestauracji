@@ -21,7 +21,6 @@ void AddIngredient::on_pushButton_clicked()
     std::string name = ui->textEdit_name->toPlainText().toStdString();
     std::string shortName = ui->lineEdit_shortName->text().toStdString();
     std::string countStr = ui->lineEdit_count->text().toStdString();
-    //int count = std::stoi(countStr);
     std::string body = "{\"productsCount\": "+countStr+", \"shortName\": \""+shortName+"\", \"name\": \""+name+"\"}";
     PostData postData = PostData("http://localhost:3000/meals/addnewingredient", body);
     postData.send_request();

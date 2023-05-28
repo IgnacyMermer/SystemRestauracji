@@ -2,6 +2,7 @@
 #define MEALDETAILS_H
 
 #include <QDialog>
+#include "../meals/Meal.h"
 
 namespace Ui {
 class MealDetails;
@@ -12,7 +13,7 @@ class MealDetails : public QDialog
     Q_OBJECT
 
 public:
-    explicit MealDetails(QWidget *parent = nullptr);
+    explicit MealDetails(Meal meal, QWidget *parent = nullptr);
     ~MealDetails();
 
 private slots:
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::MealDetails *ui;
+    Meal meal;
 };
 
 #endif // MEALDETAILS_H

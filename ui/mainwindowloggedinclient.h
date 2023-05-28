@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <vector>
 #include "../meals/Meal.h"
+#include <QListWidgetItem>
 
 namespace Ui {
 class MainWindowLoggedInClient;
@@ -34,6 +35,8 @@ private slots:
     void on_pushButton_removeOrder_clicked();
 
     void on_pushButton_confirmOrder_clicked();
+
+    void on_listWidget_meals_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     Ui::MainWindowLoggedInClient *ui;

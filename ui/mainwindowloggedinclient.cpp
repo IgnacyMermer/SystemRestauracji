@@ -18,6 +18,7 @@
 #include "../ui/mainwindow.h"
 #include "../ui/yourdata.h"
 #include "../ui/yourorders.h"
+#include "./mealdetails.h"
 
 using namespace std;
 using namespace json_spirit;
@@ -41,7 +42,7 @@ MainWindowLoggedInClient::MainWindowLoggedInClient(QWidget *parent) :
             std::stringstream stream;
             stream << std::fixed << std::setprecision(2) << meal.getPrice();
             std::string s = stream.str();
-            string itemText = meal.getName()+"\t- "+ s + "zł";
+            string itemText = meal.getName()+" - "+ s + "zł";
             ui->listWidget_meals->addItem(QString::fromStdString(itemText));
         }
     }
@@ -202,3 +203,25 @@ void MainWindowLoggedInClient::on_pushButton_confirmOrder_clicked()
 
 }
 
+void MainWindowLoggedInClient::on_listWidget_meals_itemDoubleClicked(QListWidgetItem *item){
+    std::string itemText = (item->text()).toStdString();
+    std::string name = "";
+    for(int i=0; i<itemText.length(); i++){
+        if(itemText[i]=='-'){
+            break;
+        }
+        else{
+            name+=itemText[i];
+        }
+    }
+    name = name.substr(0, name.length()-1);
+    Meal chosenMeal;
+    for(int i=0; i<meals.size(); i++){
+        if(meals[i].getName()==name){
+            chosenMeal = meals[i];
+        }
+    }
+    MealDetails mealDetails(chosenMeal);
+    mealDetails.setModal(this);
+    mealDetails.exec();
+}
