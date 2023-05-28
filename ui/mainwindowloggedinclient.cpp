@@ -28,7 +28,7 @@ MainWindowLoggedInClient::MainWindowLoggedInClient(QWidget *parent) :
 {
     totalPrice = 0;
     ui->setupUi(this);
-    GetData getData = GetData("http://localhost:3000/meals/getallmeals");
+    GetData getData = GetData("http://localhost:3000/meals/getallmealsavailable");
     getData.send_request();
     string s = getData.getResponse();
     if(getData.getHttpCode() == 200){

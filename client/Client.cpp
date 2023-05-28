@@ -1,17 +1,15 @@
 #include "Client.h"
 #include "../orders/Order.h"
 
-// Opcjonalne:
-// W klasie Client będzie metoda, która będzie tworzyła Order a następnie wzywała chef.searchForFreeCook();
 
-Client::Client(int id, std::string email, std::string login) {
+Client::Client(std::string id, std::string name, std::string login) {
     clientId = id;
-    clientEmail = email;
+    clientName = name;
     clientLogin = login;
     clientPoints = 0;
 }
 
-int Client::id() {return clientId;}
+std::string Client::id() {return clientId;}
 
 void Client::addOrder() {
     // myOrder = Order({6, 2, 5}, id(), 250);
@@ -22,7 +20,7 @@ void Client::addPoints(int points) {
     clientPoints += points;
 }
 
-std::string Client::email() {return clientEmail;}
+std::string Client::name() {return clientName;}
 
 std::string Client::login() {return clientLogin;}
 

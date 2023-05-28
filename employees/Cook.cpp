@@ -2,8 +2,8 @@
 
 class Cook : public Employee {
 public:
-    Cook(int id, std::string name, std::string email):Employee(id, name, "Cook", email){};
-    int id() {return Employee::id();};
+    Cook(std::string id, std::string name, std::string email):Employee(id, name, "Cook", email){};
+    std::string id() {return Employee::id();};
     std::string name() {return Employee::name();};
     std::string email() {return Employee::email();};
     bool giveTask(std::string name, std::string description) {

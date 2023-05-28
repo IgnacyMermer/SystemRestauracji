@@ -37,9 +37,6 @@ YourOrders::YourOrders(QWidget *parent) :
 
                 for(it = dest.begin(); it!=dest.end(); it++){
                     std::string objTemp = it->get_str();
-                    //Ingredient ingredient = Ingredient(objTemp[0].value_.get_str(), objTemp[2].value_.get_str(), objTemp[1].value_.get_str(),
-                      //                                 objTemp[3].value_.get_bool(),objTemp[4].value_.get_int());
-                    //ingredientsList.push_back(objTemp[0].value_.get_str());
                     ingredientsList.push_back(objTemp);
                 }
 
@@ -47,9 +44,15 @@ YourOrders::YourOrders(QWidget *parent) :
                                          obj[5].value_.get_int(), ingredientsList, obj[6].value_.get_real(), "");
                 meals.push_back(meal);
             }
-            Order order = Order(meals, arr[i].get_obj()[3].value_.get_str(), arr[i].get_obj()[1].value_.get_real());
+            Order order = Order(meals, arr[i].get_obj()[3].value_.get_str(), arr[i].get_obj()[1].value_.get_real(),
+                                arr[i].get_obj()[3].value_.get_str(), arr[i].get_obj()[4].value_.get_str());
             order.setId(arr[i].get_obj()[0].value_.get_str());
-            orders.push_back(order);
+            if(order.getStatus()=="done"){
+                ordersDone.push_back(order);
+            }
+            else{
+                orders.push_back(order);
+            }
             string price = to_string(order.totalPrice());
             price = price.substr(0, price.length()-4);
             string item = order.getId()+" - Zamowienie kwota: "+price;
@@ -62,7 +65,13 @@ YourOrders::YourOrders(QWidget *parent) :
                 date = "No date";
             }
             item += " "+date;
-            ui->listWidget_yourOrders->addItem(QString::fromStdString(item));
+            if(order.getStatus()=="done"){
+                ui->listWidget_yourOrdersDone->addItem(QString::fromStdString(item));
+            }
+            else{
+                ui->listWidget_yourOrders->addItem(QString::fromStdString(item));
+            }
+
         }
 
     }
@@ -91,18 +100,29 @@ void YourOrders::on_listWidget_yourOrders_itemDoubleClicked(QListWidgetItem *ite
             break;
         }
         else{
-            cout<<itemName<<'\n';
             itemName+=itemText[i];
         }
     }
     itemName = itemName.substr(0, itemName.length()-1);
-    /*int index =0;
-    for(int i=0; i<orders.size(); i++){
-        if(orders[i].getId()==itemName){
-            index = i;
+
+    YourOrderDetails yourOrderDetails(itemName);
+    yourOrderDetails.setModal(true);
+    yourOrderDetails.exec();
+}
+
+void YourOrders::on_listWidget_yourOrdersDone_itemDoubleClicked(QListWidgetItem *item)
+{
+    std::string itemText = (item->text()).toStdString();
+    std::string itemName = "";
+    for(int i=0; i<itemText.length(); i++){
+        if(itemText[i]=='-'){
             break;
         }
-    }*/
+        else{
+            itemName+=itemText[i];
+        }
+    }
+    itemName = itemName.substr(0, itemName.length()-1);
 
     YourOrderDetails yourOrderDetails(itemName);
     yourOrderDetails.setModal(true);

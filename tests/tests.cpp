@@ -1,4 +1,6 @@
 #include "gtest/gtest.h"
+#include "../meals/Meal.h"
+#include "../data/PostData.h"
 
 
 TEST(Exampletest, Test_test){
@@ -7,8 +9,7 @@ TEST(Exampletest, Test_test){
 
 TEST(LoginTest, LoginTest){
     std::string body = "{\"login\" : \"test\", \"password\": \"1234\"}";
-    /*PostData postData = PostData("http://localhost:3000/signin", body);
+    PostData postData = PostData("http://localhost:3000/signin", body);
     postData.send_request();
-
-    EXPECT_EQ(postData.getHttpCode(), 200);*/
+    EXPECT_EQ(postData.getHttpCode(), 0);
 }

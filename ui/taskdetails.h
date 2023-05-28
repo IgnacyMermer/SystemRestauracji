@@ -20,6 +20,7 @@ public:
 
 private slots:
     void on_pushButton_comeback_clicked();
+    void on_pushButton_taskDone_clicked();
 
 private:
     Ui::TaskDetails *ui;

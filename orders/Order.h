@@ -15,7 +15,11 @@ class Order {
     time_t orderTime;
     int estimatedTime;
     time_t CopletionTime;
+    string clientName;
+    string status;
 public:
+    Order(){}
+    Order(std::vector<Meal> mealsIds, string clientId, double totalPrice, string clientName, string status);
     Order(std::vector<Meal> mealsIds, string clientId, double totalPrice);
     double totalPrice();
     int getNumberOfMeals();
@@ -26,7 +30,9 @@ public:
     void setClientId(int clientId);
     void setOrderComplete();
     bool isOrderComplete();
+    string getStatus();
     void setDiscount(int discount);
+    string getClientName();
     std::vector<Meal> mealsIds();
     string clientId();
     time_t getTime();

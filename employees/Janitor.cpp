@@ -2,8 +2,8 @@
 
 class Janitor : public Employee {
 public:
-    Janitor(int id, std::string name, std::string email):Employee(id, name, "Janitor", email){};
-    int id() {return Employee::id();};
+    Janitor(std::string id, std::string name, std::string email):Employee(id, name, "Janitor", email){};
+    std::string id() {return Employee::id();};
     std::string name() {return Employee::name();};
     std::string email() {return Employee::email();};
     bool giveTask(std::string name, std::string description) {

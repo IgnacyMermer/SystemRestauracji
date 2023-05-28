@@ -1,7 +1,8 @@
 #include "Employee.h"
 #include "../data/PostData.h"
 
-Employee::Employee(int id, std::string name, std::string role, std::string email) {
+
+Employee::Employee(std::string id, std::string name, std::string role, std::string email) {
     employeeId = id;
     employeeName = name;
     employeeRole = role;
@@ -9,15 +10,20 @@ Employee::Employee(int id, std::string name, std::string role, std::string email
     employeeTask = false; 
 }
 
-int Employee::id() {
+std::string Employee::id() {
     return employeeId;
 }
 
 void Employee::createTask(std::string name, std::string description) {
     //Task task = Task(name, description, employeeID);
+<<<<<<< HEAD
     // TODO: zapis do DB tasku; zrobione w klasie PostData
     std::string employeeID = std::to_string(this->employeeId); // nie wiem czy tak pobiera się id unikalnego obiektu
     std::string body = "{\"name\" : \""+name+"\", \"description\": \""+description+"\", \"employeeId\" : \""+employeeID+"\"}";
+=======
+    // TODO: zapis do DB tasku;
+    std::string body = "{\"name\" : \""+name+"\", \"description\": \""+description+"\", \"employeeId\" : \""+employeeId+"\"}";
+>>>>>>> b6ff7c3fcc479c8246d645c7030415e36ca9c846
 
     PostData postData = PostData("http://localhost:3000/", body); // potrzebne URL
     postData.send_request();

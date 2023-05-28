@@ -10,7 +10,7 @@ class Task {
     bool done;
 public:
     Task();
-    Task(std::string id, std::string name, std::string description, std::string employeeID, std::string bossId);
+    Task(std::string id, std::string name, std::string description, std::string employeeID, std::string bossId, bool done);
     std::string name();
     std::string description();
     std::string getEmployeeId();

@@ -4,19 +4,21 @@
 #include <iostream>
 
 class Client {
-    int clientId;
-    std::string clientEmail;
+    std::string clientId;
+    std::string clientName;
     std::string clientLogin;
     int clientPoints;
 public:
-    Client(int id, std::string email, std::string login);
-    int id();
+    Client(){};
+    Client(std::string id, std::string name, std::string login);
+    std::string id();
     void addOrder();
     void addPoints(int points);
-protected:
-    std::string email();
+    std::string name();
     std::string login();
     int myPoint();
+protected:
+
 };
 
 

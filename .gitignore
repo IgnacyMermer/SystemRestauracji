@@ -49,3 +49,5 @@ tests/lib
 /data/CMakeFiles/
 /ui/CTestTestfile.cmake
 /Makefile
+/employees/CTestTestfile.cmake
+/data/CTestTestfile.cmake

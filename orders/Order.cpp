@@ -4,6 +4,14 @@
 #include "../client/Client.h"
 #include <ctime>
 
+Order::Order(std::vector<Meal> mealsIds, string clientId, double totalPrice, string clientName, string status): status(status), clientName(clientName){
+    orderMealsIds = mealsIds;
+    orderClientId = clientId;
+    orderTotalPrice = totalPrice;
+    orderCompletion = false;
+    orderTime = time(0);
+    estimatedTime = 0;
+}
 
 Order::Order(std::vector<Meal> mealsIds, string clientId, double totalPrice) {
     orderMealsIds = mealsIds;
@@ -12,7 +20,7 @@ Order::Order(std::vector<Meal> mealsIds, string clientId, double totalPrice) {
     orderCompletion = false;
     orderTime = time(0);
     estimatedTime = 0;
-
+    clientName = "";
 }
 
 double Order::totalPrice() {return orderTotalPrice;};
@@ -82,3 +90,10 @@ void Order::saveToDB() {
     // blok try catch
 };
 
+string Order::getClientName() {
+    return clientName;
+}
+
+string Order::getStatus() {
+    return status;
+}

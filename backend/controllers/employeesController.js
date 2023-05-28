@@ -3,7 +3,7 @@ const signings = require('../models/signingModel');
 
 exports.getAllEmployees = (req, res, status)=>{
     try{
-        employees.find({}).exec().then(async employee=>{
+        signings.find({}).exec().then(async employee=>{
             if(employee!=undefined){
                 return res.status(200).json({
                     employee
@@ -68,3 +68,4 @@ exports.getEmployeeByName = (req, res, status)=>{
         });
     }
 }
+

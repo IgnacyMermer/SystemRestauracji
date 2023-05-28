@@ -4,8 +4,8 @@
 class Supplier : public Employee {
 
 public:
-    Supplier(int id, std::string name, std::string email):Employee(id, name, "Supplier", email){};
-    int id() {return Employee::id();};
+    Supplier(std::string id, std::string name, std::string email):Employee(id, name, "Supplier", email){};
+    std::string id() {return Employee::id();};
     std::string name() {return Employee::name();};
     std::string email() {return Employee::email();};
     bool giveTask(std::string name, std::string description) {

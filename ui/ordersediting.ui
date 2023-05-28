@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>YourClients</class>
- <widget class="QDialog" name="YourClients">
+ <class>ordersEditing</class>
+ <widget class="QDialog" name="ordersEditing">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1038</width>
-    <height>550</height>
+    <width>1040</width>
+    <height>544</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QPushButton" name="pushButton_comeback">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Powróć</string>
+   </property>
+  </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>70</x>
      <y>20</y>
-     <width>761</width>
-     <height>511</height>
+     <width>891</width>
+     <height>491</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Klienci</string>
+       <string>Zamówienia</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -37,9 +50,16 @@
      <widget class="QListWidget" name="listWidget"/>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="pushButton_orderDone">
       <property name="text">
-       <string>Zobacz zamówienia klienta</string>
+       <string>Oznacz jako wykonane</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_showDetails">
+      <property name="text">
+       <string>Pokaż szczegóły</string>
       </property>
      </widget>
     </item>
