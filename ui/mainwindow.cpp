@@ -13,25 +13,12 @@
 using namespace std;
 using namespace json_spirit;
 
-size_t writeToString(void *contents, size_t size, size_t nmemb, string *s)
-{
-    size_t newLength = size*nmemb;
-    try
-    {
-        s->append((char*)contents, newLength);
-    }
-    catch(bad_alloc &e)
-    {
-        return 0;
-    }
-    return newLength;
-}
-
 mainwindow::mainwindow(QWidget *parent)
         : QMainWindow(parent)
         , ui(new Ui::mainwindow)
 {
     ui->setupUi(this);
+    ui->lineEdit_password->setEchoMode(QLineEdit::Password);
     UserData::mainwindowScreen = this;
 }
 
@@ -46,9 +33,6 @@ void mainwindow::on_pushButton_Login_clicked(){
     string password = (ui->lineEdit_password->text()).toStdString();
 
     string body = "{\"login\" : \""+username+"\", \"password\": \""+password+"\"}";
-    //map<string, string> body = {};
-    //body["login"] = username;
-    //body["password"] = password;
     PostData postData = PostData("http://localhost:3000/signin", body);
     postData.send_request();
     if(postData.getHttpCode()==200){
