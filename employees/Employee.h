@@ -24,8 +24,6 @@ protected:
     Task getTask();
 
     bool hasTask();
-    std::vector<int> tasks; // podajemy task id
-    std::vector<int> givenTasks; // podajemy task id
 };
 
 
