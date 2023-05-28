@@ -16,15 +16,9 @@ std::string Employee::id() {
 
 void Employee::createTask(std::string name, std::string description) {
     //Task task = Task(name, description, employeeID);
-<<<<<<< HEAD
     // TODO: zapis do DB tasku; zrobione w klasie PostData
-    std::string employeeID = std::to_string(this->employeeId); // nie wiem czy tak pobiera się id unikalnego obiektu
+    std::string employeeID = this->employeeId; // nie wiem czy tak pobiera się id unikalnego obiektu
     std::string body = "{\"name\" : \""+name+"\", \"description\": \""+description+"\", \"employeeId\" : \""+employeeID+"\"}";
-=======
-    // TODO: zapis do DB tasku;
-    std::string body = "{\"name\" : \""+name+"\", \"description\": \""+description+"\", \"employeeId\" : \""+employeeId+"\"}";
->>>>>>> b6ff7c3fcc479c8246d645c7030415e36ca9c846
-
     PostData postData = PostData("http://localhost:3000/", body); // potrzebne URL
     postData.send_request();
     if (postData.getHttpCode() != 200) {

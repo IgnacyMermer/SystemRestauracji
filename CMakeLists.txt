@@ -23,10 +23,10 @@ add_executable(projektPROI2 main.cpp UserData.cpp UserData.h)
 
 include_directories(tests)
 add_subdirectory(tests)
-include_directories(client)
-add_subdirectory(client)
 include_directories(ui)
 add_subdirectory(ui)
+include_directories(client)
+add_subdirectory(client)
 include_directories(data)
 add_subdirectory(data)
 include_directories(meals)
@@ -42,8 +42,8 @@ target_link_libraries(projektPROI2
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
-        projektPROI2_client
         projektPROI2_ui
+        projektPROI2_client
         projektPROI2_data
         projektPROI2_meal
         projektPROI2_order
