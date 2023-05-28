@@ -22,6 +22,7 @@ public:
     Meal(string id, std::string shortname, std::string name, std::string description, bool availability, int productsCount,vector<string> ingredients, double price);
 
     void refreshPrice(double price);
+    void setProductsCount(int productsCount);
     void refreshAvailability(){
 
     }
