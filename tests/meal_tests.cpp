@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "../meals/Meal.h"
 #include "../meals/Ingredient.h"
+#include "../meals/drink.h"
 
 TEST(MealTest1, GetName) {
     string ingredient1 = "Tomato";
@@ -77,3 +78,24 @@ TEST(IngredientTest6, GetAvailability) {
     EXPECT_TRUE(ingredient.getAvailability());
 }
 
+TEST(mytests,Drink1){
+    Ingredient sugar("2","sugar","sugar",true,4);
+    Drink coca_cola("1","coke","coca-cola","description",true,3,{sugar},7.1,"drink");
+    coca_cola.refreshPrice(7.1);
+    EXPECT_EQ(coca_cola.getPrice(),7.1);
+
+}
+TEST(mytests,Drink2){
+    Ingredient sugar("2","sugar","sugar",true,4);
+    Drink coca_cola("1","coke","coca-cola","description",true,3,{sugar},7.1,"drink");
+    coca_cola.refreshPrice(7.2);
+    EXPECT_EQ(coca_cola.getPrice(),7.2);
+}
+
+TEST(mytests,Drink3){
+    Ingredient sugar("2","sugar","sugar",true,4);
+    Drink coca_cola("1","coke","coca-cola","description",true,3,{sugar},7.1,"drink");
+    EXPECT_TRUE(coca_cola.getAvailability());
+    coca_cola.setProductsCount(0);
+    EXPECT_FALSE(coca_cola.getAvailability());
+}
