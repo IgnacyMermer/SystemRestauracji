@@ -5,7 +5,6 @@ add_executable(tests_run tests.cpp)
 add_executable(tests_run1 meal_tests.cpp)
 add_executable(tests_run2 order_tests.cpp)
 add_executable(tests_run3 client_tests.cpp)
-add_executable(tests_run4 data_tests.cpp)
 
 enable_testing()
 
@@ -20,9 +19,6 @@ target_link_libraries(tests_run2 gtest gtest_main)
 
 target_link_libraries(tests_run3 projektPROI2_client curlpp)
 target_link_libraries(tests_run3 gtest gtest_main)
-
-target_link_libraries(tests_run4 projektPROI2_data curlpp)
-target_link_libraries(tests_run4 gtest gtest_main)
 
 add_test( LoginTest, tests_run)
 
@@ -51,6 +47,3 @@ add_test ( OrderTest6, tests_run2 )
 add_test ( ClientTest1, tests_run3 )
 add_test ( ClientTest2, tests_run3 )
 add_test ( ClientTest3, tests_run3 )
-
-add_test ( DataTest1, tests_run4 )
-add_test ( DataTest2, tests_run4 )

@@ -25,6 +25,8 @@ include_directories(ui)
 add_subdirectory(ui)
 include_directories(data)
 add_subdirectory(data)
+include_directories(tests)
+add_subdirectory(tests)
 include_directories(client)
 add_subdirectory(client)
 include_directories(orders)
@@ -33,8 +35,7 @@ include_directories(meals)
 add_subdirectory(meals)
 include_directories(employees)
 add_subdirectory(employees)
-include_directories(tests)
-add_subdirectory(tests)
+
 
 
 
