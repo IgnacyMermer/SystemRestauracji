@@ -5,7 +5,7 @@
 TEST(OrderTest1, TotalPrice) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal1("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    Meal meal1("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     std::vector<Meal> meals = {meal1};
     Order order(meals, "123", 5.99);
     EXPECT_DOUBLE_EQ(order.totalPrice(), 5.99);
@@ -14,8 +14,8 @@ TEST(OrderTest1, TotalPrice) {
 TEST(OrderTest2, GetNumberOfMeals) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal1("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
-    Meal meal2("2", "Pizza", "Margherita", true, 1, ingredients, 8.99);
+    Meal meal1("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
+    Meal meal2("2", "Pizza", "Margherita", "description", true, 1, ingredients, 8.99);
 
     std::vector<Meal> meals = {meal1, meal2};
     Order order(meals, "123", 14.98);
@@ -25,8 +25,8 @@ TEST(OrderTest2, GetNumberOfMeals) {
 TEST(OrderTest3, AddMeal) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal1("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
-    Meal meal2("2", "Pizza", "Margherita", true, 1, ingredients, 8.99);
+    Meal meal1("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
+    Meal meal2("2", "Pizza", "Margherita", "description", true, 1, ingredients, 8.99);
 
     std::vector<Meal> meals = {meal1};
     Order order(meals, "123", 5.99);
@@ -37,8 +37,8 @@ TEST(OrderTest3, AddMeal) {
 TEST(OrderTest5, RemoveLastMeal) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal1("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
-    Meal meal2("2", "Pizza", "Margherita", true, 1, ingredients, 8.99);
+    Meal meal1("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
+    Meal meal2("2", "Pizza", "Margherita", "description", true, 1, ingredients, 8.99);
 
     std::vector<Meal> meals = {meal1, meal2};
     Order order(meals, "123", 14.98);
@@ -53,7 +53,7 @@ TEST(OrderTest6, IsMealEmpty) {
     Order order({}, "123", 5.99);
     EXPECT_TRUE(order.isMealEmpty());
 
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     order.addMeal(meal);
     EXPECT_FALSE(order.isMealEmpty());
 }

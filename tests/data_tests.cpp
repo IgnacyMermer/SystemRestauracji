@@ -1,16 +1,16 @@
-#include <gtest/gtest.h>
-#include "../data/Data.h"
+#include "gtest/gtest.h"
+#include "../data/GetData.h"
 
 TEST(DataTest1, Constructor) {
     std::string url = "http://www.example.com";
-    Data data(url);
+    GetData data = GetData(url);
     EXPECT_EQ(data.getHttpCode(), 0);
     EXPECT_EQ(data.getResponse(), "");
 }
 
 TEST(DataTest2, ChangeUrl) {
     std::string url = "http://www.example.com";
-    Data data(url);
+    GetData data = GetData(url);
     EXPECT_EQ(data.getResponse(), "");
     EXPECT_EQ(data.getHttpCode(), 0);
 

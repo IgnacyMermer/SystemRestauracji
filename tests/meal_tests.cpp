@@ -4,36 +4,36 @@
 
 TEST(MealTest1, GetName) {
     string ingredient1 = "Tomato";
-    std :: vector<string> ingredients = {ingredient1};
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    std::vector<string> ingredients = {ingredient1};
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     EXPECT_EQ(meal.getName(), "Cheeseburger");
 }
 
 TEST(MealTest2, GetId) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     EXPECT_EQ(meal.getId(), "1");
 }
 
 TEST(MealTest3, GetPrice) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     EXPECT_DOUBLE_EQ(meal.getPrice(), 5.99);
 }
 
 TEST(MealTest4, GetAvailability) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     EXPECT_TRUE(meal.getAvailability());
 }
 
 TEST(MealTest5, RefreshPrice) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     meal.refreshPrice(6.99);
     EXPECT_DOUBLE_EQ(meal.getPrice(), 6.99);
 }
@@ -41,7 +41,7 @@ TEST(MealTest5, RefreshPrice) {
 TEST(MealTest6, RefreshAvailability) {
     string ingredient1 = "Tomato";
     std :: vector<string> ingredients = {ingredient1};
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, ingredients, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, ingredients, 5.99);
     meal.refreshAvailability();
     EXPECT_TRUE(meal.getAvailability());
 }
