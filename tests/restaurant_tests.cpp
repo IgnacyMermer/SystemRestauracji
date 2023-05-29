@@ -66,14 +66,14 @@ TEST(RestaurantTest9, getUndoneOrders) {
 
 TEST(RestaurantTest10, getMeals) {
     Restaurant restaurant;
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, {"apple"}, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description",true, 2, {"apple"}, 5.99);
     restaurant.addMeal(meal);
     EXPECT_EQ(restaurant.getMeals().size(), 1);
 }
 
 TEST(RestaurantTest11, getAvailableMeals) {
     Restaurant restaurant;
-    Meal meal("1", "Burger", "Cheeseburger", true, 2, {"apple"}, 5.99);
+    Meal meal("1", "Burger", "Cheeseburger", "description", true, 2, {"apple"}, 5.99);
     restaurant.addMeal(meal);
     EXPECT_EQ(restaurant.getAvailableMeals().size(), 1);
 }

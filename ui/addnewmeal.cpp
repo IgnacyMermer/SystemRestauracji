@@ -48,19 +48,25 @@ AddNewMeal::~AddNewMeal()
 
 void AddNewMeal::on_pushButton_addIngredient_clicked()
 {
-    const QString& s = ui->listWidget_ingredientsToChoose->currentItem()->text();
-    string ingredientName = s.toStdString();
-    const QString& sCount = ui->lineEdit_newIngredientCount->text();
-    int countInt = sCount.toStdString()!=""?stoi(sCount.toStdString()):100;
-    const QString& countText = QString::fromStdString(" - Ilość: ");
-    for(int i=0; i<ingredients.size(); i++){
-        if(ingredients[i].getName() == ingredientName){
-            Ingredient newIngredient = Ingredient(ingredients[i].getId(), ingredients[i].getName(), ingredients[i].getName(),
-                                                  ingredients[i].getAvailability(), countInt);
-            chosenIngredients.push_back(newIngredient);
+    try {
+        const QString &s = ui->listWidget_ingredientsToChoose->currentItem()->text();
+        string ingredientName = s.toStdString();
+        const QString &sCount = ui->lineEdit_newIngredientCount->text();
+        int countInt = sCount.toStdString() != "" ? stoi(sCount.toStdString()) : 100;
+        const QString &countText = QString::fromStdString(" - Ilość: ");
+        for (int i = 0; i < ingredients.size(); i++) {
+            if (ingredients[i].getName() == ingredientName) {
+                Ingredient newIngredient = Ingredient(ingredients[i].getId(), ingredients[i].getName(),
+                                                      ingredients[i].getName(),
+                                                      ingredients[i].getAvailability(), countInt);
+                chosenIngredients.push_back(newIngredient);
+            }
         }
+        ui->listWidget_chosenIngredients->addItem(s + countText + sCount);
     }
-    ui->listWidget_chosenIngredients->addItem(s+countText+sCount);
+    catch(exception e){
+        std::cout<<"blad";
+    }
 }
 
 
