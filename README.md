@@ -7,6 +7,13 @@ Aplikacja posiada równeż panel każdego klienta i pracownika, w którym można
 Do stworzenia UI aplikacji wykorzystaliśmy bibliotekę Qt5. Pozwoliła ona stworzyć inny wygląd dla każdej akcji, którą chcieliśmy przetworzyć w naszym systemie
 restauracyjnym. Biblioteka ta pozwoliła nam również stworzyć aplikację kompatybilną na każdym desktopowym systemie operacyjnym. Aplikacja wygląda przystępnie 
 niestety tylko na szerokości widoku aplikacji 551x989 pixeli.
+
+# Wykonawcy:
+- Ignacy Mermer (UI, baza danych)
+- Mateusz Smardzewski (pracownicy, klienci, baza danych)
+- Miłosz Więcyk (**testy**, zamówienia)
+- Oliwier Richter (posiłki, testy)
+
 # Klasy:
 
 - Order (klasa przechowuje informacje o zamówieniach złożonych przez klientów, przechowuje dane o dacie 
