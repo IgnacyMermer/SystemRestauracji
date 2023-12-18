@@ -37,3 +37,6 @@ Pozwala ona, podczas działania na localhost, na wysyłanie zapytań HTTP i na i
 danych oraz wysyłanie odpowiednich zapytań z tymi danymi do bazy danych. Backend inaczej API pozwala rozbudowywać 
 aplikacje jeszcze bardziej, właśnie dzięki niemu moglibyśmy stworzyć inną aplikację, np. dla kierowców dowożących jedzenie
 i działała by ona na tych samych danych, a jej stworzenie nie zaburzyłoby działania pierwotnego systemu. 
+
+<img width="1030" alt="Zrzut ekranu 2023-12-18 o 15 45 32" src="https://github.com/IgnacyMermer/SystemRestauracji/assets/60555082/64787d4c-e372-4845-a4c5-d6239ee907b4">
+<img width="793" alt="Zrzut ekranu 2023-12-18 o 15 43 48" src="https://github.com/IgnacyMermer/SystemRestauracji/assets/60555082/7408722c-c9f3-43e1-96f3-f223ccb291a9">
