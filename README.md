@@ -8,12 +8,6 @@ Do stworzenia UI aplikacji wykorzystaliśmy bibliotekę Qt5. Pozwoliła ona stwo
 restauracyjnym. Biblioteka ta pozwoliła nam również stworzyć aplikację kompatybilną na każdym desktopowym systemie operacyjnym. Aplikacja wygląda przystępnie 
 niestety tylko na szerokości widoku aplikacji 551x989 pixeli.
 
-# Wykonawcy:
-- Ignacy Mermer (UI, baza danych)
-- Mateusz Smardzewski (pracownicy, klienci, baza danych)
-- Miłosz Więcyk (**testy**, zamówienia)
-- Oliwier Richter (posiłki, testy)
-
 # Klasy:
 
 - Order (klasa przechowuje informacje o zamówieniach złożonych przez klientów, przechowuje dane o dacie 
@@ -43,12 +37,3 @@ Pozwala ona, podczas działania na localhost, na wysyłanie zapytań HTTP i na i
 danych oraz wysyłanie odpowiednich zapytań z tymi danymi do bazy danych. Backend inaczej API pozwala rozbudowywać 
 aplikacje jeszcze bardziej, właśnie dzięki niemu moglibyśmy stworzyć inną aplikację, np. dla kierowców dowożących jedzenie
 i działała by ona na tych samych danych, a jej stworzenie nie zaburzyłoby działania pierwotnego systemu. 
-
-
-### Rozwój
-W przyszłości, jeżeli chcielibyśmy rozwijać naszą aplikację powinniśmy skupić się przede wszystkim na poprawie
-wyglądu UI. Okno aplikacji powinno być responsywne i dostosowywać się do urządzenia oraz użytkownika. Nasza 
-aplikacja wymaga również ulepszeń w przetwarzaniu wyjątków, testowaniu UI oraz poprawy komunikacji z serwerem. 
-Na pewno powinna być też rozwinięta o takie funkcjonalności jak generownaie PDF, przeliczanie podatków i analizowanie
-statystyk, wysyłanie powiadomień PUSH, zoptymalizowanie i podział pracy na pracowników, podgląd dokładnego statusu zamównienia,
-komentarze klientów. 
